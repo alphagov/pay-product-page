@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title><%= current_page.data.title && "#{current_page.data.title} – " %>GOV.UK Product Pages</title>
+    <title><%= current_page.data.title && "#{current_page.data.title} – " %>GOV.UK Pay</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
               GOV.UK
             </span>
             <span class="header__title">
-              Product Pages
+              Pay
               <span class="phase-banner">Beta</span>
             </span>
           </a>
@@ -45,8 +45,9 @@
             <%
               {
                 'About' => '/',
-                'Supplementary Pages' => '/supplementary.html',
-                'Support' => '/support.html'
+                'Documentation' => 'https://gds-payments.gelato.io/docs/versions/1.0.0',
+                'Support' => 'https://gds-payments.gelato.io/docs/versions/1.0.0/support-contact-and-more-information',
+                'Sign in' => 'https://selfservice.payments.service.gov.uk/login'
               }.each do |title, url|
             %>
               <li<% if url == current_page.url %> class="active"<% end %>>

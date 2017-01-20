@@ -23,6 +23,12 @@ configure :development do
   activate :livereload
 end
 
+config[:css_dir] = 'pay-product-page/stylesheets'
+config[:images_dir] = 'pay-product-page/images'
+config[:fonts_dir] = 'pay-product-page/fonts'
+config[:js_dir] = 'pay-product-page/javascripts'
+
+
 ###
 # Helpers
 ###
@@ -57,7 +63,7 @@ class ImportedAssetPathProcessor
                 # I fought the asset pipeline and the asset pipeline won:
                 # This first `when` statement handles an edge case where images are nested inside
                 # a stylesheets directory, as is the case in govuk_template.
-                when /stylesheets\/images\// then ([app.config[:images_dir]] * 2).join('/')
+                when /stylesheets\/images\// then app.config[:images_dir] + '/images'
                 when /images\// then app.config[:images_dir]
                 when /fonts\// then app.config[:fonts_dir]
                 when /stylesheets\// then app.config[:css_dir]

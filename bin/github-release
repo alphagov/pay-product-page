@@ -1,0 +1,16 @@
+#/usr/bin/env sh
+
+# Gets the lib folder relative to this script location
+lib_path="$(cd "$(dirname "$0")/../lib";pwd)"
+
+. "$lib_path/common.sh"   || exit 1
+. "$lib_path/dispatch.sh" || exit 1
+. "$lib_path/logging.sh"  || exit 1
+. "$lib_path/github-release/cli.sh"  || exit 1
+. "$lib_path/github-release/github-release.sh"  || exit 1
+
+# This variable should not be used anymore
+unset lib_path
+
+githubrelease "${@:-}"
+

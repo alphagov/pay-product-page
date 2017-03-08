@@ -33,7 +33,7 @@ a.hero-button {
   text-align: center;
 
   @include device-pixel-ratio(2) {
-    background-image: file-url('/images/hero-button/arrow@2x.png');
+    background-image: file-url('/pay-product-page/images/hero-button/arrow@2x.png');
   }
 
   @include media(tablet) {

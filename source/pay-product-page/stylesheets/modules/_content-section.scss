@@ -52,4 +52,8 @@
     padding-top: $gutter * 1.5;
     border-top: 1px $grey-2 solid;
   }
+
+  &--with-top-padding {
+    padding-top: $gutter * 1.5;
+  }
 }

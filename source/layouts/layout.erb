@@ -71,24 +71,36 @@
         <div class="footer-categories">
           <div class="footer-categories-wrapper">
             <div class="grid-row">
+              <%
+              { 'About' =>
+                  {
+                    'Get started' => '/getstarted.html',
+                    'Features' => '/features.html',
+                    'Roadmap' => '/roadmap.html',
+                    'Performance' => 'http://www.gov.uk/performance/govuk-pay'
+                  },
+                'Support' =>
+                  {
+                    'Contact' => '/contact.html',
+                    'Chat with GOV.UK Pay on Slack' => 'https://ukgovernmentdigital.slack.com/messages/govuk-pay',
+                    'Documentation' => 'https://gds-payments.gelato.io/docs/versions/1.0.0',
+                    'System status' => 'http://stats.pingdom.com/ejtodj13fqqx'
+                  }
+              }.each do |header, links|
+              %>
               <div class="column-one-third">
-                <h2>About</h2>
+                <h2><%= header %></h2>
                 <ul>
-                  <li><a href="/getstarted.html">Get started</a></li>
-                  <li><a href="/features.html">Features</a></li>
-                  <li><a href="/roadmap.html">Roadmap</a></li>
-                  <li><a href="http://gov.uk/performance/govuk-pay">Performance</a></li>
+                  <% links.each do |title, url| %>
+                  <li>
+                    <a href="<%= url == current_page.url ? "#main" : url %>">
+                      <%= title %>
+                    </a>
+                  </li>
+                  <% end %>
                 </ul>
               </div>
-              <div class="column-one-third">
-                <h2>Support</h2>
-                <ul>
-                  <li><a href="/contact.html">Contact</a></li>
-                  <li><a href="https://ukgovernmentdigital.slack.com/messages/govuk-pay">Chat with GOV.UK Pay on Slack</a></li>
-                  <li><a href="https://gds-payments.gelato.io/docs/versions/1.0.0">Documentation</a></li>
-                  <li><a href="http://stats.pingdom.com/ejtodj13fqqx">System status</a></li>
-                </ul>
-              </div>
+              <% end %>
             </div>
           </div>
         </div>

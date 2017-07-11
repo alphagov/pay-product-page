@@ -1,3 +1,46 @@
+/**
+* Footer Categories Component
+*
+* Based on the footer links you see around GOV.UK
+*
+* Example usage:
+
+<div class="footer-categories">
+  <div class="footer-categories-wrapper">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2>About</h2>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Roadmap</a></li>
+          <li><a href="#</a></li>
+        </ul>
+      </div>
+      <div class="column-one-third">
+        <h2>Support</h2>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Chat with the Pay team</a></li>
+          <li><a href="#">System status</a></li>
+        </ul>
+      </div>
+      <div class="column-one-third">
+        <h2>Documentation</h2>
+        <ul>
+          <li><a href="#">Java client</a></li>
+          <li><a href="#">Node JS client</a></li>
+          <li><a href="#">PHP client</a></li>
+          <li><a href="#">Python client</a></li>
+          <li><a href="#">Ruby client</a></li>
+          <li><a href="#">Integration testing</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+*/
 #footer {
   .footer-categories {
     margin: 0 auto;

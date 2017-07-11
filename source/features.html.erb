@@ -13,15 +13,18 @@
   </nav>
 <div class="container">
   <div class="grid-row">
-      <div class="column-one-third">
-
-          <nav class="subnav">
-              <ul>
-                  <li class="active"><a href="/features.html">Features</a></li>
-                  <li><a href="/roadmap.html">Roadmap</a></li>
-              </ul>
-          </nav>
-      </div>
+    <div class="column-one-third">
+      <nav class="sub-navigation">
+        <ol itemscope itemtype="http://schema.org/ItemList">
+          <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/features.html" itemprop="item"><span itemprop="name">Features</span></a>
+          </li>
+          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="roadmap.html" itemprop="item"><span itemprop="name">Roadmap</span></a>
+          </li>
+        </ol>
+      </nav>
+    </div>
 
       <div class="column-two-thirds">
               <h1 class="heading-large">Top features</h1>

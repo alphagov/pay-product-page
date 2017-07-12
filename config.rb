@@ -81,3 +81,6 @@ activate :sprockets do |config|
 end
 
 sprockets.append_path File.join(root, "components")
+
+# https://middlemanapp.com/advanced/pretty-urls/
+activate :directory_indexes

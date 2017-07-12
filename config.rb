@@ -84,3 +84,5 @@ sprockets.append_path File.join(root, "components")
 
 # https://middlemanapp.com/advanced/pretty-urls/
 activate :directory_indexes
+
+activate :asset_hash

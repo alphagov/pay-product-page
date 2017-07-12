@@ -28,6 +28,15 @@ config[:images_dir] = 'pay-product-page/images'
 config[:fonts_dir] = 'pay-product-page/fonts'
 config[:js_dir] = 'pay-product-page/javascripts'
 
+# Google analytics
+configure :development do
+  set :analytics, "'UA-72121642-1'"
+end
+
+configure :build do
+  set :analytics, "'UA-72121642-2'"
+end
+
 
 ###
 # Helpers

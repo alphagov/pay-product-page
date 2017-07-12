@@ -46,7 +46,7 @@
               {
                 'About' => '/',
                 'Documentation' => 'https://gds-payments.gelato.io/docs/versions/1.0.0',
-                'Support' => '/support.html',
+                'Contact' => '/contact',
                 'Sign in' => 'https://selfservice.payments.service.gov.uk/login'
               }.each do |title, url|
             %>
@@ -67,6 +67,43 @@
 
     <footer class="group js-footer" id="footer" role="contentinfo">
       <div class="footer-wrapper">
+
+        <div class="footer-categories">
+          <div class="footer-categories-wrapper">
+            <div class="grid-row">
+              <%
+              { 'About' =>
+                  {
+                    'Get started' => '/getstarted',
+                    'Features' => '/features',
+                    'Roadmap' => '/roadmap',
+                    'Performance' => 'https://www.gov.uk/performance/govuk-pay'
+                  },
+                'Support' =>
+                  {
+                    'Contact' => '/contact',
+                    'Chat with GOV.UK Pay on Slack' => 'https://ukgovernmentdigital.slack.com/messages/govuk-pay',
+                    'Documentation' => 'https://gds-payments.gelato.io/docs/versions/1.0.0',
+                    'System status' => 'http://stats.pingdom.com/ejtodj13fqqx'
+                  }
+              }.each do |header, links|
+              %>
+              <div class="column-one-third">
+                <h2><%= header %></h2>
+                <ul>
+                  <% links.each do |title, url| %>
+                  <li>
+                    <a href="<%= url == current_page.url ? "#main" : url %>">
+                      <%= title %>
+                    </a>
+                  </li>
+                  <% end %>
+                </ul>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
 
         <div class="footer-meta">
           <div class="footer-meta-inner">

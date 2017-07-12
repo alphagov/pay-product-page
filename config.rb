@@ -30,11 +30,11 @@ config[:js_dir] = 'pay-product-page/javascripts'
 
 # Google analytics
 configure :development do
-  set :analytics, "'UA-72121642-1'"
+  set :analytics, ""
 end
 
 configure :build do
-  set :analytics, "'UA-72121642-2'"
+  set :analytics, "'UA-72121642-3'"
 end
 
 

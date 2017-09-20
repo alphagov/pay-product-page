@@ -18,7 +18,12 @@
   </head>
 
   <body>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     <a href="#main" class="skip-link">Skip to main content</a>
+
+    <div id="global-cookie-message">
+      <p>GOV.UK Pay uses cookies to make the site simpler. <a href="https://www.payments.service.gov.uk/cookies/">Find out more about cookies</a></p>
+    </div>
 
     <header class="header<% if current_page.url == '/' %> header--without-border<% end %>">
       <div class="header__container">
@@ -129,6 +134,7 @@
     </footer>
 
     <%= javascript_include_tag :application %>
+    <% if config.analytics != '' %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -139,5 +145,6 @@
       ga('set', 'anonymizeIp', true);
       ga('send', 'pageview');
     </script>
+    <% end %>
   </body>
 </html>

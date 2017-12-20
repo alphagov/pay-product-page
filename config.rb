@@ -91,6 +91,8 @@ end
 
 sprockets.append_path File.join(root, "components")
 
+redirect "contact/index.html", to: "/support/"
+
 # https://middlemanapp.com/advanced/pretty-urls/
 activate :directory_indexes
 

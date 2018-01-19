@@ -89,7 +89,7 @@ activate :sprockets do |config|
   config.imported_asset_path = ImportedAssetPathProcessor.new(app)
 end
 
-sprockets.append_path File.join(root, "components")
+sprockets.append_path File.join(root, "node_modules")
 
 redirect "contact/index.html", to: "/support/"
 

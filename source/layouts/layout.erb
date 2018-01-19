@@ -18,6 +18,22 @@
 
     <!-- Google Search Console ownership verification -->
     <meta name="google-site-verification" content="niWnSqImOWz6mVQTYqNb5tFK8HaKSB4b3ED4Z9gtUQ0" />
+    <%= javascript_include_tag :application %>
+    <% if config.analytics != '' %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', <%= config.analytics %>, 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('set', 'displayFeaturesTask', null);
+      ga('set', 'transport', 'beacon');
+
+      ga('send', 'pageview');
+    </script>
+    <% end %>
   </head>
 
   <body>
@@ -31,7 +47,7 @@
     <header class="header<% if current_page.url == '/' %> header--without-border<% end %>">
       <div class="header__container">
         <div class="header__brand">
-          <a href="/">
+          <a href="/" data-click-events data-click-category="Header" data-click-action="Logo clicked">
             <span class="govuk-logo">
               <img class="govuk-logo__printable-crown" src="/pay-product-page/images/gov.uk_logotype_crown_invert_trans.png" height="32" width="36">
               GOV.UK
@@ -48,7 +64,7 @@
           Menu
         </label>
 
-        <nav id="navigation" class="header__navigation" aria-label="Top Level Navigation" aria-hidden="true">
+        <nav id="navigation" class="header__navigation" aria-label="Top Level Navigation" aria-hidden="true" data-click-events data-click-category="Header" data-click-action="Navigation link clicked">
           <ul>
             <%
               {
@@ -135,22 +151,5 @@
         </div>
       </div>
     </footer>
-
-    <%= javascript_include_tag :application %>
-    <% if config.analytics != '' %>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', <%= config.analytics %>, 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('set', 'displayFeaturesTask', null);
-      ga('set', 'transport', 'beacon');
-
-      ga('send', 'pageview');
-    </script>
-    <% end %>
   </body>
 </html>

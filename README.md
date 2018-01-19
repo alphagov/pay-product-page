@@ -2,15 +2,15 @@
 
 ## Running Locally
 
-- `bundle install`
-- `bower install`
-- `bundle exec middleman server`
-- `open http://localhost:4567`
+- `bundle install` to install middleman and its dependencies
+- `npm install` to install the frontend dependencies
+- `bundle exec middleman server` - to start middleman's built in server
+- `open http://localhost:4567` - to open the example in your browser
 
 ## Building a Static Copy of the Site
 
 - `bundle install`
-- `bower install`
+- `npm install`
 - `bundle exec middleman build`
 
 Check the `build` directory for the output.

@@ -61,7 +61,16 @@
 }
 
 .partner-logo {
+  margin-right: $gutter / 2;
   margin-bottom: $gutter;
   width: auto;
   height: 4em;
+
+  @include media(tablet) {
+  margin-right: $gutter;
+  }
+
+  &-smaller {
+    height: 3.5em;
+  }
 }

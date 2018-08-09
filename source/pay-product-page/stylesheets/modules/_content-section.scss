@@ -67,7 +67,11 @@
   height: 4em;
 
   @include media(tablet) {
-  margin-right: $gutter;
+    margin-right: 2 * ($gutter / 3);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   &-smaller {

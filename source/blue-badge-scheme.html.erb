@@ -19,42 +19,70 @@ title: Blue Badge scheme - GOV.UK Pay
   <div class="grid-row" data-click-events data-click-category="Content" data-click-action="Internal link clicked">
       <div class="column-two-thirds column-minimum">
         <h1 class="heading-large">
-          Blue Badge scheme: how to take and process payments with GOV.UK Pay
+          Blue Badge scheme: using GOV.UK Pay to take and process payments
         </h1>
+        <p>Local authorities can no longer use the Blue Badge Improvement Service for Blue Badge payments.</p>  
+        <p>The Department for Transport (DfT) has recommended local authorities use <a href="/">GOV.UK Pay</a> to take and process online payments for Blue Badges.</p>
 
-        <p>From 4 February 2019, local authorities will no longer be able to use the existing Blue Badge Improvement Service for Blue Badge payments. The Department for Transport (DfT) has recommended local authorities use <a href="/">GOV.UK Pay</a> to take and process online payments for Blue Badges.</p>
-        <p>This page gives further information to help local authorities prepare for this change.</p>
+        <h2 class="heading-medium">About GOV.UK Pay</h2>
+        <p>GOV.UK Pay is a free and secure online payment service for government and public sector organisations. 
+        <p>GOV.UK Pay provides customer-facing pages to take card payment details from users and the back-end system to process and view transactions. We use a payment service provider to take the money out of the user’s account and deposit it into your account.</p>
+        <p>We comply with the Payment Card Industry Data Security Standard (PCI-DSS).</p>
+        <p>You can read more general information about GOV.UK Pay on our <a href="/">product page</a> and our <a href="/features">features page</a>. Or <a href="https://selfservice.payments.service.gov.uk/create-service/register">sign up</a> for a test account and try it for yourself.</p>
 
-        <h2 class="heading-medium">What GOV.UK Pay is</h2>
-        <p>GOV.UK Pay is a free and secure online payment service for government and public sector organisations. We comply with the Payment Card Industry Data Security Standard (PCI-DSS).</p>
-        <p>You can read more general information about GOV.UK Pay on our <a href="/">product page</a> and our <a href="/features">features page</a>.</p>
+        <h2 class="heading-medium">Payment service provider</h2>
+        <p>GOV.UK Pay has procured a payment service provider (PSP) to take and process payments. This allows you to use GOV.UK Pay without a separate payment gateway.</p>
+        
+        <p>You’ll just need to provide:</p>
+        <ul class="list list-bullet">
+          <li>your organisation’s bank account</li>
+          <li>your organisation’s address</li> 
+          <li>the details of a nominated person from your organisation so we can run some security checks</li>
+        </ul>
+        
+        <p>If you have an exclusive PSP contract with Worldpay Corporate Gateway, Barclays ePDQ or Barclays Smartpay/Adyen, you can still use them. However, using our PSP means:</p>
+        <ul class="list list-bullet">
+          <li>the process is very simple</li>
+          <li>it’s very quick - your GOV.UK pay account and PSP account will be set up within a working day and you can start taking payments immediately</li> 
+          <li>you’re not locked into a long-term contract</li> 
+        </ul>
+        
+        <h2 class="heading-medium">Contract</h2>        
+        <p>You’ll need to sign a contract with GOV.UK Pay before you can take payments. If you choose to use our PSP, you’ll need to sign the Connected PSP Account Agreement too.</p>
+        <p>Once the contracts are signed, you can also use GOV.UK Pay to take payments for other services you provide.</p>
+        <p>In order to download and review the contracts, you’ll need to go to <a href="https://www.payments.service.gov.uk/">https://www.payments.service.gov.uk/</a> and either sign in or sign up for a test GOV.UK Pay account.</p> 
+        <p>Once you have an account and you are logged in, you can download the:</p>
+        <ul class="list list-bullet">
+          <li><a href="https://selfservice.payments.service.gov.uk/policy/download/contract-for-non-crown-bodies">GOV.UK Pay contract</a></li>
+          <li><a href="https://selfservice.payments.service.gov.uk/policy/download/stripe-connected-account-agreement">Connected PSP Account Agreement</a></li> 
+        </ul>
 
-        <h2 class="heading-medium">Payment service providers</h2>
-        <p>GOV.UK Pay will procure a payment service provider (PSP) which will be made available to local authorities and other government departments. This will allow you to use the whole GOV.UK Pay service without the need for a separate or existing payment gateway.</p>
-        <p>GOV.UK Pay will provide you with a centrally managed payments process. You will need to provide some details, such as the bank account and address of your organisation, and a copy of an identity document for someone who is authorised to sign contracts on your organisation’s behalf. </p>
-        <p>If you have an exclusivity contract with another PSP, such as Worldpay Corporate Gateway, Barclays ePDQ or Barclays Smartpay/Adyen, it will still be possible to use your own gateway account.</p>
+        <p>The contracts are linked from the page footer.</p>
 
-        <h2 class="heading-medium">Costs</h2>
-        <p>The integration to take payments is built by the Department of Transport (DfT). If you choose to integrate with the <a href="https://docs.payments.service.gov.uk/quick_start_guide/#quick-start-guide">GOV.UK Pay API</a> to automate your reporting and refunds process, you’ll have to cover the costs of the team building the integration.</p>
-        <p>The costs per transaction and per merchant will be confirmed once we have procured a payment service provider.</p>
-        <p>There will not be any account creation or management fees.</p>
+        <h2 class="heading-medium">How we set up the contract</h2>
+        <p>The contract we have in place with our PSP is a direct award on the <a href="https://ccs-agreements.cabinetoffice.gov.uk/contracts/rm3702">Crown Commercial Service's Merchant Acquiring Services, Equipment and Payment Gateway Services</a> framework. That framework follows all the applicable OJEU rules and processes.</p> 
+        <p>We chose direct award because Stripe was the only supplier who could meet our requirements. The contract was approved by the Commercial Director of Cabinet Office.</p> 
 
-        <h2 class="heading-medium">Contract</h2>
-        <p>Local authorities will need to sign a contract with GOV.UK Pay.</p>
-        <p>Once you have a contract with us, you can also use GOV.UK Pay to take payments for other services you provide.</p>
+        <h2 class="heading-medium">Transaction charges using our PSP</h2>
+        <p>There are no account creation or management fees, and you do not need a separate merchant acquirer contract.</p>
+        <p>The transaction fees are in the GOV.UK Pay contract. You’ll find our fees structure on page 36 in Schedule 6: Fees. For card payments you’ll get ‘Option 1 Blended rate card fees’.</p> 
+        <p>If a transaction is refunded you receive the variable (%) transaction amount back, but not the fixed cost.</p> 
 
-        <h2 class="heading-medium">Payments</h2>
-        <p>GOV.UK Pay processes debit and credit card transactions.</p>
-        <p>All payments will be sent to the bank account you specify within the GOV.UK Pay configuration.</p>
-        <p>Payments are processed instantly. They are paid into your account in batches 2 working days after the payment is made. You’ll be able to see payment information in real-time on your dashboard.</p>
-        <p>If you need to wait until a Blue Badge application has been agreed before charging users, you can use <a href="https://www.payments.service.gov.uk/payment-links">payment links</a>.</p>
-        <p>Payments can be easily reconciled. Every payment will be assigned a unique application ID by the Blue Badge service. GOV.UK Pay also assigns a unique ID to every payment. It’s best to refer to the GOV.UK Pay ID when communicating with the <a href="/support">GOV.UK Pay support team</a>.</p>
-        <p>Your service cannot take cash or cheque payments using GOV.UK Pay.</p>
-        <p>We do not currently offer integrated reporting for phone payments. We’re carrying out a pilot with one service to see if this is something we can offer in future.</p>
+        <h2 class="heading-medium">Receiving payments using our PSP</h2>
+        <p>GOV.UK Pay processes debit and credit card transactions.</p> 
+        <p>All payments will be sent to the bank account you specify when you set up your GOV.UK Pay account.</p> 
+        <p>Payments are processed instantly. You’ll be able to see payment information in real-time on your dashboard. They’re paid into your account in batches 2 working days after the payment is made. Every payment is assigned a unique application ID.  Transaction charges are withdrawn against your connected PSP account monthly.</p> 
+        <p>GOV.UK Pay can’t process cash, cheque or automated phone payments.</p> 
+        
+        <h2 class="heading-medium">GOV.UK Pay and the Blue Badge service</h2>
+        <p>DfT and their supplier are integrating GOV.UK Pay into the Blue Badge service. They are also building the integration that takes payment confirmation data from GOV.UK Pay into the Manage Blue Badge application.</p> 
+        <p>To take payments at the time of application, you'll just need to share the live API key for your service with DfT and their supplier using the process described in communications with you.</p>  
+        <p>If you want to automate your reporting or refunds process, you’ll need to integrate the service with your income and case management systems.</p>  
 
-        <h2 class="heading-medium">Documentation and support</h2>
-        <p>GOV.UK Pay provides <a href="https://docs.payments.service.gov.uk/#gov-uk-pay-documentation">detailed documentation</a>. This documentation is mainly written for teams that are building their own API integration with GOV.UK Pay. You only need to do this if you want to automate your reporting and refunds process.</p>
+
+        <h2 class="heading-medium">Support</h2>
         <p>GOV.UK Pay is designed to be as self-serve as possible. You can <a href="/getstarted">sign up for a test account</a> and try it for yourself.</p>
+        <p>GOV.UK Pay provides <a href="https://docs.payments.service.gov.uk/#gov-uk-pay-documentation">detailed documentation</a>. You, or your development team, will need to read this if you want to integrate with your own systems (for example, Case Management or Income Management systems) for <a href="https://docs.payments.service.gov.uk/reporting/#reporting">reporting</a> and <a href="https://docs.payments.service.gov.uk/refunding_payments/#refunding-with-the-gov-uk-pay-api">refunds</a>.</p>
         <p>You can also <a href="/support">contact the GOV.UK Pay team</a> if you have any questions or feedback.</p>
     </div>
 </div>

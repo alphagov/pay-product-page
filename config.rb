@@ -34,7 +34,7 @@ configure :development do
 end
 
 configure :build do
-  set :analytics, "'UA-72121642-3'"
+  set :analytics, "'UA-72121642-9'"
 end
 
 

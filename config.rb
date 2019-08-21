@@ -92,6 +92,7 @@ end
 sprockets.append_path File.join(root, "node_modules")
 
 redirect "contact/index.html", to: "/support/"
+redirect "features.html", to: "/using-govuk-pay"
 
 # https://middlemanapp.com/advanced/pretty-urls/
 activate :directory_indexes

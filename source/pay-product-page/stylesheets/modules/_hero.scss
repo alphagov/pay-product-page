@@ -35,14 +35,13 @@
  */
 
 .hero {
-  @extend %site-width-container;
-  margin-top: 0;
+  @extend .govuk-width-container;
+  margin-top: -10px;
   margin-bottom: 0;
-  color: $white;
-  padding: $gutter-half 0;
+  color: govuk-colour('white');
 
-  @include media(tablet) {
-    padding: $gutter*1.5 0;
+  @include govuk-media-query(tablet) {
+    padding: govuk-spacing(5) 0;
   }
 
   &--breaded {
@@ -51,33 +50,33 @@
 
   a:link,
   a:visited {
-    font-weight: bold;
-    color: $white;
+    color: govuk-colour('white');
   }
 
   a:hover,
   a:active {
-    color: $light-blue-25;
+    color: govuk-colour('white');
   }
 
   a:focus {
-    color: $black;
+    color:  $govuk-text-colour;
   }
 
   &__title {
-    @include bold-48;
+      @include govuk-font($size: 48, $weight: bold);
   }
 
   &__description {
-    @include core-24;
+    @include govuk-font($size: 24);
   }
 
   &__title,
   &__description {
-    margin-bottom: $gutter-half;
+    margin-top: govuk-spacing(3);
+    margin-bottom: govuk-spacing(3);
 
-    @include media(tablet) {
-      margin-bottom: $gutter;
+      @include govuk-media-query(tablet) {
+      margin-bottom: govuk-spacing(6);
     }
   }
 
@@ -85,7 +84,7 @@
   &__inline-image {
     text-align: center;
 
-    @include media(tablet) {
+      @include govuk-media-query(tablet) {
       display: none;
       visibility: hidden;
     }
@@ -101,33 +100,59 @@
     display: none;
     visibility: hidden;
 
-    @include media(tablet) {
+      @include govuk-media-query(tablet) {
       display: block;
       visibility: visible;
     }
 
     img {
       max-width: 100%;
-      margin-top: $gutter-half;
+      margin-top: govuk-spacing(3);
     }
   }
 
   &__content {
-    @extend %grid-row;
+    @extend .govuk-grid-row;
   }
 
   &__body,
   &__aside-image {
-    @include grid-column(1 / 2);
+    float: left;
+    width: govuk-grid-width(full);
+    box-sizing: border-box;
+    padding: 0 govuk-spacing(3);
+
+    a:link,
+    a:visited {
+      font-weight: bold;
+    }
   }
 
-  @include media(desktop) {
+  @include govuk-media-query($from: tablet) {
     &__body {
-      @include grid-column(2 / 3);
+      width: govuk-grid-width(two-thirds);
     }
 
     &__aside-image {
-      @include grid-column(1 / 3);
+      width: govuk-grid-width(one-third);
     }
+  }
+
+  .button--start_white:link,
+  .button--start_white:visited {
+    background-color: govuk-colour("white");
+    color: $govuk-brand-colour;
+    background-image: url("/public/images/arrow.png");
+    background-size: 20px;
+    background-position: 96% 50%;
+    box-shadow: 0 2px 0 #004172;
+
+    @include govuk-device-pixel-ratio($ratio: 2) {
+      background-image: file-url('/pay-product-page/images/hero-button/arrow@2x.png');
+    }
+  }
+
+  .button--start_white:hover {
+    color: govuk-colour('light-blue');
   }
 }

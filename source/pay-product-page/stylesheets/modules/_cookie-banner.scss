@@ -6,13 +6,11 @@
 
 #global-cookie-message {
   width: 100%;
-  background-color: $light-blue-25;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-color: lighten(desaturate(govuk-colour("light-blue"), 8.46), 42.55);
+  padding: govuk-spacing(3);
+
   p {
-    @extend %site-width-container;
-    @include core-16;
-    margin-top: 0;
-    margin-bottom: 0;
+    @include govuk-font($size: 16);
+    margin: 0;
   }
 }

@@ -17,6 +17,8 @@
  */
 
 .responsive-embed {
+  margin-bottom: govuk-spacing(6);
+
   .responsive-embed__wrapper {
     position: relative;
     display: block;
@@ -42,7 +44,7 @@
 
 .responsive-embed--bordered {
   padding: 5px;
-  outline: 1px solid $border-colour;
+  outline: 1px solid $govuk-border-colour;
 }
 
 // Modifier class for 16:9 aspect ratio

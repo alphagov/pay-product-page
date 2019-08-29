@@ -49,16 +49,20 @@ title: GOV.UK Pay’s Payment Service Provider
     </div>
     <div class="column-two-thirds">
         <h1 class="heading-large">GOV.UK Pay’s Payment Service Provider</h1>
-        <p>GOV.UK Pay takes payment, but uses a Payment Service Provider (PSP) to process it. GOV.UK Pay has procured a PSP for you to use (Stripe). This means you don’t need a separate contract with a PSP to use GOV.UK Pay.</p>
+        <p>GOV.UK Pay takes payment, but uses a Payment Service Provider (PSP) to process it. GOV.UK Pay has procured a PSP for you to use. This means you don’t need a separate contract with a PSP to use GOV.UK Pay.</p>
         <p>If you already have your own PSP, GOV.UK Pay supports Worldpay Corporate Gateway, Barclays ePDQ (Smartpay I) and Barclays Smartpay/Adyen (Smartpay A).</p>
           
         <h2 class="heading-medium">Using our PSP</h2>
-        <p>To get started, you simply need to accept GOV.UK Pay and our PSP’s terms and conditions.</p>
-        <p>You’ll find a link to both contracts in the footer when you sign in to your GOV.UK Pay account.</p>
+        <p>To get started, you simply need to accept GOV.UK Pay and our PSP’s terms.</p>
+        <p>You’ll find a link to both contracts in the footer when you sign in to your GOV.UK Pay account. The transaction fees we negotiated with Stripe are in the contract.</p>
+        <p>If you already have a contract with Stripe, you won’t be able to use it with GOV.UK Pay. You’ll need to accept our contract and terms.</p>
+
 
         <h2 class="heading-medium">Benefits of using our PSP</h2>
         <h3 class="heading-small">Speed</h3>
-        <p>With our ready procured PSP, your account can be set up and ready to take payments in a day. With other PSPs this would normally take at least a month.</p>
+        <p>With our ready procured PSP, your account can be set up and ready to use immediately With other PSPs this would normally take at least a month.</p>
+        <p>You can combine this with our payment links feature to start taking payments in a day, and you don’t need to build a full digital service.</p>
+        <p>Follow our guide to <a href="/govuk-payment-pages">creating payment links</a>.</p>
 
         <h3 class="heading-small">Ease</h3>
         <p>Using our PSP means:</p>
@@ -71,23 +75,47 @@ title: GOV.UK Pay’s Payment Service Provider
         <p>Our PSP is available for any public sector organisation to use.</p>
 
         <h3 class="heading-small">Cost</h3>
-        <p>There are no overhead costs on the account. You don’t pay a management, set up or monthly fee. You just pay the transaction charges. Nothing more. </p>
-        <p>Costs are commercially sensitive. Details are available in the contract when you sign in to your account. </p>
+        <p>There are no overhead costs on the account. You don’t pay a management, set up or monthly fee. You just pay the transaction charges. Nothing more.</p>
+        <p>Transaction fees are commercially sensitive. Details are available in the contract when you sign in to your account.</p>
 
-        <h2 class="heading-medium">Start taking payments immediately</h2>
-        <p>Using our new PSP and payment links means you:</p>
+        <h2 class="heading-medium">Setting up Stripe</h2>
+        <p>When you’re ready to go live, select ‘request a live account’ in your test account.</p>
+        <p>You’ll then:</p>
         <ul class="list list-bullet">
-          <li>don’t need to build a service</li>
-          <li>can be ready to take payments in minutes</li>
-          <li>can use the payment link wherever you need to take payment - so on an email, letter or paper form</li>
+          <li>be asked to click and agree to the GOV.UK Pay contract (for non-Crown organisations) and MOU (for Crown organisations) and the Stripe Connected Account Agreement</li>
+          <li>be asked to submit your bank account details, your VAT and company number (if you have one) and details of the nominated responsible person for your account</li>
+          <li>be able to set the description you want the user to see on their bank statement</li>
         </ul>
-        <p>Follow our <a href="/govuk-payment-pages" data-click-events data-click-category="Content" data-click-action="Internal link clicked">guide to creating payment links</a>.</p>
+
+        <h2 class="heading-medium">Receiving your money from Stripe</h2>
+        <p>Payouts are made in a batch into your bank account 2 working days after the payments have been made. The cut-off time for a day’s payout is midnight UTC.</p>
+        <p>The payout will display on your bank statement with the description ‘Stripe GOV.UK’.</p>
+        <p>The minimum payout is £1.</p>
+
+        <h2 class="heading-medium">Paying transaction fees</h2>
+        <p>GOV.UK Pay recoups transaction fees on a ‘net settlement’ basis.</p>
+        <p>This means that payouts will be made to you with transaction fees already deducted. For example, 15 Blue Badges are purchased on Monday, for £10 each. The transaction fees for each are 16p. You will receive a payout of £147.72 on Wednesday.</p>
+        <p>Transaction fees and the net amount are shown for each transaction in the CSV and using the API.</p>
+        <p>There will be an amount for ‘PSP fee’, which is the processing fee that Stripe takes, and ‘Net amount’, which is the amount paid to you with the PSP fee deducted.</p>
+        <p>If you take a payment for less than the amount of the transaction fee, you’ll have a negative balance.</p>
+
+        <h2 class="heading-medium">Processing refunds</h2>
+        <p>Refunds are processed immediately and the funds will come out of your next payout. If you have daily payouts, that will be the next day. As with other transactions, the cut-off time for refunds each day is midnight UTC.</p>
+        <p>If you have a zero balance in your Stripe account, the refund will still be processed, and you will have a negative balance. The money will come out of the next available payout. If the negative balance continues for longer than 2 months, we will contact you to make a payment to cover the cost.</p>
+        <p>The refunds may take up to 6 days to reach the user. This is due to the procedures of the user’s own bank and not GOV.UK Pay.</p>
+        <p>There is no additional charge for refunds, but the transaction fees you have paid on the original payment are not returned.</p>
+        <h2 class="heading-medium">Chargebacks</h2>
+        <p>If a chargeback happens, we’ll contact you to let you know and ask for evidence to submit to Stripe. The fee for a chargeback is £15 for each disputed payment. There’s no fee for disputes resolved in your favour.</p>
+
+        <h2 class="heading-medium">Support</h2>
+        <p>Support for services using Stripe is handled by the GOV.UK Pay team. Find out more about our <a href="/support">support process</a>.</p>
+
 
         <h2 class="heading-medium">How we procured our PSP</h2>
         <p>The PSP we’ve procured is a direct award on a Crown Commercial Service framework.</p>
         <p>The framework follows all OJEU rules and processes. The contract was approved by the Cabinet Office’s Commercial Director.</p>
         <h2 class="heading-medium">What next</h2>
-        <p>Take a look at our PSP’s contract in your test account or contact GOV.UK Pay support with any questions.</p>
+        <p>Take a look at our PSP’s contract in your test account or contact <a href="/support">GOV.UK Pay support</a> with any questions.</p>
     </div>
   </div>
 </div>

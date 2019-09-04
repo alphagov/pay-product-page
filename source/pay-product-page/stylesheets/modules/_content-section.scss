@@ -60,6 +60,15 @@
   }
 }
 
+.partner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include media(desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .partner-logo {
   margin-right: $gutter / 2;
   margin-bottom: $gutter;

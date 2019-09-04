@@ -61,4 +61,8 @@
       color: $text-colour;
     }
   }
+
+  &__item--sub {
+    padding-left: $gutter;
+  }
 }

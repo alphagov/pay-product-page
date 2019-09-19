@@ -14,16 +14,27 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - name: deps
+      - name: Install dependencies
         run: |
           gem install bundler
           bundle install
           npm install
-      - name: build
+      - name: Build
         run: bundle exec middleman build
-      - name: release
-        if: github.ref == 'master'
+      - name: Release
+        if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./bin/github-release --version "${GITHUB_SHA::7} publish"
+      - name: Trigger pay-frontend
+        if: github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -XPOST \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: token ${GITHUB_TOKEN}" \
+            --data '{"event_type": "product-page-release"}' \
+            https://api.github.com/repos/alphagov/pay-frontend/dispatches

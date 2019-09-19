@@ -54,7 +54,7 @@ githubrelease_command_publish ()
 {
     githubrelease_prerequisites
 
-    rm -Rf build && bundle exec middleman build && cd build
+    test ! -d build && bundle exec middleman build && cd build
     
     githubrelease_generate_package_json_file
     tar -cvzf pay-product-page-$githubrelease_option_version.tgz .

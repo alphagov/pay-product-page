@@ -1,0 +1,29 @@
+name: new-release
+
+on: push
+
+jobs:
+  build:
+    name: generate-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.x'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: deps
+        run: |
+          gem install bundler
+          bundle install
+          npm install
+      - name: build
+        run: bundle exec middleman build
+      - name: release
+        if: github.ref == 'master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./bin/github-release --version "${GITHUB_SHA::7} publish"

@@ -1,20 +1,13 @@
 // Task list pattern
 
-// Override column width for tablet and up
-.column-minimum {
-  @include media(tablet) {
-    min-width: 600px;
-  }
-}
-
 // Spacing to the left of the task list
 $task-list-indent: 35px;
 
 .task-list {
-  margin-top: $gutter;
+  margin-top: govuk-spacing(6);
   padding: 0;
-  @include media(tablet) {
-    margin-top: ($gutter * 2);
+    @include govuk-media-query(tablet) {
+    margin-top: govuk-spacing(9);
   }
 }
 
@@ -22,15 +15,15 @@ $task-list-indent: 35px;
 .task-list-section {
   display: table;
 
-  @include bold-24;
-  padding-bottom: ($gutter / 6);
+  @include govuk-font($size: 24, $weight: bold);
+  padding-bottom: govuk-spacing(1);
 }
 
 .task-list-section-number {
   display: table-cell;
-  padding-right: ($gutter / 6);
+  padding-right: govuk-spacing(1);
 
-  @include media(tablet) {
+    @include govuk-media-query(tablet) {
     min-width: $task-list-indent;
     padding-right: 0;
   }
@@ -38,30 +31,31 @@ $task-list-indent: 35px;
 
 
 .task-list-items {
-  margin-bottom: $gutter;
-  @include media(tablet) {
-    margin-bottom: ($gutter * 2);
+  margin-bottom: govuk-spacing(6);
+
+    @include govuk-media-query(tablet) {
+    margin-bottom: govuk-spacing(9);
   }
 
-  @include media(tablet) {
+    @include govuk-media-query(tablet) {
     padding-left: $task-list-indent;
   }
 }
 
 .task-list-item {
-  margin-left: 20px;
+  margin-left: govuk-spacing(4);
   // border-bottom: 1px solid $border-colour;
   // padding-top: $gutter-one-third;
   // padding-bottom: $gutter-one-third;
-  @extend %contain-floats;
+  @extend .govuk-clearfix;
 }
 
 .task-list-item:first-child {
-  border-top: 1px solid $border-colour;
+  border-top: 1px solid $govuk-border-colour;
 }
 
 
 .task-name {
-  width: $two-thirds;
+  width: 66.666%;
   float: left;
 }

@@ -63,6 +63,7 @@ activate :sprockets do |config|
 end
 
 sprockets.append_path File.join(root, 'node_modules/govuk-frontend/')
+sprockets.append_path File.join(root, 'node_modules/gaap-analytics/build')
 
 redirect "contact/index.html", to: "/support/"
 redirect "features.html", to: "/using-govuk-pay/"

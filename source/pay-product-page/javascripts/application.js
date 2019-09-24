@@ -1,7 +1,8 @@
-//= require gaap-analytics/build/gaap-analytics.min
-//= require header.js
+//= require govuk/all.js
+//= require gaap-analytics.min.js
 //= require cookies.js
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-  window.GAAP.analytics.init()
+document.addEventListener("DOMContentLoaded", function(event) {
+  GOVUKFrontend.initAll()
+  GAAP.analytics.eventTracking.init()
 });

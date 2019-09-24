@@ -52,44 +52,18 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
   activate :minify_javascript
 end
 
-# Override generated asset path to remove the long explicit vendor paths
-class ImportedAssetPathProcessor
-  attr_reader :app
-
-  def initialize(app)
-    @app = app
-  end
-
-  def call(sprockets_asset)
-    filename = File.basename(sprockets_asset.logical_path)
-    directory = case sprockets_asset.logical_path
-                # I fought the asset pipeline and the asset pipeline won:
-                # This first `when` statement handles an edge case where images are nested inside
-                # a stylesheets directory, as is the case in govuk_template.
-                when /stylesheets\/images\// then app.config[:images_dir] + '/images'
-                when /images\// then app.config[:images_dir]
-                when /fonts\// then app.config[:fonts_dir]
-                when /stylesheets\// then app.config[:css_dir]
-                else
-                  "assets"
-                end
-
-    File.join(directory, filename)
-  end
-end
-
 activate :sprockets do |config|
   config.expose_middleman_helpers = true
-  config.imported_asset_path = ImportedAssetPathProcessor.new(app)
 end
 
-sprockets.append_path File.join(root, "node_modules")
+sprockets.append_path File.join(root, 'node_modules/govuk-frontend/')
+sprockets.append_path File.join(root, 'node_modules/gaap-analytics/build')
 
 redirect "contact/index.html", to: "/support/"
 redirect "features.html", to: "/using-govuk-pay/"

@@ -1,49 +1,44 @@
 ---
 title: Support
 ---
-
-<nav class="breadcrumbs" aria-label="Breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a href="https://www.gov.uk/service-toolkit#gov-uk-services" itemprop="item"><span itemprop="name">GOV.UK services</span></a>
-    </li>
-    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a href="/" itemprop="item"><span itemprop="name">GOV.UK Pay</span></a>
-    </li>
-    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a href="#main" itemprop="item"><span itemprop="name">Support</span></a>
-    </li>
-  </ol>
-</nav>
-
-<div class="container">
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <h1 class="heading-large">Support</h1>
-      <p>GOV.UK Pay is built and supported 24/7 by a full-time team at the Government Digital Service. The Senior Product Manager is Katie Bates.</p>
-      <p>Follow our <a href="/getstarted/" data-click-events data-click-category="Content" data-click-action="Internal link clicked">guide to getting started</a> to create an account.</p>
-      <p>GOV.UK Pay’s support is for government services, and does not provide support for individual members of the public paying for services. If you are a member of the public experiencing technical difficulties paying for a specific service, please contact that service’s support directly.</p> 
-    </div>
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
+        </li>
+    </ol>
   </div>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <h2 class="heading-medium">Support process</h2>
-      <p>If you have a problem, first check for known issues on the <a href="https://payments.statuspage.io/" data-click-events data-click-category="Content" data-click-action="External link clicked">GOV.UK Pay system status page</a>. Subscribe to get alerts on the progress of any listed issue.</p>
+  <main id="main-content" class="govuk-main-wrapper" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Support</h1>
+      <p class="govuk-body">GOV.UK Pay is built and supported 24/7 by a full-time team at the Government Digital Service. The Senior Product Manager is Katie Bates.</p>
+      <p class="govuk-body">Follow our <a class="govuk-link" href="/getstarted/" data-click-events data-click-category="Content" data-click-action="Internal link clicked">guide to getting started</a> to create an account.</p>
+      <p class="govuk-body">GOV.UK Pay’s support is for government services, and does not provide support for individual members of the public paying for services. If you are a member of the public experiencing technical difficulties paying for a specific service, please contact that service’s support directly.</p> 
+      <h2 class="govuk-heading-m">Support process</h2>
+      <p class="govuk-body">If you have a problem, first check for known issues on the <a class="govuk-link" href="https://payments.statuspage.io/" data-click-events data-click-category="Content" data-click-action="External link clicked">GOV.UK Pay system status page</a>. Subscribe to get alerts on the progress of any listed issue.</p>
 
-      <h3 class="heading-small">During office hours</h3>
-      <p>Our office hours are 9.30am to 5.30pm, Monday to Friday. You can email us at <a href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk" data-click-events data-click-category="Content" data-click-action="Email link clicked">govuk-pay-support@digital.cabinet-office.gov.uk</a></p>
+      <h3 class="govuk-heading-s">During office hours</h3>
+      <p class="govuk-body">Our office hours are 9.30am to 5.30pm, Monday to Friday. You can email us at <a class="govuk-link" href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk" data-click-events data-click-category="Content" data-click-action="Email link clicked">govuk-pay-support@digital.cabinet-office.gov.uk</a></p>
 
-      <h3 class="heading-small">Out of hours support</h3>
-      <p>We offer 24 hour online support for critical incidents affecting live production services. We have different response times depending on whether the problem you want to report is an emergency.</p>
-      <p>It’s only an emergency if:</p>
-      <ul class="list-bullet">
+      <h3 class="govuk-heading-s">Out of hours support</h3>
+      <p class="govuk-body">We offer 24 hour online support for critical incidents affecting live production services. We have different response times depending on whether the problem you want to report is an emergency.</p>
+      <p class="govuk-body">It’s only an emergency if:</p>
+      <ul class="govuk-list govuk-list--bullet">
         <li>no one in your team can log in</li>
         <li>a significant number of users are not able to make a payment</li>
         <li>you have reasons to believe sensitive data has been leaked</li>
       </ul>
 
-      <p>We’ll reply within 30 minutes and give you hourly updates until the problem’s fixed.</li></p>
-      <p>We’ll reply by the next working day for any other problems.</p>
+      <p class="govuk-body">We’ll reply within 30 minutes and give you hourly updates until the problem’s fixed.</li></p>
+      <p class="govuk-body">We’ll reply by the next working day for any other problems.</p>
     </div>
   </div>
 </div>

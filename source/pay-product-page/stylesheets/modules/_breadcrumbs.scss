@@ -7,4 +7,8 @@
     font-weight: bold;
     text-decoration: none;
   }
+
+  .govuk-breadcrumbs__list-item::before {
+    border-color: govuk-colour('white');
+  }
 }

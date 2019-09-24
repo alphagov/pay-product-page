@@ -1,85 +1,85 @@
 ---
 title: Security
 ---
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
+        </li>
+    </ol>
+  </div>
+  <main id="main-content" class="govuk-main-wrapper" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <nav class="sub-navigation" data-click-events data-click-category="Content" data-click-action="Button clicked">
+          <ol itemscope itemtype="http://schema.org/ItemList">
+            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/using-govuk-pay" itemprop="item"><span itemprop="name">Using GOV.UK Pay</span></a>
+            </li>
+            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/govuk-payment-pages" itemprop="item"><span itemprop="name">GOV.UK payment pages</span></a>
+            </li>
+            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/api-integration" itemprop="item"><span itemprop="name">API integration</span></a>
+            </li>
+            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/payment-service-provider" itemprop="item"><span itemprop="name">GOV.UK Pay’s Payment Service Provider</span></a>
+            </li>
+            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/direct-debit" itemprop="item"><span itemprop="name">Direct Debit</span></a>
+            </li>
+            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/apple-pay-and-google-pay" itemprop="item"><span itemprop="name">Apple Pay and Google Pay</span></a>
+            </li>
+            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/roadmap" itemprop="item"><span itemprop="name">Roadmap</span></a>
+            </li>
+            <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="govuk-link" href="/security" itemprop="item"><span itemprop="name"><%= current_page.data.title %></span></a>
+            </li>
+          </ol>
+        </nav>
+      </div>
 
-  <nav class="breadcrumbs" aria-label="Breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a href="https://www.gov.uk/service-toolkit#gov-uk-services" itemprop="item"><span itemprop="name">GOV.UK services</span></a>
-          </li>
-          <li class="breadcrumbs__item breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a href="/" itemprop="item"><span itemprop="name">GOV.UK Pay</span></a>
-          </li>
-          <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a href="#main" itemprop="item"><span itemprop="name">Using GOV.UK Pay</span></a>
-          </li>
-      </ol>
-  </nav>
-<div class="container">
-  <div class="grid-row">
-    <div class="column-one-third">
-      <nav class="sub-navigation" data-click-events data-click-category="Content" data-click-action="Button clicked">
-        <ol itemscope itemtype="http://schema.org/ItemList">
-          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/using-govuk-pay" itemprop="item"><span itemprop="name">Using GOV.UK Pay</span></a>
-          </li>
-          <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/govuk-payment-pages" itemprop="item"><span itemprop="name">GOV.UK payment pages</span></a>
-          </li>
-          <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/govuk-payment-pages" itemprop="item"><span itemprop="name">API integration</span></a>
-          </li>
-          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/payment-service-provider" itemprop="item"><span itemprop="name">GOV.UK Pay’s Payment Service Provider</span></a>
-          </li>
-          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/direct-debit" itemprop="item"><span itemprop="name">Direct Debit</span></a>
-          </li>
-          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/apple-pay-and-google-pay" itemprop="item"><span itemprop="name">Apple Pay and Google Pay</span></a>
-          </li>
-          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/roadmap" itemprop="item"><span itemprop="name">Roadmap</span></a>
-          </li>
-          <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/security" itemprop="item"><span itemprop="name">Security</span></a>
-          </li>
-        </ol>
-      </nav>
-    </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l"><%= current_page.data.title %></h1>
+        <p class="govuk-body">GOV.UK Pay is a secure online payments system.</p>
+        <p class="govuk-body">GOV.UK Pay provides a safe and Payment Card Industry (PCI) compliant platform to process card payments.</p>
 
-      <div class="column-two-thirds">
-        <h1 class="heading-large">Security</h1>
-        <p>GOV.UK Pay is a secure online payments system.</p>
-        <p>GOV.UK Pay provides a safe and Payment Card Industry (PCI) compliant platform to process card payments.</p>
+        <h2 class="govuk-heading-s">PCI compliance</h2>
+        <p class="govuk-body">GOV.UK Pay is certified as a level 1 service provider with the Payment Card Industry Data Security Standard (PCI DSS) version 3.2. The PCI DSS provides guidance to help maintain payment  security.</p>
+        <p class="govuk-body"><a class="govuk-link" href="https://docs.payments.service.gov.uk/security/#payment-card-industry-pci-compliance" data-click-events data-click-category="Content" data-click-action="External link clicked">More information about PCI compliance is available in our technical documentation</a></p>
 
-        <h2 class="heading-small">PCI compliance</h2>
-        <p>GOV.UK Pay is certified as a level 1 service provider with the Payment Card Industry Data Security Standard (PCI DSS) version 3.2. The PCI DSS provides guidance to help maintain payment  security.</p>
-        <p><a href="https://docs.payments.service.gov.uk/security/#payment-card-industry-pci-compliance" data-click-events data-click-category="Content" data-click-action="External link clicked">More information about PCI compliance is available in our technical documentation</a></p>
+        <h2 class="govuk-heading-s">Government security guidelines</h2>
 
-        <h2 class="heading-small">Government security guidelines</h2>
+        <p class="govuk-body">GOV.UK Pay supports the <a class="govuk-link" href="https://www.gov.uk/service-manual/technology/using-https" data-click-events data-click-category="Content" data-click-action="External link clicked">government HTTPS security guidelines</a>.</p>
+        <p class="govuk-body">HTTPS protects information from being intercepted by malicious third parties as it travels over the internet. Using HTTPS ensures our connections on GOV.UK Pay are secure.</p>
+        <p class="govuk-body">GOV.UK Pay also supports all the mandatory requirements for Government ICT systems and services.</p>
 
-        <p>GOV.UK Pay supports the <a href="https://www.gov.uk/service-manual/technology/using-https" data-click-events data-click-category="Content" data-click-action="External link clicked">government HTTPS security guidelines</a>.</p>
-        <p>HTTPS protects information from being intercepted by malicious third parties as it travels over the internet. Using HTTPS ensures our connections on GOV.UK Pay are secure.</p>
-        <p>GOV.UK Pay also supports all the mandatory requirements for Government ICT systems and services.</p>
-
-        <h2 class="heading-small">Testing GOV.UK Pay</h2>
-        <p>The GOV.UK Pay environment is regularly tested by independent suppliers.</p>
-        <p>This includes:</p>
-        <ul class="list list-bullet">
+        <h2 class="govuk-heading-s">Testing GOV.UK Pay</h2>
+        <p class="govuk-body">The GOV.UK Pay environment is regularly tested by independent suppliers.</p>
+        <p class="govuk-body">This includes:</p>
+        <ul class="govuk-list govuk-list--bullet">
           <li>at least one annual IT Health Check</li>
           <li>Internal and external vulnerability scanning</li>
         </ul>
-        <p>GOV.UK Pay is independently assessed for its PCI DSS compliance.</p>
+        <p class="govuk-body">GOV.UK Pay is independently assessed for its PCI DSS compliance.</p>
         
-        <h2 class="heading-small">Cloud Security Principles</h2>
-        <p>GOV.UK Pay has implemented the <a href="https://www.ncsc.gov.uk/collection/cloud-security?curPage=/collection/cloud-security/implementing-the-cloud-security-principles">Cloud Security Principles</a>.</p>
+        <h2 class="govuk-heading-s">Cloud Security Principles</h2>
+        <p class="govuk-body">GOV.UK Pay has implemented the <a class="govuk-link" href="https://www.ncsc.gov.uk/collection/cloud-security?curPage=/collection/cloud-security/implementing-the-cloud-security-principles">Cloud Security Principles</a>.</p>
 
-        <h2 class="heading-small">GOV.UK Service Manual</h2>
-        <p>GDS services follow the standards described in the <a href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a>.</p>
+        <h2 class="govuk-heading-s">GOV.UK Service Manual</h2>
+        <p class="govuk-body">GDS services follow the standards described in the <a class="govuk-link" href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a>.</p>
 
-        <p>The standards describe the best way to build and run a service and include advice about:</p>
-        <ul class="list list-bullet">
+        <p class="govuk-body">The standards describe the best way to build and run a service and include advice about:</p>
+        <ul class="govuk-list govuk-list--bullet">
           <li>accessibility and assisted digital</li>
           <li>agile delivery</li>
           <li>design</li>

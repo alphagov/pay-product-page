@@ -59,7 +59,7 @@
   }
 
   a:focus {
-    color:  $govuk-text-colour;
+    @include govuk-focused-text;
   }
 
   &__title {

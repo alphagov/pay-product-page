@@ -18,7 +18,11 @@
 .hero-alternative-action {
   @include govuk-font($size: 19);
   white-space: nowrap;
-  margin-left: govuk-spacing(3);
+  margin-bottom: govuk-spacing(3);
   position: relative;
-  top: govuk-spacing(2)
+
+  @include govuk-media-query(tablet) {
+    top: govuk-spacing(2);
+    margin-left: govuk-spacing(3);
+  }
 }

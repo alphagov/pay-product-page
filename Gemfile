@@ -16,4 +16,4 @@ gem "sprockets", "4.0.0.beta10"
 gem 'sassc'
 gem 'sass'
 
-gem "rack", "2.0.8" # to address https://github.com/middleman/middleman/issues/2309
+gem "rack", "2.2.2" # to address https://github.com/middleman/middleman/issues/2309

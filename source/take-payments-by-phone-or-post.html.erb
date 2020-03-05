@@ -1,5 +1,5 @@
 ---
-title: Roadmap
+title: Take payments by phone or post
 ---
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
@@ -29,7 +29,7 @@ title: Roadmap
             <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
               <a class="govuk-link" href="/api-integration" itemprop="item"><span itemprop="name">API integration</span></a>
             </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <li class="sub-navigation__item sub-navigation__item--sub sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
               <a class="govuk-link" href="/take-payments-by-phone-or-post" itemprop="item"><span itemprop="name">Take payments by phone or post</span></a>
             </li>
             <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -41,7 +41,7 @@ title: Roadmap
             <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
               <a class="govuk-link" href="/apple-pay-and-google-pay" itemprop="item"><span itemprop="name">Apple Pay and Google Pay</span></a>
             </li>
-            <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
               <a class="govuk-link" href="/roadmap" itemprop="item"><span itemprop="name">Roadmap</span></a>
             </li>
             <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -52,48 +52,47 @@ title: Roadmap
       </div>
 
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Roadmap</h1>
-            <p class="govuk-body">Here’s a list of the new functionality we’re planning to offer through GOV.UK&nbsp;Pay.</p>
-            <div class="govuk-inset-text">
-              <p class="govuk-body">This roadmap is only a guide and may change. We work in 3-monthly cycles.</p>
-            </div>
-             <h2 class="govuk-heading-m">Recently released</h2>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Return card type (debit/ credit) in API searches</li>
-                <li>Reporting for telephone payments</li>
-                <li>Support for 3D Secure 2</li>
-              </ul>
+      <h1 class="govuk-heading-l">Take payments by phone or post</h1>
 
-             <h2 class="govuk-heading-m">October to December 2019</h2>
+      <p class="govuk-body">You can use GOV.UK Pay to take credit and debit card payments by telephone, or post. These are sometimes called ‘MOTO’ payments.</p>
 
-              <p class="govuk-body">This quarter, we’re focussing on work that supports GOV.UK Pay’s growth and making it more efficient to run, including:</p>
+      <p class="govuk-body">You get all of the advantages and security of using GOV.UK Pay, but you fill in your users’ details on the payment pages for them.</p>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Moving to a new platform</li>
-                <li>Implementing <a class="govuk-link" href="https://landing.google.com/sre/sre-book/chapters/service-level-objectives/#indicators-o8seIAcZ">service level objectives</a></li>
-                <li>Transaction rate limits that are tailored to your service’s needs</li>
-               </ul>
+      <p class="govuk-body">You can use this feature to take payments:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>over the phone</li>
+        <li>from users details on paper forms</li>
+      </ul>
 
-              <p class="govuk-body">We’re also working on:</p>
+      <h2 class="govuk-heading-m">Who can use this</h2>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Transaction reporting across multiple services</li>
-                <li>Increasing the CSV download limit from 10,000</li>
-                <li>Additional accessibility research</li>
-              </ul>
+      <p class="govuk-body">This is available for anyone on GOV.UK Pay who uses Stripe, Worldpay or ePDQ as their Payment Service Provider (PSP).</p>
 
-            <h2 class="govuk-heading-m">Later</h2>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Payout reporting for services using GOV.UK Pay's <a class="govuk-link" href="https://www.payments.service.gov.uk/payment-service-provider/">Payment Service Provider</a>, Stripe</li>
-                <li>Support for Apple Pay and Google Pay for services using GOV.UK Pay's PSP</li>
-                <li>Scheduled CSV downloads</li>
-                <li>Recurring card payments</li>
-                <li>Extending our Direct Debit pilot</li>
-              </ul>
+      <p class="govuk-body">It isn’t currently available to Smartpay customers.</p>
 
-            <h2 class="govuk-heading-m">Get in touch</h2>
-            <p class="govuk-body"><a class="govuk-link" href="https://www.payments.service.gov.uk/support/">Let us know</a> if you have any questions, or there are other features you’d like us to develop.</p>
-            <p class="govuk-body"><a class="govuk-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdJRj0asGOu3VJZ-0UPmx0T6w7FMsdduRAS51k18TS2XlNC7w/viewform">Sign up to the GOV.UK Pay newsletter</a> to find out more.</p>
+      <h2 class="govuk-heading-m">Why use this feature</h2>
+
+      <p class="govuk-body">All of your payments will be in one system, there’s no need to use any other software. You simply use the same API as you do for online card payments. So all of your reporting, refund processing etc can all be done in the same place.</p>
+
+      <p class="govuk-body">This feature also gives customers an alternative way of paying. It allows services to easily help users that might be struggling to access an online service. This is called <a class="govuk-link" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction">assisted digital</a>.</p>
+
+      <h2 class="govuk-heading-m">Other uses</h2>
+
+      <p class="govuk-body">If you already have a telephone payments system, but would like your online and phone payment records in one place, use your existing API endpoint to send us your telephone payments data.</p>
+
+      <p class="govuk-body">This allows you to do all of your reporting and refunds in the same place.</p>
+
+      <h2 class="govuk-heading-m">Set up your account</h2>
+
+      <p class="govuk-body">If you want to take payments like this, just <a class="govuk-link" href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk">get in touch</a>.</p>
+
+      <p class="govuk-body">You’ll need to be <a class="govuk-link" href="https://docs.payments.service.gov.uk/security/#payment-card-industry-pci-compliance">PCI compliant</a> and we’ll need to see evidence of this before we can set up your account to receive payments in this way.</p>
+
+      <h2 class="govuk-heading-m">Future developments</h2>
+
+      <p class="govuk-body">We’d like to add to this in future. We’re particularly interested in hearing about how you use, or might use, Interactive Voice Response (IVR) payments.</p>
+
+      <p class="govuk-body"><a class="govuk-link" href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk">Let us know</a> if you’re taking payments by phone or post, and what else we can do to help with this.</p>
     </div>
   </main>
 </div>

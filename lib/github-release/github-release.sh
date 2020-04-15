@@ -36,7 +36,7 @@ EOF
 githubrelease_new_release ()
 {
     data="{\"tag_name\": \"$githubrelease_option_version\",\"target_commitish\": \"master\",\"name\": \"$githubrelease_option_version\",\"body\": \"Release of version $githubrelease_option_version\",\"draft\": false,\"prerelease\": false}"
-    response=$(curl --data "$data" https://api.github.com/repos/alphagov/pay-product-page/releases?access_token=$githubrelease_option_authkey)
+    response=$(curl -H "Authorization:token $githubrelease_option_authkey" --data "$data" https://api.github.com/repos/alphagov/pay-product-page/releases)
 
     inf "github-release" "Release creation: $response"
 

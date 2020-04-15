@@ -43,9 +43,15 @@
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
 
-    <div id="global-cookie-message">
-      <p>GOV.UK Pay uses cookies to make the site simpler. <a class="govuk-link" href="https://www.payments.service.gov.uk/cookies/">Find out more about cookies</a></p>
-    </div>
+    <% if config.new_cookie_banner == true %>
+      <!-- TODO insert new cookie banner html -->
+    <% end %>
+    
+    <% if config.new_cookie_banner == false %>
+      <div id="global-cookie-message">
+        <p>GOV.UK Pay uses cookies to make the site simpler. <a class="govuk-link" href="https://www.payments.service.gov.uk/cookies/">Find out more about cookies</a></p>
+      </div>
+    <% end %>
 
     <header class="govuk-header <%= current_page.data.hero && "govuk-header__container--no-border" %>" role="banner" data-module="govuk-header">
       <div class="govuk-header__container govuk-width-container">

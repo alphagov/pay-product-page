@@ -63,6 +63,13 @@
           </div>
         </div>
       </div>
+
+      <div class="govuk-pay-cookie-banner__confirmation" tabindex="-1">
+        <p class="govuk-pay-cookie-banner__confirmation-message govuk-body">
+          You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.
+        </p>
+        <button class="dm-cookie-banner__hide-button govuk-link" data-hide-cookie-banner="true" role="link">Hide</button>
+      </div>
     <% end %>
     
     <% if config.new_cookie_banner == false %>

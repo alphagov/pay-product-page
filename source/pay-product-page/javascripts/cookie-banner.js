@@ -236,7 +236,12 @@ CookieBanner.prototype.setCookieConsent = function (analyticsConsent) {
 }
 
 CookieBanner.prototype.showConfirmationMessage = function (analyticsConsent) {
+  var messagePrefix = analyticsConsent ? 'You’ve accepted analytics cookies.' : 'You told us not to use analytics cookies.'
+
   this.$cookieBannerMainContent = document.querySelector('.govuk-pay-cookie-banner__wrapper')
+  this.$cookieBannerConfirmationMessage = document.querySelector('.govuk-pay-cookie-banner__confirmation-message')
+
+  this.$cookieBannerConfirmationMessage.insertAdjacentText('afterbegin', messagePrefix)
   this.$cookieBannerMainContent.style.display = 'none'
   this.$module.cookieBannerConfirmationMessage.style.display = 'block'
 }

@@ -2,6 +2,8 @@
 //= require gaap-analytics.min.js
 //= require cookies.js
 //= require cookie-banner.js
+//= require analytics.js
+//= require pii.js
 
 document.addEventListener("DOMContentLoaded", function(event) {
   GOVUKFrontend.initAll()

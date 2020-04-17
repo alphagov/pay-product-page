@@ -22,21 +22,6 @@
 
     <!-- Google Search Console ownership verification -->
     <meta name="google-site-verification" content="niWnSqImOWz6mVQTYqNb5tFK8HaKSB4b3ED4Z9gtUQ0" />
-    <% if false %>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', <%= config.analytics %>, 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('set', 'displayFeaturesTask', null);
-      ga('set', 'transport', 'beacon');
-
-      ga('send', 'pageview');
-    </script>
-    <% end %>
   </head>
 
   <body class="govuk-template__body">
@@ -62,7 +47,7 @@
             <a class="govuk-link dm-cookie-banner__link" href="/cookies">How GOV.UK Pay uses cookies</a>
           </div>
         </div>
-        
+
         <div class="govuk-pay-cookie-banner__confirmation" tabindex="-1">
           <p class="govuk-pay-cookie-banner__confirmation-message govuk-body">
             You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.

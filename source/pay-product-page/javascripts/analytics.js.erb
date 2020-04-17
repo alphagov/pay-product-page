@@ -1,15 +1,19 @@
 function InitialiseAnalytics () {
+  <% if config.analytics != '' %>
   LoadGoogleAnalytics()
 
   SetupAnalytics({
-      trackingId: 'UA-72121642-9',
-      anonymizeIp: true,
-      displayFeaturesTask: null,
-      transport: 'beacon',
-      expires: 365
-    })
-  
+    trackingId: <%= config.analytics %>,
+    anonymizeIp: true,
+    displayFeaturesTask: null,
+    transport: 'beacon',
+    expires: 365
+  })
+
   TrackPageview()
+  <% else %> 
+    return 
+  <% end %>
 }
 
 function LoadGoogleAnalytics () { /* eslint-disable */

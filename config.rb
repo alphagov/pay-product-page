@@ -30,7 +30,7 @@ config[:js_dir] = 'pay-product-page/javascripts'
 
 # Google analytics
 configure :development do
-  set :analytics, ""
+  set :analytics, "''"
   set :new_cookie_banner, false
 end
 

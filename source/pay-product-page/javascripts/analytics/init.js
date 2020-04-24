@@ -1,17 +1,17 @@
 //= require ./analytics.js
 
-window.GovPay = window.GovPay || {};
-window.GovPay.InitAnalytics = (function () {
+window.GovUkPay = window.GovUkPay || {};
+window.GovUkPay.InitAnalytics = (function () {
   // TODO: Remove hard coded tracking IDs to make this more generic and useful to others
   var TRACKING_ID = "UA-72121642-9";
 
 
   InitialiseAnalytics = function () {
-    window.GovPay.Analytics.LoadGoogleAnalytics();
+    window.GovUkPay.Analytics.LoadGoogleAnalytics();
 
     // Configure profiles and make interface public
     // for custom dimensions, virtual pageviews and events
-    window.GovPay.analytics = window.GovPay.Analytics.SetupAnalytics({
+    window.GovUkPay.analytics = window.GovUkPay.Analytics.SetupAnalytics({
       trackingId: TRACKING_ID,
       anonymizeIp: true,
       displayFeaturesTask: null,
@@ -20,7 +20,7 @@ window.GovPay.InitAnalytics = (function () {
     });
 
     // Track initial pageview
-    window.GovPay.Analytics.TrackPageview();
+    window.GovUkPay.Analytics.TrackPageview();
   };
 
   return {

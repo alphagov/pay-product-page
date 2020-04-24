@@ -6,5 +6,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   GOVUKFrontend.initAll()
   GAAP.analytics.eventTracking.init()
-  window.GovPay.CookieBanner.checkForBannerAndInit();
+  window.GovUkPay.CookieBanner.checkForBannerAndInit();
 });

@@ -17,7 +17,7 @@ beforeAll(() => {
   })
 
   require('./init')
-  window.GovPay.Analytics = {
+  window.GovUkPay.Analytics = {
     LoadGoogleAnalytics: jest.fn(),
     SetupAnalytics: jest.fn(),
     TrackPageview: jest.fn(),
@@ -33,11 +33,11 @@ describe('InitialiseAnalytics component', () => {
     })
 
     it('the Google Analytics libraries will have been loaded', () => {
-      expect(window.GovPay.Analytics.LoadGoogleAnalytics).toHaveBeenCalled()
+      expect(window.GovUkPay.Analytics.LoadGoogleAnalytics).toHaveBeenCalled()
     })
 
     it('the Analytics tracker will have been configured', () => {
-      expect(window.GovPay.Analytics.SetupAnalytics).toHaveBeenCalledWith(
+      expect(window.GovUkPay.Analytics.SetupAnalytics).toHaveBeenCalledWith(
         expect.objectContaining({
           // Do not assert cookieDomain or trackingId for now
           anonymizeIp: true,
@@ -49,7 +49,7 @@ describe('InitialiseAnalytics component', () => {
     })
 
     it('fires an initial trackPageview', () => {
-      expect(window.GovPay.Analytics.TrackPageview).toHaveBeenCalled()
+      expect(window.GovUkPay.Analytics.TrackPageview).toHaveBeenCalled()
     })
   })
 })

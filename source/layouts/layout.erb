@@ -44,7 +44,7 @@
     <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
 
     <% if config.new_cookie_banner == true %>
-      <!-- TODO insert new cookie banner html -->
+      <%= partial 'partials/cookie-banner.erb' %>
     <% end %>
     
     <% if config.new_cookie_banner == false %>

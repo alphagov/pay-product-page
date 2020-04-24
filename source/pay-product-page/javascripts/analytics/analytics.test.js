@@ -21,7 +21,7 @@ beforeEach(() => {
   // Set up mock
   window.ga = jest.fn();
 
-  window.GovPay.Analytics.SetupAnalytics(defaultConfig);
+  window.GovUkPay.Analytics.SetupAnalytics(defaultConfig);
 });
 
 afterEach(() => {
@@ -44,7 +44,7 @@ describe("analytics component", () => {
 
   it("setup google analytics", () => {
     expect(window.GoogleAnalyticsObject).not.toBeDefined();
-    window.GovPay.Analytics.LoadGoogleAnalytics();
+    window.GovUkPay.Analytics.LoadGoogleAnalytics();
     expect(window.GoogleAnalyticsObject).toEqual("ga");
   });
 
@@ -62,7 +62,7 @@ describe("analytics component", () => {
     it("trackPageView sends pageview event", () => {
       window.ga.mockClear();
 
-      window.GovPay.Analytics.TrackPageview();
+      window.GovUkPay.Analytics.TrackPageview();
 
       expect(window.ga.mock.calls[0]).toEqual([
         "send",
@@ -86,7 +86,7 @@ describe("analytics component", () => {
     it("trackPageView sends a pageview event", () => {
       window.ga.mockClear();
 
-      window.GovPay.Analytics.TrackPageview();
+      window.GovUkPay.Analytics.TrackPageview();
 
       expect(window.ga.mock.calls[0]).toEqual([
         "send",

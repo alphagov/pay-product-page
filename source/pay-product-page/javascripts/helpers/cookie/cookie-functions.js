@@ -1,6 +1,6 @@
-window.GovPay = window.GovPay || {}
+window.GovUkPay = window.GovUkPay || {}
 
-window.GovPay.Cookie = (function () {
+window.GovUkPay.Cookie = (function () {
   var DEFAULT_COOKIE_CONSENT = {
     analytics: false
   }
@@ -145,7 +145,7 @@ window.GovPay.Cookie = (function () {
   }
 
   var setCookie = function(name, value, options) {
-    if (window.GovPay.Cookie.checkConsentCookie(name, value)) {
+    if (window.GovUkPay.Cookie.checkConsentCookie(name, value)) {
       if (typeof options === 'undefined') {
         options = {}
       }

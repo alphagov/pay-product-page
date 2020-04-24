@@ -1,9 +1,9 @@
 //= require ../helpers/cookie/cookie-functions.js
 //= require ../analytics/init.js
 
-window.GovPay = window.GovPay || {};
+window.GovUkPay = window.GovUkPay || {};
 
-window.GovPay.CookieBanner = (function () {
+window.GovUkPay.CookieBanner = (function () {
   $module = {};
   COOKIE_NAME = "govuk_pay_cookie_policy";
 
@@ -60,7 +60,7 @@ window.GovPay.CookieBanner = (function () {
 
   showCookieMessage = function () {
     // Show the cookie banner if policy cookie not set
-    var hasCookiesPolicy = GovPay.Cookie.getCookie(COOKIE_NAME);
+    var hasCookiesPolicy = window.GovUkPay.Cookie.getCookie(COOKIE_NAME);
 
     if ($module.cookieBanner && !hasCookiesPolicy) {
       $module.cookieBanner.style.display = "block";
@@ -78,12 +78,12 @@ window.GovPay.CookieBanner = (function () {
   };
 
   setCookieConsent = function (analyticsConsent) {
-    window.GovPay.Cookie.setConsentCookie({ analytics: analyticsConsent });
+    window.GovUkPay.Cookie.setConsentCookie({ analytics: analyticsConsent });
 
     showConfirmationMessage(analyticsConsent);
     $module.cookieBannerConfirmationMessage.focus();
     if (analyticsConsent) {
-      window.GovPay.InitAnalytics.InitialiseAnalytics();
+      window.GovUkPay.InitAnalytics.InitialiseAnalytics();
     }
   };
 

@@ -1,5 +1,5 @@
-window.GovPay = window.GovPay || {};
-window.GovPay.Analytics = (function () {
+window.GovUkPay = window.GovUkPay || {};
+window.GovUkPay.Analytics = (function () {
   // Stripped-down wra§pper for Google Analytics, based on:
   // https://github.com/alphagov/static/blob/master/doc/analytics.md
   SetupAnalytics = function (config) {

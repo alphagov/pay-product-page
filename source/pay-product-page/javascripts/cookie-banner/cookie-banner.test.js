@@ -16,25 +16,20 @@ describe("Cookie Banner", () => {
   });
 
   describe("Existing User", () => {
-    it(`should NOT see cookie banner when cookie consent = true`, () => {
-      JsCookie.set("govuk_pay_cookie_policy", "{analytics: true}");
+    it(`should NOT see cookie banner but initialise analytics when cookie consent = true`, () => {
+      JsCookie.set("govuk_pay_cookie_policy", "{\"analytics\": true}");
       window.GovUkPay.CookieBanner.checkForBannerAndInit();
 
-      expect(
-        document.querySelector(".pay-cookie-banner").style.display
-      ).toEqual("none");
+      expect(document.querySelector(".pay-cookie-banner").style.display).toEqual("none");
+      expect(window.GovUkPay.InitAnalytics.InitialiseAnalytics.mock.calls.length).toBe(1);
     });
 
-    it(`should NOT see cookie banner when cookie consent = false`, () => {
-      JsCookie.set("govuk_pay_cookie_policy", "{analytics: false}");
+    it(`should NOT see cookie banner and not initialise analytics when cookie consent = false`, () => {
+      JsCookie.set("govuk_pay_cookie_policy", "{\"analytics\": false}");
       window.GovUkPay.CookieBanner.checkForBannerAndInit();
 
-      expect(
-        document.querySelector(".pay-cookie-banner").style.display
-      ).toEqual("none");
-      expect(
-        window.GovUkPay.InitAnalytics.InitialiseAnalytics.mock.calls.length
-      ).toBe(0);
+      expect(document.querySelector(".pay-cookie-banner").style.display).toEqual("none");
+      expect(window.GovUkPay.InitAnalytics.InitialiseAnalytics.mock.calls.length).toBe(0);
     });
   });
 

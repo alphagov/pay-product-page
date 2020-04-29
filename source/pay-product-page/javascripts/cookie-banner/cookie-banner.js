@@ -60,12 +60,20 @@ window.GovUkPay.CookieBanner = (function () {
 
   showCookieMessage = function () {
     // Show the cookie banner if policy cookie not set
-    var hasCookiesPolicy = window.GovUkPay.Cookie.getCookie(COOKIE_NAME);
+    var hasCookiesPolicy = window.GovUkPay.Cookie.getCookie(COOKIE_NAME)
 
-    if ($module.cookieBanner && !hasCookiesPolicy) {
-      $module.cookieBanner.style.display = "block";
+    if ($module.cookieBanner) {
+      if (!hasCookiesPolicy) {
+        $module.cookieBanner.style.display = "block"
+      } else {
+        const consentCookieObj =window.GovUkPay.Cookie.getConsentCookie()
+        if (consentCookieObj && consentCookieObj.analytics === true) {
+          window.GovUkPay.InitAnalytics.InitialiseAnalytics();
+        }
+        $module.cookieBanner.style.display = "none"
+      }
     }
-  };
+  }
 
   hideCookieMessage = function (event) {
     if ($module.cookieBannerConfirmationMessage) {

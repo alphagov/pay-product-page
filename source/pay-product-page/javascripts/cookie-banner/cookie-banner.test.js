@@ -101,18 +101,18 @@ describe("Cookie Banner", () => {
     });
   });
 
-  describe('Confirmation mesage', () => {
+  describe("Confirmation mesage", () => {
     it(`hide button works`, () => {
       window.GovUkPay.CookieBanner.checkForBannerAndInit();
       document.querySelector("button[data-accept-cookies=true]").click();
-  
+
       const confirmBanner = document.querySelector(
         ".pay-cookie-banner__confirmation"
       );
       expect(confirmBanner.style.display).toEqual("block");
 
-      confirmBanner.querySelector('.pay-cookie-banner__hide-button').click();
-      expect(confirmBanner.style.display).toEqual('none');
+      confirmBanner.querySelector(".pay-cookie-banner__hide-button").click();
+      expect(confirmBanner.style.display).toEqual("none");
     });
-  })
+  });
 });

@@ -28,6 +28,8 @@ config[:images_dir] = 'pay-product-page/images'
 config[:fonts_dir] = 'pay-product-page/fonts'
 config[:js_dir] = 'pay-product-page/javascripts'
 
+ignore '**/javascripts/*test*.js'
+
 # Google analytics
 configure :development do
   set :analytics, ""
@@ -36,7 +38,7 @@ end
 
 configure :build do
   set :analytics, "'UA-72121642-9'"
-  set :new_cookie_banner, false
+  set :new_cookie_banner, true
 end
 
 

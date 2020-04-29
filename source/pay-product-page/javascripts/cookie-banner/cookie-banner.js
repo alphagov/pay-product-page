@@ -41,18 +41,18 @@ window.GovUkPay.CookieBanner = (function () {
       "button[data-accept-cookies=true]"
     );
     if (this.$acceptCookiesLink) {
-      this.$acceptCookiesLink.addEventListener("click", () =>
-        setCookieConsent(true)
-      );
+      this.$acceptCookiesLink.addEventListener("click", function () {
+        setCookieConsent(true);
+      })
     }
 
     this.$rejectCookiesLink = $module.cookieBanner.querySelector(
       "button[data-accept-cookies=false]"
     );
     if (this.$rejectCookiesLink) {
-      this.$rejectCookiesLink.addEventListener("click", () =>
-        setCookieConsent(false)
-      );
+      this.$rejectCookiesLink.addEventListener("click", function () {
+        setCookieConsent(false);
+      })
     }
 
     this.showCookieMessage();

@@ -28,7 +28,7 @@ config[:images_dir] = 'pay-product-page/images'
 config[:fonts_dir] = 'pay-product-page/fonts'
 config[:js_dir] = 'pay-product-page/javascripts'
 
-ignore '**/*test*.js'
+ignore '**/javascripts/*test*.js'
 
 # Google analytics
 configure :development do

@@ -2,17 +2,18 @@
  * @jest-environment jsdom
  */
 
+const jsCookie = require("js-cookie");
+
+beforeEach(() => {
+  clearCookies()
+});
+
 describe("Cookie settings", () => {
   beforeAll(() => {
     require("./cookie-functions");
   });
 
   describe("getCookie", () => {
-    afterEach(() => {
-      // Delete _ga cookie
-      document.cookie = "_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    });
-
     it("returns null if no cookie present", () => {
       expect(window.GovUkPay.Cookie.getCookie("_ga")).toEqual(null);
     });
@@ -24,13 +25,6 @@ describe("Cookie settings", () => {
   });
 
   describe("setCookie", () => {
-    afterEach(() => {
-      // Delete test cookies
-      document.cookie = "myCookie=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
-      document.cookie =
-        "govuk_pay_cookie_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    });
-
     it("doesnt set a cookie with a value if not a recognised name", () => {
       window.GovUkPay.Cookie.setCookie("myCookie", "myValue");
 
@@ -83,70 +77,50 @@ describe("Cookie settings", () => {
   });
 
   describe("getConsentCookie", () => {
-    afterEach(() => {
-      // Delete consent cookie
-      document.cookie =
-        "govuk_pay_cookie_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    });
-
     it("returns null if consent cookie not present", () => {
       expect(window.GovUkPay.Cookie.getConsentCookie()).toEqual(null);
     });
 
     it("returns consent cookie object if present", () => {
-      document.cookie = 'govuk_pay_cookie_policy={"analytics":false}';
+      document.cookie = 'govuk_pay_cookie_policy={"analytics":false}; domain=.example.org';
 
-      expect(window.GovUkPay.Cookie.getConsentCookie()).toEqual({
-        analytics: false,
-      });
+      expect(window.GovUkPay.Cookie.getConsentCookie()).toEqual({analytics: false,});
     });
   });
 
   describe("setConsentCookie", () => {
-    afterEach(() => {
-      // Delete consent cookie
-      document.cookie =
-        "govuk_pay_cookie_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    it("changes existing cookie value to false", () => {
+      document.cookie = 'govuk_pay_cookie_policy={"analytics":true}; domain=.example.org';
+
+      window.GovUkPay.Cookie.setConsentCookie({analytics: false});
+
+      expect(window.GovUkPay.Cookie.getCookie('govuk_pay_cookie_policy'))
+          .toEqual("{\"analytics\":false}");
     });
 
-    describe("to false", () => {
-      it("changes existing cookie value to false", () => {
-        document.cookie = 'govuk_pay_cookie_policy={"analytics":true};';
+    it("deletes existing analytics cookies", () => {
+      document.cookie = 'govuk_pay_cookie_policy={"analytics":true}; domain=.example.org'
+      document.cookie = '_ga=ga1; domain=.example.org'
+      document.cookie = '_gid=gid1; domain=.example.org'
+      document.cookie = '_gat_govuk_shared=shared; domain=.example.org'
 
-        window.GovUkPay.Cookie.setConsentCookie({ analytics: false });
+      window.GovUkPay.Cookie.setConsentCookie({analytics: false});
 
-        expect(document.cookie).toEqual(
-          'govuk_pay_cookie_policy={"analytics":false}'
-        );
-      });
-
-      it("deletes existing analytics cookies", () => {
-        document.cookie = "_ga=test;_gid=test;_gat_govuk_shared=test";
-
-        window.GovUkPay.Cookie.setConsentCookie({ analytics: false });
-
-        expect(document.cookie).toEqual(
-          'govuk_pay_cookie_policy={"analytics":false}'
-        );
-        // Make sure those analytics cookies are definitely gone
-        expect(window.GovUkPay.Cookie.getCookie("_ga")).toEqual(null);
-        expect(window.GovUkPay.Cookie.getCookie("_gid")).toEqual(null);
-        expect(window.GovUkPay.Cookie.getCookie("_gat_govuk_shared")).toEqual(
-          null
-        );
-      });
+      expect(window.GovUkPay.Cookie.getCookie("govuk_pay_cookie_policy"))
+          .toEqual("{\"analytics\":false}");
+      // Make sure those analytics cookies are definitely gone
+      expect(window.GovUkPay.Cookie.getCookie("_ga")).toEqual(null);
+      expect(window.GovUkPay.Cookie.getCookie("_gid")).toEqual(null);
+      expect(window.GovUkPay.Cookie.getCookie("_gat_govuk_shared")).toEqual(null);
     });
 
-    describe("to true", () => {
-      it("sets existing cookie policy cookie to true", () => {
-        document.cookie = 'govuk_pay_cookie_policy={"analytics":false};';
+    it("changes existing cookie value to true", () => {
+      document.cookie = 'govuk_pay_cookie_policy={"analytics":false}; domain=.example.org'
 
-        window.GovUkPay.Cookie.setConsentCookie({ analytics: true });
+      window.GovUkPay.Cookie.setConsentCookie({analytics: true});
 
-        expect(document.cookie).toEqual(
-          'govuk_pay_cookie_policy={"analytics":true}'
-        );
-      });
+      expect(window.GovUkPay.Cookie.getCookie('govuk_pay_cookie_policy'))
+          .toEqual("{\"analytics\":true}");
     });
   });
 
@@ -159,3 +133,12 @@ describe("Cookie settings", () => {
     });
   });
 });
+
+function clearCookies() {
+  Object.keys(jsCookie.get()).forEach(function (cookieName) {
+    var neededAttributes = {
+      domain: '.example.org'
+    };
+    jsCookie.remove(cookieName, neededAttributes);
+  });
+}

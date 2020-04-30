@@ -40,12 +40,10 @@ describe("Cookie settings", () => {
     JsCookie.remove("govuk_pay_cookie_policy");
 
     document.body.innerHTML = testCookiePageTemplate;
-
-    document.querySelector(".pay-cookie-settings-alert--error").style.display =
-      "none";
-    document.querySelector(
-      ".pay-cookie-settings-alert--success"
-    ).style.display = "none";
+    document.querySelector(".pay-cookie-settings-alert--error").style.display = "none";
+    document.querySelector(".pay-cookie-settings-alert--success").style.display = "none";
+    // expire analytics cookie explictly, as cookies are not cleared in jest environment during the tests
+    document.cookie = "govuk_pay_cookie_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=.example.org";
   });
 
   describe("initialising the component", () => {
@@ -278,7 +276,7 @@ describe("Cookie settings", () => {
 
           expect(
             document.querySelector(".pay-cookie-settings__prev-page").href
-          ).toEqual("http://localhost/page1");
+          ).toEqual("http://www.example.org/page1");
         });
 
         it("when the referrer is the same page, do not show back link", () => {

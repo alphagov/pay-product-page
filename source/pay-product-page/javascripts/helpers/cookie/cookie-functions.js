@@ -94,7 +94,6 @@ window.GovUkPay.Cookie = (function () {
             Cookie(cookie, null)
   
             if (Cookie(cookie)) {
-
               document.cookie = cookie + '=;expires=' + new Date() + ';domain=' + getCookieDomain() + ';path=/'
             }
           }
@@ -106,7 +105,7 @@ window.GovUkPay.Cookie = (function () {
   }
 
   var getCookieDomain = function(){
-    return window.location.hostname.replace(/^www\./, '.') 
+    return window.location.hostname.replace(/^www\./, '.')
   }
 
   var checkConsentCookieCategory = function (cookieName, cookieCategory) {
@@ -149,7 +148,7 @@ window.GovUkPay.Cookie = (function () {
       if (typeof options === 'undefined') {
         options = {}
       }
-      var cookieString = name + '=' + value + '; path=/'
+      var cookieString = name + '=' + value + '; path=/; domain=' +  getCookieDomain()
       if (options.days) {
         var date = new Date()
         date.setTime(date.getTime() + (options.days * 24 * 60 * 60 * 1000))

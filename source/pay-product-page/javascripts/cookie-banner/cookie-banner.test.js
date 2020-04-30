@@ -9,10 +9,11 @@ describe("Cookie Banner", () => {
     window.GovUkPay = window.GovUkPay || {};
     window.GovUkPay.InitAnalytics = {};
     window.GovUkPay.InitAnalytics.InitialiseAnalytics = jest.fn();
-
     document.querySelector(".pay-cookie-banner").style.display = "none";
     require("../helpers/cookie/cookie-functions");
     require("./cookie-banner");
+    // expire analytics cookie explictly, as cookies are not cleared in jest environment during the tests
+    document.cookie = "govuk_pay_cookie_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=.example.org";
   });
 
   describe("Existing User", () => {

@@ -266,7 +266,7 @@ describe("Cookie settings", () => {
         });
 
         it("when there is a referrer, it does show a back link", () => {
-            Object.defineProperty(window.document, 'referrer', { value: "http://localhost/page1", configurable: true })  
+            Object.defineProperty(window.document, 'referrer', { value: "http://www.example.org/page1", configurable: true })  
           window.GovUkPay.CookieSettings.submitSettingsForm(submitEvent);
   
           expect(
@@ -280,7 +280,7 @@ describe("Cookie settings", () => {
         });
 
         it("when the referrer is the same page, do not show back link", () => {
-            Object.defineProperty(window.document, 'referrer', { value: "http://localhost/", configurable: true
+            Object.defineProperty(window.document, 'referrer', { value: "http://www.example.org/", configurable: true
          })  
           window.GovUkPay.CookieSettings.submitSettingsForm(submitEvent);
   

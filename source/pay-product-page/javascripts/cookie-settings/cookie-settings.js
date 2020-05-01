@@ -104,7 +104,7 @@ window.GovUkPay.CookieSettings = (function() {
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
 
-        if (referrer && referrer !== document.location.pathname) {
+        if (referrer && referrer !== document.location.href) {
             previousPageLink.href = referrer;
             previousPageLink.style.display = "block";
         } else {
@@ -131,7 +131,7 @@ window.GovUkPay.CookieSettings = (function() {
 
 
     var getReferrerLink = function() {
-        return document.referrer ? new URL(document.referrer).pathname : false;
+        return document.referrer ? document.referrer : false
     };
 
     return {

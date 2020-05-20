@@ -9,9 +9,9 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman', '>= 4.3.4'
-gem 'middleman-livereload'
-gem "middleman-sprockets"
+gem 'middleman', '>= 4.3.5'
+gem 'middleman-livereload', '>= 3.4.6'
+gem "middleman-sprockets", ">= 4.1.1"
 gem "sprockets", "4.0.0.beta10"
 gem 'sassc'
 gem 'sass'

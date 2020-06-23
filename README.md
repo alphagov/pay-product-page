@@ -34,18 +34,16 @@ Look at the CSS for the individual components for usage examples and notes.
 
 ## Releasing a Static Copy of the Site
 
-The command line script `github-release` allows you to easily build an artifact containing the generated static site and publish it on GitHub in a format that makes it suitable for use as a Node.js dependency.
+Use the command line script `github-release` to build an artifact containing the generated static site which is published as a [GitHub release](https://github.com/alphagov/pay-product-page/releases).
 
-Using the GitHub API, the script creates a new release from `master` with an associated tag. On your local machine, it then builds a static version of the site (using `middleman`) from your working copy, adds a `package.json` file (which makes it a Node.js module) inside the resulting `build` directory, `tar`s and `gzip`s the `build` directory, then attaches the gzipped tarball as a binary to the release in GitHub, where it appears alongside the source code downloads on the releases page. This artifact is available over HTTPS and can be used as a dependency in a Node.js project.
+1. Checkout and `pull` the `master` branch
+2. Follow the instructions above under [Building a static copy of the site](#building-a-static-copy-of-the-site)
+3. Generate a [personal access](https://github.com/settings/tokens) token in GitHub
+4. Run the following:
 
-In order to run the script, you need to declare an environment variable called `GITHUB_TOKEN` containing your GitHub authentication token:
+```GITHUB_TOKEN=xxx bin/github-release --version 1.0.1 publish```
 
-`GITHUB_TOKEN=xxx`
+>- `GITHUB_TOKEN` is the personal access token you generated
+>- the `--version` argument specifies the version of the new release (pick something sensible based on the previous releases)
 
-Then you can run the script:
-
-`bin/github-release --version 1.0.1 publish`
-
-The `--version` argument specifies the version of the new release (pick something sensible based on the previous releases). This version number is used for the release version, tag name, `version` property in the `package.json` and as part of the file name for the binary.
-
-The script is bash and has no dependencies other than `curl` and those necessary for `middleman`.
+To deploy the product page, update the `pay-product-page` dependency in [`pay-frontend`](https://github.com/alphagov/pay-frontend/blob/master/package.json) to point to the GitHub URL for the `.tgz` file associated with the [GitHub release](https://github.com/alphagov/pay-product-page/releases). Then deploy `pay-frontend`.

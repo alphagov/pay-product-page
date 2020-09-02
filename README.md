@@ -38,7 +38,7 @@ Use the command line script `github-release` to build an artifact containing the
 
 1. Checkout and `pull` the `master` branch
 2. Follow the instructions above under [Building a static copy of the site](#building-a-static-copy-of-the-site)
-3. Generate a [personal access](https://github.com/settings/tokens) token in GitHub
+3. Generate a [personal access](https://github.com/settings/tokens) token in GitHub. The token should have the `repo` scope.
 4. Run the following:
 
 ```GITHUB_TOKEN=xxx bin/github-release --version 1.0.1 publish```

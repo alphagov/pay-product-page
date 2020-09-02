@@ -87,4 +87,15 @@
   &-smaller {
     height: 3.5em;
   }
+
+  &--fcdo{
+    height: auto;
+    max-height: 4em;
+
+    @include govuk-media-query(tablet) {
+      box-sizing: border-box;
+      margin: 0;     
+      padding-right: 20px; 
+    } 
+  }
 }

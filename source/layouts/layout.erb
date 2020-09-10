@@ -46,7 +46,7 @@
     <% if config.new_cookie_banner == true %>
       <%= partial 'partials/cookie-banner.erb' %>
     <% end %>
-    
+
     <% if config.new_cookie_banner == false %>
       <div id="global-cookie-message">
         <p>GOV.UK Pay uses cookies to make the site simpler. <a class="govuk-link" href="https://www.payments.service.gov.uk/cookies/">Find out more about cookies</a></p>
@@ -80,7 +80,6 @@
             <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
             <%
               {
-                'About' => '/',
                 'Get started' => '/getstarted/',
                 'Documentation' => 'https://docs.payments.service.gov.uk',
                 'Support' => '/support/',
@@ -88,7 +87,7 @@
               }.each do |title, url|
             %>
               <li class="govuk-header__navigation-item<% if url == current_page.url %> govuk-header__navigation-item--active" aria-current="page<% end %>">
-                <a class="govuk-header__link" href="<%= url == current_page.url ? "#main" : url %>">
+                <a class="govuk-header__link" href="<%= url %>">
                   <%= title %>
                 </a>
               </li>

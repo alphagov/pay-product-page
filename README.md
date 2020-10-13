@@ -47,3 +47,11 @@ Use the command line script `github-release` to build an artifact containing the
 >- the `--version` argument specifies the version of the new release (pick something sensible based on the previous releases)
 
 To deploy the product page, update the `pay-product-page` dependency in [`pay-frontend`](https://github.com/alphagov/pay-frontend/blob/master/package.json) to point to the GitHub URL for the `.tgz` file associated with the [GitHub release](https://github.com/alphagov/pay-product-page/releases). Then deploy `pay-frontend`.
+
+## Licence
+
+[MIT Licence](LICENCE)
+
+## Responsible Disclosure
+
+GOV.UK Pay aims to stay secure for everyone. If you are a security researcher and have discovered a security vulnerability in this code, we appreciate your help in disclosing it to us in a responsible manner. We will give appropriate credit to those reporting confirmed issues. Please e-mail gds-team-pay-security@digital.cabinet-office.gov.uk with details of any issue you find, we aim to reply quickly.

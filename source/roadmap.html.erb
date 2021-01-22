@@ -59,47 +59,58 @@ title: Roadmap
             </div>
              <h2 class="govuk-heading-m">Recently released</h2>
               <ul class="govuk-list govuk-list--bullet">
-                <li>Making GOV.UK Pay more accessible for users</li>
-                <li>Hide sensitive card details when call centre agents are working from home (a <a class="govuk-link" href="https://www.payments.service.gov.uk/take-payments-by-phone-or-post/">MOTO payments</a> feature)</li>
-                <li>Increased the <a class="govuk-link" href="https://docs.payments.service.gov.uk/custom_metadata/#add-custom-metadata">metadata</a> value limit from 50 to 100 characters</li>
-                <li>Reports on bank payouts from Stripe available via CSV and API</li>
-                <li>Performance improvements to the Transactions page in the <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/login">admin tool</a></li>
-                <li>Various operational improvements and bug fixes</li>
+                <li>Protection for in-flight payments when switching between 3D Secure 1 and Worldpay’s 3DS Flex, so that users don’t have to retry payments</li>
+                <li>Security keys for 3DS Flex are checked when entered, so that users’ payments won’t be disrupted</li>
+                <li>Added support for Google Pay due to Strong Customer Authentication requirements</li>
+                <li>Made it easier to add reporting columns to payment links, for collecting data like cost centre codes</li>
+                <li>Made Stripe payout data available via API as well as CSV download</li>
+                <li>Improved guidance on for MOTO payments, custom branding and Strong Customer Authentication</li>
+                <li>Various operational improvements and bug fixes to make sure GOV.UK Pay is a reliable, available and secure service that performs well for services and paying users</li>
+              </ul>
 
+            <h2 class="govuk-heading-m">What we’ve learned through research</h2>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The paying user experience supports users with accessible needs well, but entering long card numbers is confusing and time-consuming for users with cognitive impairments</li>
+                <li>We can add hint text to make it easier for paying users with cognitive impairments to enter the correct numbers first time around</li>
+                <li>All paying users would benefit from clearer warnings about the steps they’ll need to take in 3D Secure verification, which might also reduce the number of abandoned transactions</li>
+                <li>Finance and technical users would benefit from better guidance about how to manage reporting and reconciliation on their GOV.UK Pay service</li>
               </ul>
 
              <h2 class="govuk-heading-m">Things we’re working on</h2>
 
-              <p class="govuk-body">We’re focusing on work that improves the experience for service users of GOV.UK Pay, as well as work that helps service teams be compliant with <a class="govuk-link" href="https://www.fca.org.uk/consumers/strong-customer-authentication">Strong Customer Authentication</a> regulations. We continue to do work that supports GOV.UK Pay’s growth and makes it more efficient to run.</p>
+              <p class="govuk-body">We’re focusing on delivering improvements to the experience for service users of GOV.UK Pay. We continue to do operational and performance work that supports GOV.UK Pay’s growth and makes it more efficient to run.</p>
               <p class="govuk-body">This includes:</p>
 
               <ul class="govuk-list govuk-list--bullet">
-                <li>Making it easier for service teams to understand and start using Pay</li>
-                <li>Redesign the payments journey to reduce the number of abandoned payments</li>
-                <li>Doing further research into accessibility and where we might need to improve the experience for paying users</li>
-                <li>Making GOV.UK Pay’s infrastructure run even more efficiently</li>
+                <li>making it easier for service teams to understand and start using Pay, through better content on our product pages and making our admin tool easier to navigate</li>
+                <li>making GOV.UK Pay’s infrastructure run even more efficiently</li>
+               </ul>
+
+              <p class="govuk-body">Alongside our delivery work, we’re also running two discoveries this quarter:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>to prioritise which payment types and channels we build to meet services’ needs for their paying users</li>
+                <li>to understand how GOV.UK Pay can support the new finance patterns and software changes in central government, to make reporting and reconciliation easier</li>
                </ul>
 
             <h2 class="govuk-heading-m">Up next</h2>
               <ul class="govuk-list govuk-list--bullet">
-                <li>Retry sending emails when GOV.UK Notify has an outage</li>
-                <li>Make our existing performance data publicly available</li>
-                <li>Support Welsh-language users to receive a receipt after making a payment</li>
+                <li>Alphas based on what we’ve learned in our discoveries</li>
+                <li>Telephone payment links for services that can’t integrate with our API</li>
               </ul>
 
               <h2 class="govuk-heading-m">Later</h2>
                 <ul class="govuk-list govuk-list--bullet">
-                  <li>Automated telephone payments (IVR) alpha and private beta</li>
-                  <li>Support for processing and reporting on payments made via a call centre supplier</li>
-                  <li>Discovery into recurring payments</li>
                   <li>Improved support for services managing invoices</li>
+                  <li>Retry sending emails when GOV.UK Notify has an outage</li>
+                  <li>Make our existing performance data publicly available</li>
+                  <li>Support Welsh-language users to receive a receipt after making a payment</li>
                 </ul>
 
                 <h2 class="govuk-heading-m">Things we're exploring</h2>
                   <ul class="govuk-list govuk-list--bullet">
                     <li>Working with Government Shared Services, Government Finance Function and Government Banking to make it easier for central government teams to start using Pay</li>
-                    <li>Making income management easier in local government by working with the <a class="govuk-link" href="https://pipeline.localgov.digital/wiki/484/mhclg-local-digital-fund-alpha-project-exploring-income-management-and-e-pa#">MHCLG-funded alpha, led by Barnsley Council</a></li>
-                    <li>Making it easier for service teams to take and manage payments by Direct Debit by working with Government Finance Function and Government Banking Service</li>
+                    <li>How we might involve service teams more directly and frequently in prioritising our roadmap based on collective needs</li>
                   </ul>
 
             <h2 class="govuk-heading-m">Get in touch</h2>

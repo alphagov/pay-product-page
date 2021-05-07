@@ -46,7 +46,11 @@ Use the command line script `github-release` to build an artifact containing the
 >- `GITHUB_TOKEN` is the personal access token you generated
 >- the `--version` argument specifies the version of the new release (pick something sensible based on the previous releases)
 
-To deploy the product page, update the `pay-product-page` dependency in [`pay-frontend`](https://github.com/alphagov/pay-frontend/blob/master/package.json) to point to the GitHub URL for the `.tgz` file associated with the [GitHub release](https://github.com/alphagov/pay-product-page/releases). Then deploy `pay-frontend`.
+The product page is deployed as part of `pay-frontend`.
+
+1. Update the `pay-product-page` dependency in the [`package.json`](https://github.com/alphagov/pay-frontend/blob/master/package.json) file in `pay-frontend` to point to the GitHub URL for the `.tgz` file associated with the [GitHub release](https://github.com/alphagov/pay-product-page/releases).
+2. Within `pay-frontend`, run `npm install`.
+3. Merge and deploy the changes to `pay-frontend`.
 
 ## Licence
 

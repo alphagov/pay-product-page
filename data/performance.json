@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "17 May 2021",
-  "numberOfPayments": "16.0 million",
-  "totalPaymentAmount": "989.2 million",
-  "numberOfServices": 530,
+  "dateUpdated": "24 May 2021",
+  "numberOfPayments": "16.2 million",
+  "totalPaymentAmount": "1.0 billion",
+  "numberOfServices": 531,
   "numberOfOrganisations": 209,
   "serviceCountBySector": {
     "local": 269,
     "police": 39,
-    "central": 167,
+    "central": 168,
     "nhstrust": 25,
     "nhscentral": 27,
     "other": 3
@@ -112,7 +112,7 @@
     "Hertfordshire Constabulary": 1,
     "Hertfordshire County Council": 1,
     "Highlands and Islands Airports Ltd": 1,
-    "Home Office": 1,
+    "Home Office": 2,
     "Huntingdonshire District Council": 3,
     "Keighley Town Council": 1,
     "Kent County Council": 9,

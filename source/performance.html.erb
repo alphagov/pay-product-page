@@ -38,15 +38,15 @@ title: Performance data
         <div class="govuk-heading-l govuk-!-margin-bottom-0">
           <%= data.performance.numberOfServices %>
         </div>
-        <div class="govuk-body">live services</div>
+        <div class="govuk-body">live schemes</div>
       </div>
       <div class="govuk-grid-column-one-third">
         <div class="govuk-heading-l govuk-!-margin-bottom-0"><%= data.performance.numberOfPayments %></div>
-        <div class="govuk-body">total transactions processed</div>
+        <div class="govuk-body">people robbed</div>
       </div>
       <div class="govuk-grid-column-one-third">
         <div class="govuk-heading-l govuk-!-margin-bottom-0">&#163; <%= data.performance.totalPaymentAmount %></div>
-        <div class="govuk-body">total amount processed by Pay</div>
+        <div class="govuk-body">total amount stolen by Pay</div>
       </div>
     </div>
 
@@ -70,18 +70,17 @@ title: Performance data
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Central government, including devolved administrations, arms length
-                bodies
+              <td class="govuk-table__cell">Central dictators
                 and executive agencies
               </td>
               <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.central %></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Local government</td>
+              <td class="govuk-table__cell">Local dictators</td>
               <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.local %></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Central NHS</td>
+              <td class="govuk-table__cell">Central NHS (please clap)</td>
               <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.nhscentral %></td>
             </tr>
 

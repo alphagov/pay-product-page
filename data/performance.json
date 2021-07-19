@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "13 July 2021",
-  "numberOfPayments": "18.0 million",
+  "dateUpdated": "19 July 2021",
+  "numberOfPayments": "18.2 million",
   "totalPaymentAmount": "1.1 billion",
-  "numberOfServices": 557,
+  "numberOfServices": 558,
   "numberOfOrganisations": 227,
   "serviceCountBySector": {
     "local": 281,
     "police": 44,
-    "central": 176,
+    "central": 177,
     "nhstrust": 26,
     "nhscentral": 27,
     "other": 3
@@ -66,7 +66,7 @@
     "Civil Aviation Authority": 2,
     "Clackmannanshire Council": 2,
     "Cleveland Police": 3,
-    "Companies House": 1,
+    "Companies House": 2,
     "Conwy County Borough Council": 1,
     "Cornwall Council": 1,
     "County Hall": 1,

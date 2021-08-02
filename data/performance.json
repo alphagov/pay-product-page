@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "27 July 2021",
-  "numberOfPayments": "18.5 million",
-  "totalPaymentAmount": "1.1 billion",
-  "numberOfServices": 563,
+  "dateUpdated": "2 August 2021",
+  "numberOfPayments": "18.7 million",
+  "totalPaymentAmount": "1.2 billion",
+  "numberOfServices": 564,
   "numberOfOrganisations": 230,
   "serviceCountBySector": {
     "local": 285,
     "police": 44,
-    "central": 177,
+    "central": 178,
     "nhstrust": 27,
     "nhscentral": 27,
     "other": 3
@@ -230,7 +230,7 @@
     "UK Shared Business Services": 1,
     "United Kingdom National Codification Bureau": 5,
     "Valuation Tribunal Service": 1,
-    "Vehicle Certification Agency": 1,
+    "Vehicle Certification Agency": 2,
     "Walsall Metropolitan Borough Council": 1,
     "Warwickshire County Council": 11,
     "Water Search and Rescue Team": 1,

@@ -23,3 +23,8 @@ updates:
     versions:
     - ">= 2.2.a"
     - "< 2.3"
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "daily"
+    time: "03:00"

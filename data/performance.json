@@ -1,15 +1,15 @@
 {
-  "dateUpdated": "23 August 2021",
-  "numberOfPayments": "19.5 million",
+  "dateUpdated": "31 August 2021",
+  "numberOfPayments": "19.8 million",
   "totalPaymentAmount": "1.2 billion",
-  "numberOfServices": 579,
+  "numberOfServices": 582,
   "numberOfOrganisations": 236,
   "serviceCountBySector": {
-    "local": 298,
-    "police": 45,
+    "local": 301,
     "central": 179,
-    "nhstrust": 27,
+    "police": 45,
     "nhscentral": 27,
+    "nhstrust": 27,
     "other": 3
   },
   "serviceCountByOrganisation": {

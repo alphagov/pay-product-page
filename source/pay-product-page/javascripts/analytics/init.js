@@ -13,6 +13,7 @@ window.GovUkPay.InitAnalytics = (function () {
     // for custom dimensions, virtual pageviews and events
     window.GovUkPay.analytics = window.GovUkPay.Analytics.SetupAnalytics({
       trackingId: TRACKING_ID,
+      cookieDomain: window.GovUkPay.Cookie.getCookieDomain(),
       anonymizeIp: true,
       displayFeaturesTask: null,
       transport: "beacon",

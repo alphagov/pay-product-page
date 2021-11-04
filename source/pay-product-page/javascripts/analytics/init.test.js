@@ -22,6 +22,10 @@ beforeAll(() => {
     SetupAnalytics: jest.fn(),
     TrackPageview: jest.fn(),
   }
+
+  window.GovUkPay.Cookie = {
+    getCookieDomain: jest.fn(),
+  } 
     
 })
 

@@ -1,14 +1,14 @@
 {
-  "dateUpdated": "8 November 2021",
-  "numberOfPayments": "22.4 million",
+  "dateUpdated": "15 November 2021",
+  "numberOfPayments": "22.7 million",
   "totalPaymentAmount": "1.4 billion",
-  "numberOfServices": 637,
-  "numberOfOrganisations": 251,
+  "numberOfServices": 638,
+  "numberOfOrganisations": 252,
   "serviceCountBySector": {
     "local": 327,
     "central": 190,
     "police": 53,
-    "nhstrust": 37,
+    "nhstrust": 38,
     "nhscentral": 27,
     "other": 3
   },
@@ -240,6 +240,7 @@
     "Thames Valley Police": 1,
     "The City of Edinburgh Council": 15,
     "The Coal Authority": 2,
+    "The Hillingdon Hospitals NHS Foundation Trust": 1,
     "The National Archives": 1,
     "The Office of the Police and Crime Commissioner for Leicestershire": 1,
     "The Police & Crime Commissioner for Northamptonshire": 1,

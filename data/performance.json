@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "22 November 2021",
-  "numberOfPayments": "23.0 million",
+  "dateUpdated": "30 November 2021",
+  "numberOfPayments": "23.3 million",
   "totalPaymentAmount": "1.5 billion",
-  "numberOfServices": 640,
-  "numberOfOrganisations": 252,
+  "numberOfServices": 646,
+  "numberOfOrganisations": 255,
   "serviceCountBySector": {
-    "local": 328,
-    "central": 191,
+    "local": 332,
+    "central": 192,
     "police": 53,
     "nhstrust": 38,
     "nhscentral": 27,
-    "other": 3
+    "other": 4
   },
   "serviceCountByOrganisation": {
     "888 (Oldbury) Squadron RAF Air Cadets": 1,
@@ -96,7 +96,7 @@
     "Doncaster Council": 1,
     "Dorset Council": 96,
     "Dorset County Hospital NHS FT": 1,
-    "Driving and Vehicle Licensing Agency (DVLA)": 4,
+    "Driving and Vehicle Licensing Agency (DVLA)": 5,
     "Dudley Metropolitan Borough Council": 1,
     "East Suffolk & North Essex NHS Foundation Trust": 1,
     "Environment Agency": 6,
@@ -116,7 +116,7 @@
     "Greater Manchester Police": 3,
     "Guys and St Thomas Foundation NHS Trust": 2,
     "Gwent Police": 1,
-    "HM Courts & Tribunals Service": 4,
+    "HM Courts & Tribunals Service": 5,
     "HM Land Registry": 3,
     "Halton Borough Council": 1,
     "Hampshire Constabulary": 1,
@@ -258,6 +258,7 @@
     "West Suffolk NHS": 1,
     "Weymouth Town Council": 1,
     "Wokingham Borough Council": 3,
-    "Worcestershire County Council": 1
+    "Worcestershire County Council": 1,
+    "Yeovil Town Council": 3
   }
 }

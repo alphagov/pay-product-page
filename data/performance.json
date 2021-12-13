@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "6 December 2021",
-  "numberOfPayments": "23.6 million",
+  "dateUpdated": "13 December 2021",
+  "numberOfPayments": "23.8 million",
   "totalPaymentAmount": "1.5 billion",
   "numberOfServices": 648,
-  "numberOfOrganisations": 257,
+  "numberOfOrganisations": 256,
   "serviceCountBySector": {
     "local": 334,
-    "central": 192,
+    "central": 193,
     "police": 53,
     "nhstrust": 38,
     "nhscentral": 27,
-    "other": 4
+    "other": 3
   },
   "serviceCountByOrganisation": {
     "888 (Oldbury) Squadron RAF Air Cadets": 1,
@@ -97,7 +97,7 @@
     "Doncaster Council": 1,
     "Dorset Council": 96,
     "Dorset County Hospital NHS FT": 1,
-    "Driving and Vehicle Licensing Agency (DVLA)": 5,
+    "Driving and Vehicle Licensing Agency (DVLA)": 4,
     "Dudley Metropolitan Borough Council": 1,
     "East Suffolk & North Essex NHS Foundation Trust": 1,
     "Environment Agency": 6,
@@ -251,7 +251,7 @@
     "UK Shared Business Services": 1,
     "United Kingdom National Codification Bureau": 5,
     "Valuation Tribunal Service": 1,
-    "Vehicle Certification Agency": 2,
+    "Vehicle Certification Agency": 3,
     "Walsall Metropolitan Borough Council": 1,
     "Warwickshire County Council": 14,
     "Water Search and Rescue Team": 1,

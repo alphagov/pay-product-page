@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "13 December 2021",
-  "numberOfPayments": "23.8 million",
+  "dateUpdated": "20 December 2021",
+  "numberOfPayments": "24.1 million",
   "totalPaymentAmount": "1.5 billion",
-  "numberOfServices": 648,
-  "numberOfOrganisations": 256,
+  "numberOfServices": 650,
+  "numberOfOrganisations": 257,
   "serviceCountBySector": {
-    "local": 334,
+    "local": 335,
     "central": 193,
-    "police": 53,
+    "police": 54,
     "nhstrust": 38,
     "nhscentral": 27,
     "other": 3
@@ -183,7 +183,7 @@
     "North Norfolk District Council": 1,
     "North Somerset Council": 1,
     "North Wales Police": 1,
-    "North Yorkshire Police": 1,
+    "North Yorkshire Police": 2,
     "Northern Ireland Carrier Bag Levy Team": 1,
     "Northern Lincolnshire and Goole NHS FT": 1,
     "Nottingham University Hospitals NHS Trust": 1,
@@ -260,6 +260,7 @@
     "West Suffolk NHS": 1,
     "Weymouth Town Council": 1,
     "Wokingham Borough Council": 4,
+    "Wolverhampton City Council": 1,
     "Worcestershire County Council": 1,
     "Yeovil Town Council": 3
   }

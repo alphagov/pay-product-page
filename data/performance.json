@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "5 January 2022",
-  "numberOfPayments": "24.6 million",
+  "dateUpdated": "10 January 2022",
+  "numberOfPayments": "24.9 million",
   "totalPaymentAmount": "1.6 billion",
-  "numberOfServices": 653,
-  "numberOfOrganisations": 260,
+  "numberOfServices": 654,
+  "numberOfOrganisations": 261,
   "serviceCountBySector": {
     "local": 336,
     "central": 193,
-    "police": 56,
+    "police": 57,
     "nhstrust": 38,
     "nhscentral": 27,
     "other": 3
@@ -189,6 +189,7 @@
     "Northern Lincolnshire and Goole NHS FT": 1,
     "Nottingham University Hospitals NHS Trust": 1,
     "Nottinghamshire Office of the Police and Crime Commissioner": 1,
+    "Nottinghamshire Police Overseas Visitor Registration": 1,
     "Office for Standards in Education - OFSTED": 1,
     "Office of the Public Guardian": 3,
     "Oil and Gas Authority": 1,

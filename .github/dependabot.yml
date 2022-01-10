@@ -9,6 +9,7 @@ updates:
   labels:
   - dependencies
   - govuk-pay
+  - javascript
 - package-ecosystem: bundler
   directory: "/"
   schedule:
@@ -18,13 +19,19 @@ updates:
   labels:
   - dependencies
   - govuk-pay
+  - ruby
   ignore:
   - dependency-name: rack
     versions:
     - ">= 2.2.a"
     - "< 2.3"
-- package-ecosystem: "github-actions"
+- package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: "daily"
+    interval: daily
     time: "03:00"
+  open-pull-requests-limit: 10
+  labels:
+  - dependencies
+  - govuk-pay
+  - github_actions

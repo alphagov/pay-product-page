@@ -57,6 +57,13 @@ githubrelease_command_publish ()
     test ! -d build && bundle exec middleman build
 
     cd build
+    current_directory=$(basename "$PWD")
+
+    if [ $current_directory != "build" ]; then
+        critical "github-release" "We do not seem to be in the build directory"
+        exit 1
+    fi
+
     githubrelease_generate_package_json_file
     tar -cvzf pay-product-page-$githubrelease_option_version.tgz .
                                

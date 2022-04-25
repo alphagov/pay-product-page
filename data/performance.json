@@ -1,14 +1,14 @@
 {
-  "dateUpdated": "20 April 2022",
-  "numberOfPayments": "31.4 million",
+  "dateUpdated": "25 April 2022",
+  "numberOfPayments": "31.7 million",
   "totalPaymentAmount": "2.0 billion",
-  "numberOfServices": 696,
+  "numberOfServices": 697,
   "numberOfOrganisations": 276,
   "serviceCountBySector": {
     "local": 358,
     "central": 200,
     "police": 64,
-    "nhstrust": 44,
+    "nhstrust": 45,
     "nhscentral": 27,
     "other": 3
   },
@@ -144,7 +144,7 @@
     "LNC Activities and Training CIC": 1,
     "Lancashire County Council": 1,
     "Leeds City Council": 1,
-    "Lewisham and Greenwich NHS Trust": 8,
+    "Lewisham and Greenwich NHS Trust": 9,
     "Lisburn & Castlereagh City Council": 1,
     "Liverpool City Council": 1,
     "London Borough of Barking and Dagenham Council": 20,

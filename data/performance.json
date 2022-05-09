@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "3 May 2022",
-  "numberOfPayments": "32.4 million",
+  "dateUpdated": "9 May 2022",
+  "numberOfPayments": "32.8 million",
   "totalPaymentAmount": "2.1 billion",
-  "numberOfServices": 699,
-  "numberOfOrganisations": 276,
+  "numberOfServices": 701,
+  "numberOfOrganisations": 277,
   "serviceCountBySector": {
-    "local": 360,
+    "local": 361,
     "central": 200,
     "police": 64,
     "nhstrust": 45,
     "nhscentral": 27,
-    "other": 3
+    "other": 4
   },
   "serviceCountByOrganisation": {
     "888 (Oldbury) Squadron RAF Air Cadets": 1,
@@ -141,6 +141,7 @@
     "Kettering General Hospital NHS Foundation Trust": 1,
     "Knutsford Town Council": 1,
     "Knutsford Town Council (Knutsford Mayor's Fundraising)": 1,
+    "LFB": 1,
     "LNC Activities and Training CIC": 1,
     "Lancashire County Council": 1,
     "Leeds City Council": 1,

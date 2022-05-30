@@ -1,18 +1,20 @@
 {
-  "dateUpdated": "23 May 2022",
-  "numberOfPayments": "33.8 million",
+  "dateUpdated": "30 May 2022",
+  "numberOfPayments": "34.3 million",
   "totalPaymentAmount": "2.2 billion",
-  "numberOfServices": 703,
-  "numberOfOrganisations": 276,
+  "numberOfServices": 705,
+  "numberOfOrganisations": 278,
   "serviceCountBySector": {
     "local": 361,
-    "central": 201,
+    "central": 203,
     "police": 65,
     "nhstrust": 45,
     "nhscentral": 27,
     "other": 4
   },
   "serviceCountByOrganisation": {
+    "1079 (Tiverton) Squadron, RAF Air Cadets": 1,
+    "347 (Dudley) Squadron ATC": 1,
     "888 (Oldbury) Squadron RAF Air Cadets": 1,
     "Aberdeenshire Council": 1,
     "Adur & Worthing Councils": 2,

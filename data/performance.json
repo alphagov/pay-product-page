@@ -1,14 +1,14 @@
 {
-  "dateUpdated": "13 June 2022",
-  "numberOfPayments": "35.1 million",
+  "dateUpdated": "20 June 2022",
+  "numberOfPayments": "35.6 million",
   "totalPaymentAmount": "2.3 billion",
-  "numberOfServices": 715,
-  "numberOfOrganisations": 280,
+  "numberOfServices": 717,
+  "numberOfOrganisations": 281,
   "serviceCountBySector": {
     "local": 369,
     "central": 204,
     "police": 66,
-    "nhstrust": 45,
+    "nhstrust": 47,
     "nhscentral": 27,
     "other": 4
   },
@@ -269,6 +269,7 @@
     "The Police & Crime Commissioner for Northamptonshire": 1,
     "The Police and Crime Commissioner for Dyfed Powys": 2,
     "The Police and Crime Commissioner for Kent": 1,
+    "Torbay & South Devon NHS Foundation Trust": 2,
     "Transport for Greater Manchester": 3,
     "UK Shared Business Services": 1,
     "United Kingdom National Codification Bureau": 5,

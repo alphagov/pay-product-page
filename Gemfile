@@ -12,7 +12,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '>= 4.3.4'
 gem 'middleman-livereload'
 gem "middleman-sprockets"
-gem "sprockets", "4.0.3"
+gem "sprockets", "4.1.0"
 gem 'sassc'
 gem 'sass'
 

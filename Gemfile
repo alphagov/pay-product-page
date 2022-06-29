@@ -15,5 +15,3 @@ gem "middleman-sprockets"
 gem "sprockets", "4.1.1"
 gem 'sassc'
 gem 'sass'
-
-gem "rack", "2.1.4.1" # to address https://github.com/middleman/middleman/issues/2309

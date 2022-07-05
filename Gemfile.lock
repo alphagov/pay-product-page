@@ -78,7 +78,7 @@ GEM
     middleman-sprockets (4.1.1)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
-    minitest (5.16.1)
+    minitest (5.16.2)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
@@ -87,7 +87,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.22.1)
     public_suffix (4.0.7)
-    rack (2.2.3.1)
+    rack (2.2.4)
     rack-livereload (0.3.17)
       rack
     rb-fsevent (0.11.1)
@@ -118,7 +118,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (>= 4.3.4)
+  middleman (>= 4.3.6)
   middleman-livereload
   middleman-sprockets
   sass

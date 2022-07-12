@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@dcd71f646680f2efd8db4afa5ad64fdcba30e748
       - name: Setup
-        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd
+        uses: actions/setup-node@5b949b50c3461bbcd5a540b150c368278160234a
         with:
           node-version: 12.22.4
       - name: Cache NPM packages

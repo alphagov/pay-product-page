@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "30 August 2022",
-  "numberOfPayments": "39.7 million",
+  "dateUpdated": "5 September 2022",
+  "numberOfPayments": "40.0 million",
   "totalPaymentAmount": "2.5 billion",
-  "numberOfServices": 760,
-  "numberOfOrganisations": 297,
+  "numberOfServices": 762,
+  "numberOfOrganisations": 299,
   "serviceCountBySector": {
     "local": 392,
-    "central": 210,
+    "central": 211,
     "police": 76,
     "nhstrust": 50,
     "nhscentral": 28,
-    "other": 4
+    "other": 5
   },
   "serviceCountByOrganisation": {
     "1079 (Tiverton) Squadron, RAF Air Cadets": 1,
@@ -112,6 +112,7 @@
     "Dorset County Hospital NHS FT": 1,
     "Driving and Vehicle Licensing Agency (DVLA)": 4,
     "Dudley Metropolitan Borough Council": 1,
+    "Dundee Airport Limited": 1,
     "East Suffolk & North Essex NHS Foundation Trust": 1,
     "Education Authority NI": 1,
     "Environment Agency": 6,
@@ -124,6 +125,7 @@
     "Foreign, Commonwealth and Development Office": 58,
     "Forestry England": 1,
     "Friends of Water Search and Rescue Team": 1,
+    "GDS": 1,
     "GMCA Greater Manchester Police": 2,
     "Gambling Commission": 1,
     "Gangmasters and Labour Abuse Authority": 1,

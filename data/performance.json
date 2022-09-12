@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "5 September 2022",
-  "numberOfPayments": "40.0 million",
-  "totalPaymentAmount": "2.5 billion",
-  "numberOfServices": 762,
-  "numberOfOrganisations": 299,
+  "dateUpdated": "12 September 2022",
+  "numberOfPayments": "40.4 million",
+  "totalPaymentAmount": "2.6 billion",
+  "numberOfServices": 764,
+  "numberOfOrganisations": 301,
   "serviceCountBySector": {
     "local": 392,
-    "central": 211,
+    "central": 212,
     "police": 76,
     "nhstrust": 50,
     "nhscentral": 28,
-    "other": 5
+    "other": 6
   },
   "serviceCountByOrganisation": {
     "1079 (Tiverton) Squadron, RAF Air Cadets": 1,
@@ -54,6 +54,7 @@
     "British High Commission Freetown": 1,
     "British High Commission Gaborone": 1,
     "British High Commission Kampala": 1,
+    "British High Commission Kuala Lumpur": 1,
     "British High Commission Lilongwe": 1,
     "British High Commission Lusaka": 1,
     "British High Commission Maputo": 1,
@@ -256,6 +257,7 @@
     "Security Industry Authority": 1,
     "Sheffield City Council": 1,
     "Sheffield Teaching Hospitals NHS Foundation Trust": 1,
+    "Smart Applications Management": 1,
     "Social Security Scotland": 1,
     "Social Work England": 1,
     "Somerset County Council": 1,

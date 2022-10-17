@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "10 October 2022",
-  "numberOfPayments": "41.9 million",
+  "dateUpdated": "17 October 2022",
+  "numberOfPayments": "42.2 million",
   "totalPaymentAmount": "2.7 billion",
-  "numberOfServices": 769,
-  "numberOfOrganisations": 304,
+  "numberOfServices": 772,
+  "numberOfOrganisations": 297,
   "serviceCountBySector": {
     "local": 395,
     "central": 212,
-    "police": 78,
+    "police": 81,
     "nhstrust": 50,
     "nhscentral": 28,
     "other": 6
@@ -149,6 +149,7 @@
     "Home Office": 2,
     "Homerton Healthcare NHS Foundation Trust": 1,
     "Hull University Teaching Hospitals NHS Trust": 1,
+    "Humberside Police": 3,
     "Huntingdonshire District Council": 4,
     "Intellectual Property Office": 1,
     "Keighley Town Council": 1,

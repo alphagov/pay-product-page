@@ -1,19 +1,20 @@
 {
-  "dateUpdated": "12 December 2022",
-  "numberOfPayments": "45.2 million",
+  "dateUpdated": "19 December 2022",
+  "numberOfPayments": "45.6 million",
   "totalPaymentAmount": "2.9 billion",
-  "numberOfServices": 796,
-  "numberOfOrganisations": 310,
+  "numberOfServices": 799,
+  "numberOfOrganisations": 313,
   "serviceCountBySector": {
-    "local": 403,
+    "local": 404,
     "central": 219,
     "police": 85,
-    "nhstrust": 54,
+    "nhstrust": 55,
     "nhscentral": 28,
-    "other": 7
+    "other": 8
   },
   "serviceCountByOrganisation": {
     "1079 (Tiverton) Squadron, RAF Air Cadets": 1,
+    "129 (Tunbridge Wells) Squadron ATC": 1,
     "1801 (Alnwick) Squadron RAF Air Cadets": 1,
     "347 (Dudley) Squadron ATC": 1,
     "485 Harborne & Quinton Sqn RAFAC": 1,
@@ -90,6 +91,7 @@
     "County Hall": 1,
     "Croydon Council": 1,
     "Croydon Health Services NHS Trust": 1,
+    "Cumberland Council": 1,
     "Cumbria County Council": 5,
     "DBS FIN RCPTS CTS": 1,
     "DBS Mil Pers": 1,
@@ -308,6 +310,7 @@
     "Turners Hill Parish Council": 1,
     "UK Shared Business Services": 1,
     "United Kingdom National Codification Bureau": 6,
+    "University Hospitals Dorset NHS Foundation Trust": 1,
     "Valuation Tribunal Service": 1,
     "Vehicle Certification Agency": 4,
     "Walsall Metropolitan Borough Council": 1,

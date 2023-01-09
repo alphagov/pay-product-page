@@ -1,9 +1,9 @@
 {
-  "dateUpdated": "5 January 2023",
-  "numberOfPayments": "46.4 million",
-  "totalPaymentAmount": "2.9 billion",
+  "dateUpdated": "9 January 2023",
+  "numberOfPayments": "46.7 million",
+  "totalPaymentAmount": "3.0 billion",
   "numberOfServices": 803,
-  "numberOfOrganisations": 315,
+  "numberOfOrganisations": 312,
   "serviceCountBySector": {
     "local": 405,
     "central": 221,

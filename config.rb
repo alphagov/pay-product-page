@@ -23,10 +23,9 @@ configure :development do
   activate :livereload
 end
 
-config[:css_dir] = 'pay-product-page/stylesheets'
-config[:images_dir] = 'pay-product-page/images'
-config[:fonts_dir] = 'pay-product-page/fonts'
-config[:js_dir] = 'pay-product-page/javascripts'
+config[:css_dir] = 'stylesheets'
+config[:images_dir] = 'images'
+config[:js_dir] = 'javascripts'
 
 ignore '**/javascripts/*test*.js'
 
@@ -37,6 +36,7 @@ configure :development do
 end
 
 configure :build do
+  config[:http_prefix] = '/pay-product-page'
   set :analytics, "'UA-72121642-9'"
   set :new_cookie_banner, true
 end
@@ -53,14 +53,6 @@ end
 #   end
 # end
 
-# Build-specific configuration
-configure :build do
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  activate :minify_javascript
-end
 
 activate :sprockets do |config|
   config.expose_middleman_helpers = true

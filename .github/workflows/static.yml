@@ -40,7 +40,6 @@ jobs:
       - name: Install and Build
         run: |
           npm ci
-          bundle install
           bundle exec middleman build
       - name: Setup Pages
         uses: actions/configure-pages@v2

@@ -16,23 +16,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    uses: ./.github/workflows/run-tests.yml
   build-and-deploy:
+    needs: test
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: '.ruby-version'
           bundler-cache: true
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Install and Build
         run: |
           npm ci

@@ -2,19 +2,8 @@
 title: Privacy notice
 ---
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-      </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third sticky">

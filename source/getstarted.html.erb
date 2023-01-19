@@ -3,19 +3,8 @@ title: Get started
 ---
 
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page">Get started</a>
-      </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -32,8 +21,8 @@ title: Get started
               <p class="govuk-body">GOV.UK&nbsp;Pay is available for any government or public sector organisation that
                 wants to take card payments online.</p>
               <p class="govuk-body">Review GOV.UK Pay’s
-                <a class="govuk-link" href="/using-govuk-pay" data-click-events data-click-category="Content" data-click-action="Internal link clicked">top
-                  features and roadmap</a> and decide if it meets your service’s needs.</p>
+                <%= link_to "top features and roadmap", "using-govuk-pay", "data-click-events" => "", "data-click-category" => "Content", "data-click-action" => "Internal link clicked", class: "govuk-link" %>
+                and decide if it meets your service’s needs.</p>
               <p class="govuk-body">If you'd like to find out more about GOV.UK Pay, we hold sessions at 10am every
                 Tuesday to demonstrate the platform and answer questions. You can
                 <a class="govuk-link" href="https://meet.google.com/ziy-vtir-bkp" data-click-events data-click-category="Content" data-click-action="Internal link clicked">join
@@ -60,13 +49,13 @@ title: Get started
               <span class="task-list-section-number">3.</span> Share with your team
             </h2>
             <div class="task-list__details">
-              <p class="govuk-body">Share information about GOV.UK&nbsp;Pay with your broader team. Managing payments
+              <p class="govuk-body">Share information about GOV.UK Pay with your broader team. Managing payments
                 usually involves people from a number of different teams: digital, operational delivery and finance, for
                 example.</p>
 
               <p class="govuk-body"> You can
                 <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/my-services" data-click-events data-click-category="Content" data-click-action="Internal link clicked">invite
-                  team members</a> from the My Services area of your GOV.UK&nbsp;Pay admin tool. You may want to send
+                  team members</a> from the 'My Services' area of your GOV.UK Pay admin tool. You may want to send
                 our
                 <a class="govuk-link" href="https://docs.payments.service.gov.uk" data-click-events data-click-category="Content" data-click-action="Internal link clicked">documentation</a>
                 to your technical and finance teams.</p>
@@ -95,14 +84,14 @@ title: Get started
             <div class="task-list__details">
               <p class="govuk-body">You must have a Payment Service Provider (PSP) to process the payments taken using
                 GOV.UK Pay. However, there is no procurement work required to obtain a PSP. This saves you time and
-                money and you’re not locked into a long-term contract.</p>
+                money, and you’re not locked into a long-term contract.</p>
               <p class="govuk-body">There are 2 PSP options available:</p>
 
               <ol class="psp-list">
                 <li>
                   <h3 class="govuk-heading-s">1. Use GOV.UK Pay's Payment Service Provider, Stripe</h3>
                   <p class="govuk-body">Stripe is available to any public sector organisation to use. Account set up is
-                    quick and easy and you can start taking payments immediately.
+                    quick and easy, and you can start taking payments immediately.
                     <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/register/email-address">Create
                       an account</a> to get started.</p>
                 </li>
@@ -117,8 +106,8 @@ title: Get started
               </ol>
 
               <p class="govuk-body">
-                <a class="govuk-link" href="/support" data-click-events data-click-category="Content" data-click-action="Internal link clicked">Contact
-                  GOV.UK Pay support</a> with any questions.</p>
+                <%= link_to "Contact GOV.UK Pay support", "support", "data-click-events" => "", "data-click-category" => "Content", "data-click-action" => "Internal link clicked", class: "govuk-link" %>
+                with any questions.</p>
             </div>
           </li>
           <li class="task-list__item">
@@ -132,7 +121,7 @@ title: Get started
               <p class="govuk-body">As part of this process your organisation needs to agree to the terms and conditions
                 of our Memorandum of Understanding (for Crown organisations) or contract (for non-Crown organisations)
                 and provide some information about your organisation. You can find a link to the agreements in the page
-                footer when you are signed into your account. You’ll need to accept the terms before you can take
+                footer when you are signed in to your account. You’ll need to accept the terms before you can take
                 payments.</p>
               <p class="govuk-body">If you are using GOV.UK Pay’s PSP Stripe, you will also need to accept the terms of
                 the Stripe agreement.</p>

@@ -36,7 +36,8 @@ configure :development do
 end
 
 configure :build do
-  config[:http_prefix] = '/pay-product-page'
+  activate :relative_assets
+  set :relative_links, true
   set :analytics, "'UA-72121642-9'"
   set :new_cookie_banner, true
 end
@@ -47,11 +48,11 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def pathValue(url)
+    url.delete_prefix('/').delete_suffix('/')
+  end
+end
 
 
 activate :sprockets do |config|

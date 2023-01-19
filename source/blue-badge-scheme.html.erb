@@ -2,19 +2,8 @@
 title: Blue Badge scheme
 ---
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-      </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds" data-click-events data-click-category="Content" data-click-action="Internal link clicked">
@@ -34,8 +23,8 @@ title: Blue Badge scheme
           the user’s account and deposit it into your account.</p>
         <p class="govuk-body">We comply with the Payment Card Industry Data Security Standard (PCI-DSS).</p>
         <p class="govuk-body">You can read more general information about GOV.UK Pay on our
-          <a class="govuk-link" href="/">product page</a> and our
-          <a class="govuk-link" href="/using-govuk-pay">features page</a>. Or
+          <%= link_to "product page", "index", class: "govuk-link" %> and our
+          <%= link_to "features page", "using-govuk-pay", class: "govuk-link" %>. Or
           <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/register/email-address">sign up</a>
           for a test account and try it for yourself.</p>
 
@@ -67,7 +56,7 @@ title: Blue Badge scheme
         <p class="govuk-body">In order to download and review the contracts, you’ll need to go to
           <a class="govuk-link" href="https://www.payments.service.gov.uk/">https://www.payments.service.gov.uk/</a> and
           either sign in or sign up for a test GOV.UK Pay account.</p>
-        <p class="govuk-body">Once you have an account and you are logged in, you can download the:</p>
+        <p class="govuk-body">Once you have an account, and you are logged in, you can download the:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>
             <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/policy/download/contract-for-non-crown-bodies">GOV.UK
@@ -117,7 +106,7 @@ title: Blue Badge scheme
 
         <h2 class="govuk-heading-m">Support</h2>
         <p class="govuk-body">GOV.UK Pay is designed to be as self-serve as possible. You can
-          <a class="govuk-link" href="/getstarted">sign up for a test account</a> and try it for yourself.</p>
+          <%= link_to "sign up for a test account", "getstarted", class: "govuk-link" %> and try it for yourself.</p>
         <p class="govuk-body">GOV.UK Pay provides
           <a class="govuk-link" href="https://docs.payments.service.gov.uk/#gov-uk-pay-documentation">detailed
             documentation</a>. You, or your development team, will need to read this if you want to integrate with your
@@ -125,7 +114,7 @@ title: Blue Badge scheme
           <a class="govuk-link" href="https://docs.payments.service.gov.uk/reporting/#reporting">reporting</a> and
           <a class="govuk-link" href="https://docs.payments.service.gov.uk/refunding_payments/#refunding-with-the-gov-uk-pay-api">refunds</a>.
         </p>
-        <p class="govuk-body">You can also <a class="govuk-link" href="/support">contact the GOV.UK Pay team</a> if you
+        <p class="govuk-body">You can also <%= link_to "contact the GOV.UK Pay team", "support", class: "govuk-link" %> if you
           have any questions or feedback.</p>
       </div>
     </div>

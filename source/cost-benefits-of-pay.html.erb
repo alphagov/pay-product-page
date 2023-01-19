@@ -1,59 +1,13 @@
 ---
-title: The cost benefits of using GOV.UK Pay
+title: Cost benefits of Pay
 ---
 
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-      </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <nav class="sub-navigation" data-click-events data-click-category="Content" data-click-action="Button clicked">
-          <ol itemscope itemtype="http://schema.org/ItemList">
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/using-govuk-pay" itemprop="item"><span itemprop="name">Using GOV.UK Pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/cost-benefits-of-pay" itemprop="item"><span itemprop="name">Cost benefits of Pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/govuk-payment-pages" itemprop="item"><span itemprop="name">GOV.UK payment pages</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/api-integration" itemprop="item"><span itemprop="name">API integration</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/take-payments-by-phone-or-post" itemprop="item"><span itemprop="name">Take payments by phone or post</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/payment-service-provider" itemprop="item"><span itemprop="name">GOV.UK Pay’s Payment Service Provider</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/direct-debit" itemprop="item"><span itemprop="name">Direct Debit</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/apple-pay-and-google-pay" itemprop="item"><span itemprop="name">Apple Pay and Google Pay</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/roadmap" itemprop="item"><span itemprop="name">Roadmap</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/security" itemprop="item"><span itemprop="name">Security and compliance</span></a>
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <%= partial 'partials/features-sub-nav.erb', locals: { current_page: current_page.data.title } %>
 
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">The cost benefits of using GOV.UK Pay</h1>
@@ -80,7 +34,7 @@ title: The cost benefits of using GOV.UK Pay
         </ul>
 
         <p class="govuk-body">For Government Banking’s Worldpay fees, email
-          <a class="govuk-link" href="mailto:serviceteam.gbs@hmrc.gov.uk">serviceteam.gbs@hmrc.gov.uk</a>.</p>
+          <%= mail_to "serviceteam.gbs@hmrc.gov.uk", "serviceteam.gbs@hmrc.gov.uk", :class => "govuk-link" %>.</p>
 
         <h2 class="govuk-heading-m">What you do not pay for</h2>
         <p class="govuk-body">There are financial advantages to using Pay that might not be obvious. They’re important
@@ -135,7 +89,7 @@ title: The cost benefits of using GOV.UK Pay
 
         <h3 class="govuk-heading-s">Speed of getting services live</h3>
         <p class="govuk-body">Sign up with our PSP, Stripe, and you can immediately use your account.</p>
-        <p class="govuk-body">With <a class="govuk-link" href="/govuk-payment-pages">payment links</a>, you can start
+        <p class="govuk-body">With <%= link_to "payment links", "govuk-payment-pages", class: "govuk-link" %>, you can start
           taking payments in a day. You do not need to build a digital service to use them.</p>
         <p class="govuk-body">For API integrations, your teams or suppliers can use our
           <a class="govuk-link" href="https://docs.payments.service.gov.uk/">technical documentation</a> to quickly and

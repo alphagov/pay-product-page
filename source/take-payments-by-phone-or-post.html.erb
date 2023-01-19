@@ -2,57 +2,12 @@
 title: Take payments by phone or post
 ---
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-      </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <nav class="sub-navigation" data-click-events data-click-category="Content" data-click-action="Button clicked">
-          <ol itemscope itemtype="http://schema.org/ItemList">
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/using-govuk-pay" itemprop="item"><span itemprop="name">Using GOV.UK Pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/cost-benefits-of-pay" itemprop="item"><span itemprop="name">Cost benefits of pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/govuk-payment-pages" itemprop="item"><span itemprop="name">GOV.UK payment pages</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/api-integration" itemprop="item"><span itemprop="name">API integration</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/take-payments-by-phone-or-post" itemprop="item"><span itemprop="name">Take payments by phone or post</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/payment-service-provider" itemprop="item"><span itemprop="name">GOV.UK Pay’s Payment Service Provider</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/direct-debit" itemprop="item"><span itemprop="name">Direct Debit</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/apple-pay-and-google-pay" itemprop="item"><span itemprop="name">Apple Pay and Google Pay</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/roadmap" itemprop="item"><span itemprop="name">Roadmap</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/security" itemprop="item"><span itemprop="name">Security and compliance</span></a>
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <%= partial 'partials/features-sub-nav.erb', locals: {current_page: current_page.data.title} %>
+
 
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Take payments by phone or post</h1>
@@ -61,7 +16,7 @@ title: Take payments by phone or post
           <a class="govuk-link" href="https://docs.payments.service.gov.uk/moto_payments/#take-a-payment-over-the-phone-moto-payments">take
             credit and debit card payments by telephone, or post</a>. These are sometimes called ‘MOTO’ payments.</p>
 
-        <p class="govuk-body">You get all of the advantages and security of using GOV.UK Pay, but you fill in your
+        <p class="govuk-body">You get all the advantages and security of using GOV.UK Pay, but you fill in your
           users’ details on the payment pages for them.</p>
 
         <p class="govuk-body">You can use this feature to take payments:</p>

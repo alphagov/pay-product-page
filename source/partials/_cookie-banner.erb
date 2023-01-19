@@ -13,13 +13,13 @@
       <button class="govuk-button pay-cookie-banner__button pay-cookie-banner__button--reject" type="submit" data-accept-cookies="false" aria-describedby="pay-cookie-banner__heading">
         No<span class="govuk-visually-hidden">, GOV.UK Pay cannot store analytics cookies on your device</span>
       </button>
-      <%= link_to "How GOV.UK Pay uses cookies", "/cookies", class: "govuk-link pay-cookie-banner__link" %>
+      <%= link_to "How GOV.UK Pay uses cookies", "cookies", class: "govuk-link pay-cookie-banner__link" %>
     </div>
   </div>
 
   <div class="pay-cookie-banner__confirmation" tabindex="-1">
     <p class="pay-cookie-banner__confirmation-message govuk-body">
-      You can <%= link_to "change your cookie settings", "/cookies", class: "govuk-link" %> at any time.
+      You can <%= link_to "change your cookie settings", "cookies", class: "govuk-link" %> at any time.
     </p>
     <button class="pay-cookie-banner__hide-button govuk-link" data-hide-cookie-banner="true" role="link">Hide</button>
   </div>

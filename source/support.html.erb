@@ -2,19 +2,8 @@
 title: Support
 ---
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-      </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -22,8 +11,8 @@ title: Support
         <p class="govuk-body">GOV.UK Pay is built and supported 24/7 by a full-time team at the Government Digital
           Service.</p>
         <p class="govuk-body">Follow our
-          <a class="govuk-link" href="/getstarted/" data-click-events data-click-category="Content" data-click-action="Internal link clicked">guide
-            to getting started</a> to create an account.</p>
+          <%= link_to 'guide to getting started', 'getstarted', :class => 'govuk-link', "data-click-events" => "", "data-click-category" => "Content", "data-click-action" => "Internal link clicked", :relative => true %>
+          to create an account.</p>
         <p class="govuk-body">GOV.UK Pay’s support is for government services, and does not provide support for
           individual members of the public paying for services. If you are a member of the public experiencing technical
           difficulties paying for a specific service, please contact that service’s support directly.</p>

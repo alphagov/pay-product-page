@@ -74,14 +74,14 @@
         <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
           <%
             {
-              'Features' => ['using-govuk-pay', true],
-              'Get started' => ['getstarted', true],
-              'Support' => ['support', true],
-              'Documentation' => ['https://docs.payments.service.gov.uk', false],
-              'Sign in' => ['https://selfservice.payments.service.gov.uk/login', false]
+              'Features' => ['using-govuk-pay', true, 'Using GOV.UK Pay'],
+              'Get started' => ['getstarted', true, 'Get started'],
+              'Documentation' => ['https://docs.payments.service.gov.uk', false, ''],
+              'Support' => ['support', true, 'Support'],
+              'Sign in' => ['https://selfservice.payments.service.gov.uk/login', false, '']
             }.each do |title, url|
           %>
-            <li class="govuk-header__navigation-item<% if url == pathValue(current_page.url) %> govuk-header__navigation-item--active<% end %>">
+            <li class="govuk-header__navigation-item<% if url[2] == current_page.data.title %> govuk-header__navigation-item--active<% end %>">
               <%= link_to title, url[0], class: "govuk-header__link", :relative => url[1] %>
             </li>
           <% end %>

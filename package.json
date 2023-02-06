@@ -3,9 +3,6 @@
   "private": "true",
   "version": "1.0.0",
   "description": "This is an example product page for use by GaaP products.",
-  "jest": {
-    "testEnvironment": "node"
-  },
   "scripts": {
     "test": "jest"
   },

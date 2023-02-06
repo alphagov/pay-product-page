@@ -7,7 +7,8 @@ description: Take and process online payments from your users - GOV.UK Pay is a 
     <div class="govuk-breadcrumbs breadcrumbs-hero" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
+          <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK
+            services</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
           <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page">GOV.UK&nbsp;Pay</a>
@@ -15,27 +16,28 @@ description: Take and process online payments from your users - GOV.UK Pay is a 
       </ol>
     </div>
     <div class="hero__content">
-        <div class="hero__body">
-            <h1 class="hero__title">Take online payments from your&nbsp;users</h1>
-            <div class="hero__inline-image">
-                <img src="/pay-product-page/images/pay-top-image.png" alt="" role="presentation">
-            </div>
-            <p class="hero__description">
-              If you work in the public sector, use GOV.UK Pay to take&nbsp;payments
-            </p>
-            <a href="/getstarted" role="button" draggable="false" class="govuk-button govuk-button--start button--start_white" data-module="govuk-button" data-click-events data-click-category="Hero" data-click-action="Button clicked">
-              Create a test account
-              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-              </svg>
-            </a>
-            <span class="hero-alternative-action">
-              or <a href="/using-govuk-pay" data-click-events data-click-category="Hero" data-click-action="Internal link clicked">find out what GOV.UK Pay offers</a>
-            </span>
+      <div class="hero__body">
+        <h1 class="hero__title">Take loads of online payments from your users</h1>
+        <div class="hero__inline-image">
+          <%= image_tag 'pay-top-image.png', alt: "Payment screen on mobile and dashboard with refund function.", role: "presentation" %>
         </div>
-        <div class="hero__aside-image">
-            <img src="/pay-product-page/images/pay-top-image.png" alt="Payment screen on mobile and dashboard with refund function." role="presentation">
-        </div>
+        <p class="hero__description">
+          If you work in the public sector, use GOV.UK Pay to take payments
+        </p>
+        <% link_to 'getstarted', :role => 'button', :class => 'govuk-button govuk-button--start button--start_white', 'data-click-events' => '', 'data-click-category' => 'Hero', 'data-click-action' => 'Internal link clicked', :relative => true do %>
+          Create a test account
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        <% end %>
+        <span class="hero-alternative-action">
+              or
+          <%= link_to 'find out what GOV.UK Pay offers', 'using-govuk-pay', 'data-click-events' => '', 'data-click-category' => 'Hero', 'data-click-action' => 'Internal link clicked', :relative => true %>
+        </span>
+      </div>
+      <div class="hero__aside-image">
+        <%= image_tag 'pay-top-image.png', alt: "Payment screen on mobile and dashboard with refund function.", role: "presentation" %>
+      </div>
     </div>
   </div>
 </div>
@@ -43,62 +45,74 @@ description: Take and process online payments from your users - GOV.UK Pay is a 
   <div class="govuk-width-container">
     <div class="content-section">
       <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <h2 class="content-section__title govuk-heading-m">Take payments instantly</h2>
-               <p class="govuk-body">Use GOV.UK Pay and be ready to take online payments in&nbsp;minutes.</p>
-               <p class="govuk-body">There are no monthly bills, setup or upgrade&nbsp;fees.</p>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <img class="content-section__image" src="/pay-product-page/images/product-page_images_user-screen.svg" alt="A user-facing payment page with entry fields for card details and a payment summary. A helpful inline error message responds to user input." />
-          </div>
+        <div class="govuk-grid-column-one-half">
+          <h2 class="content-section__title govuk-heading-m">Take payments instantly</h2>
+          <p class="govuk-body">Use GOV.UK Pay and be ready to take online payments in&nbsp;minutes.</p>
+          <p class="govuk-body">There are no monthly bills, setup or upgrade&nbsp;fees.</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <%= image_tag 'product-page_images_user-screen.svg', alt: "A user-facing payment page with entry fields for card details and a payment summary. A helpful inline error message responds to user input.", class: "content-section__image" %>
+        </div>
       </div>
     </div>
     <div class="content-section content-section--with-top-border">
       <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <h2 class="content-section__title govuk-heading-m">Manage your payments</h2>
-            <p class="govuk-body">Take payments, issue refunds and run reports on all your&nbsp;payments.</p>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <img class="content-section__image" src="/pay-product-page/images/product-page_images_transaction-screen.svg" alt="Dashboard showing a list of transactions with search filters." />
-          </div>
+        <div class="govuk-grid-column-one-half">
+          <h2 class="content-section__title govuk-heading-m">Manage your payments</h2>
+          <p class="govuk-body">Take payments, issue refunds and run reports on all your&nbsp;payments.</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <%= image_tag 'product-page_images_transaction-screen.svg', alt: "Dashboard showing a list of transactions with search filters.", class: "content-section__image" %>
+        </div>
       </div>
     </div>
     <div class="content-section content-section--with-top-border">
-        <h2 class="content-section__title govuk-heading-m">Create a hosted payment page or integrate your existing&nbsp;service</h2>
+      <h2 class="content-section__title govuk-heading-m">Create a hosted payment page or integrate your existing&nbsp;service</h2>
       <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <p class="govuk-body govuk-!-margin-bottom-9">If you want to take online payments and don’t have an online service, <a class="govuk-link" href="/govuk-payment-pages">create a GOV.UK payment page</a>.</p>
-            <img class="content-section__image" src="/pay-product-page/images/product-page_images_payment-link.svg" alt="A user-facing payment page with information about what the payment is about and a input box to input the price." />
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <p class="govuk-body govuk-!-margin-bottom-9">If you <a class="govuk-link" href="/api-integration">integrate your online service</a> you’ll get greater control over your&nbsp;payments.</p>
-            <img class="content-section__image" src="/pay-product-page/images/product-page_images_api_json_example.svg" alt="An screenshot of an extract of JSON code that would be used in an API call to GOV.UK Pay" />
-          </div>
+        <div class="govuk-grid-column-one-half">
+          <p class="govuk-body govuk-!-margin-bottom-9">If you want to take online payments and don’t have an online
+            service, <%= link_to 'create a GOV.UK payment page', 'govuk-payment-pages', :class => 'govuk-link', :relative => true %>
+            .</p>
+          <%= image_tag 'product-page_images_payment-link.svg', alt: "A user-facing payment page with information about what the payment is about and an input box to input the price.", class: "content-section__image" %>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p class="govuk-body govuk-!-margin-bottom-9">If you
+            <%= link_to 'integrate your online service', 'api-integration', :class => 'govuk-link', :relative => true %>
+            you’ll get greater control
+            over your&nbsp;payments.</p>
+          <%= image_tag 'product-page_images_api_json_example.svg', alt: "A screenshot of an extract of JSON code that would be used in an API call to GOV.UK Pay.", class: "content-section__image" %>
+        </div>
       </div>
     </div>
     <div class="content-section content-section--with-top-border">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
           <h2 class="content-section__title govuk-heading-m">Used and trusted across government</h2>
-          <p class="govuk-body">Partners from right across the public sector are already using GOV.UK Pay, including the NHS, MOJ, police forces and local authorities.</p>
-          <p class="govuk-body">See all the <a class="govuk-link" href="/performance">services using GOV.UK Pay</a>.</p>
+          <p class="govuk-body">Partners from right across the public sector are already using GOV.UK Pay, including the
+            NHS, MOJ, police forces and local authorities.</p>
+          <p class="govuk-body">See all
+            the <%= link_to 'services using GOV.UK Pay', 'performance', :class => 'govuk-link', :relative => true %>
+            .</p>
         </div>
         <div class="govuk-grid-column-one-half partner-grid">
-          <img class="content-section__image partner-logo" src="/pay-product-page/images/logos/home-office.png" alt="Home Office" />
-          <img class="content-section__image partner-logo" src="/pay-product-page/images/logos/moj.png" alt="Ministry of Justice" />
-          <img class="content-section__image partner-logo" src="/pay-product-page/images/logos/dit.png" alt="Department for International Trade" />
-          <img class="content-section__image partner-logo partner-logo--fcdo" src="/pay-product-page/images/logos/fcdo.png" alt="Foreign, Commonwealth & Development Office" />
-          <img class="content-section__image partner-logo" src="/pay-product-page/images/logos/mod.png" alt="Ministry of Defence" />
-          <img class="content-section__image partner-logo" src="/pay-product-page/images/logos/nhs.png" alt="NHS" />
+          <%= image_tag 'logos/home-office.png', alt: "Home Office", class: "content-section__image partner-logo" %>
+          <%= image_tag 'logos/moj.png', alt: "Ministry of Justice", class: "content-section__image partner-logo" %>
+          <%= image_tag 'logos/dit.png', alt: "Department for International Trade", class: "content-section__image partner-logo" %>
+          <%= image_tag 'logos/fcdo.png', alt: "Foreign, Commonwealth & Development Office", class: "content-section__image partner-logo partner-logo--fcdo" %>
+          <%= image_tag 'logos/mod.png', alt: "Ministry of Defence", class: "content-section__image partner-logo" %>
+          <%= image_tag 'logos/nhs.png', alt: "NHS", class: "content-section__image partner-logo" %>
         </div>
-    </div>
-    <div class="content-section content-section--with-top-border">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h2 class="content-section__title govuk-heading-m">Security and relevant standards built&nbsp;in</h2>
-          <p class="govuk-body">GOV.UK Pay is robust, secure and fully Payment Card Industry (PCI) compliant.</p>
-          <p class="govuk-body">Read the <a class="govuk-link" href="/accessibility-statement/">accessibility statement</a> to check how it meets accessibility standards.</p>
+      </div>
+      <div class="content-section content-section--with-top-border">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <h2 class="content-section__title govuk-heading-m">Security and relevant standards built&nbsp;in</h2>
+            <p class="govuk-body">GOV.UK Pay is robust, secure and fully Payment Card Industry (PCI) compliant.</p>
+            <p class="govuk-body">Read
+              the <%= link_to 'accessibility statement', 'accessibility-statement', :class => 'govuk-link', :relative => true %>
+              to check how it meets
+              accessibility standards.</p>
+          </div>
         </div>
       </div>
     </div>

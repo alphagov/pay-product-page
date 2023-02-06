@@ -4,19 +4,8 @@ title: Performance data
 
 <div class="govuk-width-container">
 
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        Performance data
-      </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
 
   <main class="govuk-main-wrapper govuk-!-margin-top-4" id="main-content">
     <div class="govuk-grid-row  govuk-!-margin-bottom-4">
@@ -63,36 +52,36 @@ title: Performance data
         <table class="govuk-table govuk-!-margin-bottom-9">
           <caption class="govuk-visually-hidden">Sectors using pay</caption>
           <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Sector type</th>
-              <th scope="col" class="govuk-table__header">Number of live services</th>
-            </tr>
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Sector type</th>
+            <th scope="col" class="govuk-table__header">Number of live services</th>
+          </tr>
           </thead>
           <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Central government, including devolved administrations, arms length
-                bodies
-                and executive agencies
-              </td>
-              <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.central %></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Local government</td>
-              <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.local %></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Central NHS</td>
-              <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.nhscentral %></td>
-            </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Central government, including devolved administrations, arms length
+              bodies
+              and executive agencies
+            </td>
+            <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.central %></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Local government</td>
+            <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.local %></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Central NHS</td>
+            <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.nhscentral %></td>
+          </tr>
 
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">NHS Trust</td>
-              <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.nhstrust %></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Police</td>
-              <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.police %></td>
-            </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">NHS Trust</td>
+            <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.nhstrust %></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Police</td>
+            <td class="govuk-table__cell"><%= data.performance.serviceCountBySector.police %></td>
+          </tr>
           </tbody>
         </table>
       </div>
@@ -122,20 +111,20 @@ title: Performance data
         <table class="govuk-table govuk-!-margin-top-4">
           <caption class="govuk-visually-hidden">Live services per organisation</caption>
           <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Organisations</th>
-              <th scope="col" class="govuk-table__header">Number of live services</th>
-            </tr>
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Organisations</th>
+            <th scope="col" class="govuk-table__header">Number of live services</th>
+          </tr>
           </thead>
           <tbody class="govuk-table__body">
-            <% data.performance.serviceCountByOrganisation.each do |organisation,count| %>
+          <% data.performance.serviceCountByOrganisation.each do |organisation, count| %>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <%= organisation %>
               </td>
               <td class="govuk-table__cell"><%= count %></td>
             </tr>
-            <% end %>
+          <% end %>
           </tbody>
         </table>
       </div>

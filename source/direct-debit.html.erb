@@ -1,64 +1,23 @@
 ---
-title: Direct Debit on GOV.UK Pay
+title: Direct Debit
 ---
 
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-        </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <nav class="sub-navigation" data-click-events data-click-category="Content" data-click-action="Button clicked">
-          <ol itemscope itemtype="http://schema.org/ItemList">
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/using-govuk-pay" itemprop="item"><span itemprop="name">Using GOV.UK Pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/cost-benefits-of-pay" itemprop="item"><span itemprop="name">Cost benefits of pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/govuk-payment-pages" itemprop="item"><span itemprop="name">GOV.UK payment pages</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/api-integration" itemprop="item"><span itemprop="name">API integration</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/take-payments-by-phone-or-post" itemprop="item"><span itemprop="name">Take payments by phone or post</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/payment-service-provider" itemprop="item"><span itemprop="name">GOV.UK Pay’s Payment Service Provider</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/direct-debit" itemprop="item"><span itemprop="name">Direct Debit</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/apple-pay-and-google-pay" itemprop="item"><span itemprop="name">Apple Pay and Google Pay</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/roadmap" itemprop="item"><span itemprop="name">Roadmap</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/security" itemprop="item"><span itemprop="name">Security and compliance</span></a>
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <%= partial 'partials/features-sub-nav.erb', locals: {current_page: current_page.data.title} %>
+
 
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Direct Debit on GOV.UK Pay</h1>
-        <p class="govuk-body">Our Direct Debit private beta is currently paused, but we’re exploring options for another round.</p>
-        <p class="govuk-body">Contact <a class="govuk-link" href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk" data-click-events data-click-category="Content" data-click-action="Email link clicked">govuk-pay-support@digital.cabinet-office.gov.uk</a> with questions about Direct Debit or if you’re interested in taking Direct Debit payments on GOV.UK Pay.</p>
+        <p class="govuk-body">Our Direct Debit private beta is currently paused, but we’re exploring options for another
+          round.</p>
+        <p class="govuk-body">Contact
+          <a class="govuk-link" href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk" data-click-events data-click-category="Content" data-click-action="Email link clicked">govuk-pay-support@digital.cabinet-office.gov.uk</a>
+          with questions about Direct Debit or if you’re interested in taking Direct Debit payments on GOV.UK Pay.</p>
+      </div>
     </div>
   </main>
 </div>

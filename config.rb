@@ -5,9 +5,9 @@
 # Per-page layout changes:
 #
 # With no layout
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+page "/*.xml", layout: false
+page "/*.json", layout: false
+page "/*.txt", layout: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -23,16 +23,16 @@ configure :development do
   activate :livereload
 end
 
-config[:css_dir] = 'stylesheets'
-config[:images_dir] = 'images'
-config[:js_dir] = 'javascripts'
+config[:css_dir] = "stylesheets"
+config[:images_dir] = "images"
+config[:js_dir] = "javascripts"
 
-ignore '**/javascripts/*test*.js'
+ignore "**/javascripts/*test*.js"
 
 # Google analytics
 configure :development do
   set :analytics, ""
-  set :new_cookie_banner, true 
+  set :new_cookie_banner, true
 end
 
 configure :build do
@@ -42,25 +42,28 @@ configure :build do
   set :new_cookie_banner, true
 end
 
-
 ###
 # Helpers
 ###
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def pathValue(url)
+  def path_value(url)
     url.delete_prefix('/').delete_suffix('/')
   end
-end
 
+  def tel_to(text, className)
+    groups = text.to_s.scan(/(?:^\+)?\d+/)
+    link_to text, "tel:#{groups.join ''}", className
+  end
+end
 
 activate :sprockets do |config|
   config.expose_middleman_helpers = true
 end
 
-sprockets.append_path File.join(root, 'node_modules/govuk-frontend/')
-sprockets.append_path File.join(root, 'node_modules/gaap-analytics/build')
+sprockets.append_path File.join(root, "node_modules/govuk-frontend/")
+sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
 
 redirect "contact/index.html", to: "/support/"
 redirect "features.html", to: "/using-govuk-pay/"

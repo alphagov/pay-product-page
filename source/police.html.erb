@@ -1,56 +1,63 @@
 ---
 title: Using GOV.UK Pay to take and process payments for the police force
 ---
+
 <div class="govuk-width-container">
-  <%= partial 'partials/breadcrumb.erb' %>
+  <%= partial 'partials/breadcrumb.html.erb' %>
 
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds" data-click-events data-click-category="Content" data-click-action="Internal link clicked">
-        <h1 class="govuk-heading-l">
-          Using GOV.UK Pay to take and process payments for the police force
-        </h1>
+        <h1 class="govuk-heading-l">Using GOV.UK Pay to take and process payments for the police force</h1>
 
-        <p class="govuk-body">The government is creating a template website and backend system for all UK police forces
-          to use. It’s called the Single Online Home (SOH). The SOH will allow the public to access police services
-          across the UK in a consistent way.</p>
-        <p class="govuk-body">As part of this, all police forces will use GOV.UK Pay to take online payments for their
-          services, starting with firearm licences.</p>
+        <p class="govuk-body">
+          The government is creating a template website and backend system for all UK police forces to use. It’s called the Single Online Home (SOH). The SOH will allow the public
+          to access police services across the UK in a consistent way.
+        </p>
+        <p class="govuk-body">As part of this, all police forces will use GOV.UK Pay to take online payments for their services, starting with firearm licences.</p>
 
         <h2 class="govuk-heading-m">About GOV.UK Pay</h2>
-        <p class="govuk-body">GOV.UK Pay is a free and secure online payment service for government and public sector
-          organisations.</p>
-        <p class="govuk-body">GOV.UK Pay provides customer-facing pages to take card payment details from users and the
-          back-end system to process and view transactions. We use a payment service provider (PSP) to take the money
-          out of the user’s account and deposit it into your account.</p>
-        <p class="govuk-body">We comply with the
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/security/">Payment Card Industry Data Security
-            Standard (PCI-DSS)</a>. You can also access our privacy policy from your account.</p>
-        <p class="govuk-body">You can read more about GOV.UK Pay on our
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/">product</a> and
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/features">features page</a>. Or
-          <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/register/email-address">sign up</a>
-          for a test account and try it for yourself.</p>
+        <p class="govuk-body">GOV.UK Pay is a free and secure online payment service for government and public sector organisations.</p>
+        <p class="govuk-body">
+          GOV.UK Pay provides customer-facing pages to take card payment details from users and the back-end system to process and view transactions. We use a payment service
+          provider (PSP) to take the money out of the user’s account and deposit it into your account.
+        </p>
+        <p class="govuk-body">
+          We comply with the <%= link_to 'Payment Card Industry Data Security Standard (PCI-DSS)', 'security', class: 'govuk-link' %>. You can also access our privacy policy from
+          your account.
+        </p>
+        <p class="govuk-body">
+          You can read more about GOV.UK Pay on our
+          <%= link_to 'product', 'index', class: 'govuk-link' %>
+          and
+          <%= link_to 'features page', 'features', class: 'govuk-link' %>. Or
+          <%= link_to 'sign up', 'https://selfservice.payments.service.gov.uk/register/email-address', class: 'govuk-link' %>
+          for a test account and try it for yourself.
+        </p>
 
         <h2 class="govuk-heading-m">Get a GOV.UK Pay account</h2>
         <p class="govuk-body">To get set up on GOV.UK Pay:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>sign up for a GOV.UK Pay test account to try out GOV.UK Pay for yourself at:
-            <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/">https://selfservice.payments.service.gov.uk/login</a>
+          <li>
+            <%= link_to 'sign up for a GOV.UK Pay test account', 'https://selfservice.payments.service.gov.uk/register/email-address', class: 'govuk-link' %>
           </li>
           <li>when you’re ready to go live, select ‘My services’</li>
-          <li>navigate to the service you want to make live and select 'Request a live account’ option from the service
-            Dashboard, which will guide you through the process of getting a live account
+          <li>
+            navigate to the service you want to make live and select 'Request a live account’ option from the service Dashboard, which will guide you through the process of getting
+            a live account
           </li>
           <li>you’ll be asked to confirm you accept our legal terms</li>
         </ul>
-        <p class="govuk-body">If you have any questions, the
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/support/">GOV.UK Pay team can help</a>.</p>
+        <p class="govuk-body">
+          If you have any questions, the
+          <%= link_to 'GOV.UK Pay team can help', 'support', class: 'govuk-link' %>.
+        </p>
 
         <h2 class="govuk-heading-m">Payment service providers (PSPs)</h2>
 
-        <p class="govuk-body">GOV.UK Pay has procured a payment service provider (PSP) to take and process payments.
-          This allows you to use GOV.UK Pay without a separate payment gateway.</p>
+        <p class="govuk-body">
+          GOV.UK Pay has procured a payment service provider (PSP) to take and process payments. This allows you to use GOV.UK Pay without a separate payment gateway.
+        </p>
 
         <h3 class="govuk-heading-s">You’ll just need to provide:</h3>
         <ul class="govuk-list govuk-list--bullet">
@@ -62,59 +69,68 @@ title: Using GOV.UK Pay to take and process payments for the police force
         <p class="govuk-heading-s">Using our PSP means:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>the process is very simple</li>
-          <li>it’s very quick - your GOV.UK pay account and PSP account will be set up within a working day and you can
-            start taking payments immediately
-          </li>
+          <li>it’s very quick - your GOV.UK pay account and PSP account will be set up within a working day and you can start taking payments immediately</li>
           <li>you’re not locked into a long-term contract</li>
         </ul>
 
         <h2 class="govuk-heading-m">Contract</h2>
-        <p class="govuk-body">You’ll need to sign a contract with GOV.UK Pay before you can take payments. If you choose
-          to use our PSP, you’ll need to sign the Connected PSP Account Agreement too.</p>
-        <p class="govuk-body">Once the contracts are signed, you can also use GOV.UK Pay to take payments for other
-          services you provide.</p>
-        <p class="govuk-body">In order to download and review the contracts, you’ll need to go to
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/">https://www.payments.service.gov.uk/</a> and
-          either sign in or sign up for a test GOV.UK Pay account.</p>
+        <p class="govuk-body">
+          You’ll need to sign a contract with GOV.UK Pay before you can take payments. If you choose to use our PSP, you’ll need to sign the Connected PSP Account Agreement too.
+        </p>
+        <p class="govuk-body">Once the contracts are signed, you can also use GOV.UK Pay to take payments for other services you provide.</p>
+        <p class="govuk-body">
+          In order to download and review the contracts, you’ll need to
+          <%= link_to 'either sign in or sign up for a test GOV.UK Pay account', 'https://selfservice.payments.service.gov.uk/login', class: 'govuk-link' %>.
+        </p>
 
         <p class="govuk-body">Once you are signed in to your account you can download the:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>
-            <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/policy/download/contract-for-non-crown-bodies">GOV.UK
-              Pay contract</a></li>
+            <%= link_to 'GOV.UK Pay contract', 'https://selfservice.payments.service.gov.uk/policy/download/contract-for-non-crown-bodies', class: 'govuk-link' %>
+          </li>
           <li>
-            <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/policy/download/stripe-connected-account-agreement">Connected
-              PSP Account Agreement</a></li>
+            <%= link_to 'Connected PSP Account Agreement', 'https://selfservice.payments.service.gov.uk/policy/download/stripe-connected-account-agreement', class: 'govuk-link' %>
+          </li>
         </ul>
 
         <p class="govuk-body">The contracts are linked from the page footer.</p>
-        <p class="govuk-body">The Single Online Home transition team will work with you to connect your live account to
-          the SOH firearms licence platform.</p>
+        <p class="govuk-body">The Single Online Home transition team will work with you to connect your live account to the SOH firearms licence platform.</p>
 
         <h2 class="govuk-heading-m">Custom branded payment pages</h2>
-        <p class="govuk-body">You can add your own branding to payment pages and emails. </p>
-        <p class="govuk-body">Follow the
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/optional_features/custom_branding/#custom-branding-of-payment-pages">instructions
-            to set up your custom branding</a>.</p>
+        <p class="govuk-body">You can add your own branding to payment pages and emails.</p>
+        <p class="govuk-body">
+          Follow the
+          <%=
+            link_to 'instructions to set up your custom branding',
+                    'https://docs.payments.service.gov.uk/optional_features/custom_branding/#custom-branding-of-payment-pages',
+                    class: 'govuk-link'
+          %>.
+        </p>
 
         <h2 class="govuk-heading-m">Payment reference number</h2>
-        <p class="govuk-body">The Single Online Home system will generate an application reference number to associate
-          with the payment. This will enable you to reconcile the application with the payment.</p>
+        <p class="govuk-body">
+          The Single Online Home system will generate an application reference number to associate with the payment. This will enable you to reconcile the application with the
+          payment.
+        </p>
 
         <h2 class="govuk-heading-m">Support</h2>
-        <p class="govuk-body">Try GOV.UK Pay for yourself by
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/getstarted">signing up for a test account</a>.
+        <p class="govuk-body">
+          Try GOV.UK Pay for yourself by
+          <%= link_to 'signing up for a test account', 'getstarted', class: 'govuk-link' %>.
         </p>
-        <p class="govuk-body">GOV.UK Pay provides
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/#gov-uk-pay-documentation">detailed
-            documentation</a>. You, or your development team, will need to read this if you want to integrate with your
-          own systems, for example, case management or income management systems for
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/reporting/#reporting">reporting</a> and
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/refunding_payments/#refunding-with-the-gov-uk-pay-api">refunds</a>.
+        <p class="govuk-body">
+          GOV.UK Pay provides
+          <%= link_to 'detailed documentation', 'https://docs.payments.service.gov.uk/#gov-uk-pay-documentation', class: 'govuk-link' %>. You, or your development team, will need
+          to read this if you want to integrate with your own systems, for example, case management or income management systems for
+          <%= link_to 'reporting', 'https://docs.payments.service.gov.uk/reporting/#reporting', class: 'govuk-link' %>
+          and
+          <%= link_to 'refunds', 'https://docs.payments.service.gov.uk/refunding_payments/#refunding-with-the-gov-uk-pay-api', class: 'govuk-link' %>.
         </p>
-        <p class="govuk-body">You can also
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/support">contact the GOV.UK Pay team</a> if
-          you have any questions or feedback.</p>
+        <p class="govuk-body">
+          You can also
+          <%= link_to 'contact the GOV.UK Pay team', 'support', class: 'govuk-link' %>
+          if you have any questions or feedback.
+        </p>
       </div>
     </div>
   </main>

@@ -1,16 +1,16 @@
 ---
 title: API integration
 ---
+
 <div class="govuk-width-container">
-  <%= partial 'partials/breadcrumb.erb' %>
+  <%= partial 'partials/breadcrumb.html.erb' %>
 
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
-      <%= partial 'partials/features-sub-nav.erb', locals: { current_page: current_page.data.title } %>
-
+      <%= partial 'partials/features-sub-nav.html.erb', locals: { current_page: current_page.data.title } %>
 
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Integrating your service with GOV.UK&nbsp;Pay</h1>
+        <h1 class="govuk-heading-l">Integrating your service with GOV.UK Pay</h1>
 
         <p class="govuk-body">You can use GOV.UK Pay to take credit and debit card payments in your digital service.</p>
 
@@ -21,56 +21,75 @@ title: API integration
           <li>report on payments manually with CSV downloads or automatically via our API</li>
           <li>apply custom branding on payment pages</li>
         </ul>
-        <p class="govuk-body">If you integrate with our RESTful API you can customise your payment pages to look like
-          the rest of your digital service.</p>
+        <p class="govuk-body">If you integrate with our RESTful API you can customise your payment pages to look like the rest of your digital service.</p>
         <p class="govuk-body">
-          <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/register/email-address">Create an
-            account</a> for free and try it yourself.</p>
+          <%= link_to 'Create an account', 'https://selfservice.payments.service.gov.uk/register/email-address', class: 'govuk-link' %>
+          for free and try it yourself.
+        </p>
 
         <h3 class="govuk-heading-s">When to integrate your service</h3>
-        <p class="govuk-body">If you integrate you get all the features of GOV.UK Pay, plus some additional
-          benefits.</p>
+        <p class="govuk-body">If you integrate you get all the features of GOV.UK Pay, plus some additional benefits.</p>
 
         <h3 class="govuk-heading-s">Control your payments</h3>
-        <p class="govuk-body">Using our API gives you greater flexibility over your payments. For example, it lets you
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/delayed_capture/#delay-taking-a-payment">delay
-            payment</a> to a time that suits you.</p>
+        <p class="govuk-body">
+          Using our API gives you greater flexibility over your payments. For example, it lets you
+          <%= link_to 'delay payment', 'https://docs.payments.service.gov.uk/delayed_capture/#delay-taking-a-payment', class: 'govuk-link' %>
+          to a time that suits you.
+        </p>
 
         <h3 class="govuk-heading-s">Prepopulated fields</h3>
-        <p class="govuk-body">GOV.UK Pay
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/optional_features/prefill_user_details/#prefilling-fields-on-the-payment-page">prepopulates
-            some transaction details</a> so users only need to enter their details once.</p>
+        <p class="govuk-body">
+          GOV.UK Pay
+          <%=
+            link_to 'prepopulates some transaction details',
+                    'https://docs.payments.service.gov.uk/optional_features/prefill_user_details/#prefilling-fields-on-the-payment-page',
+                    class: 'govuk-link'
+          %>
+          so users only need to enter their details once.
+        </p>
 
         <h3 class="govuk-heading-s">Reporting</h3>
-        <p class="govuk-body">Create
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/reporting/#reporting">transaction reports</a>
+        <p class="govuk-body">
+          Create
+          <%= link_to 'transaction reports', 'https://docs.payments.service.gov.uk/reporting/#reporting', class: 'govuk-link' %>
           to track your payments. Or you can integrate your current income management systems with
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/api_reference/#api-reference">our API</a>.
+          <%= link_to 'our API', 'https://docs.payments.service.gov.uk/api_reference/#api-reference', class: 'govuk-link' %>.
         </p>
 
         <h3 class="govuk-heading-s">Failure pages</h3>
-        <p class="govuk-body">Build your own
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/optional_features/use_your_own_error_pages/#use-your-own-payment-failure-pages">payment
-            failure pages</a> to improve your users experience of your service.</p>
+        <p class="govuk-body">
+          Build your own
+          <%=
+            link_to 'payment failure pages',
+                    'https://docs.payments.service.gov.uk/optional_features/use_your_own_error_pages/#use-your-own-payment-failure-pages',
+                    class: 'govuk-link'
+          %>
+          to improve your users experience of your service.
+        </p>
 
         <h3 class="govuk-heading-s">Metadata</h3>
         <p class="govuk-body">
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/custom_metadata/#add-custom-metadata">Add
-            metadata</a> to your transactions to make it easier to reconcile payments. Add metadata to cost centre or
-          ledger codes, customer IDs or any data you need to track.</p>
+          <%= link_to 'Add metadata', 'https://docs.payments.service.gov.uk/custom_metadata/#add-custom-metadata', class: 'govuk-link' %>
+          to your transactions to make it easier to reconcile payments. Add metadata to cost centre or ledger codes, customer IDs or any data you need to track.
+        </p>
 
         <h2 class="govuk-heading-m">Integrate with our API</h2>
         <p class="govuk-body">You’ll need some developer help to get GOV.UK Pay set up.</p>
         <p class="govuk-body">To get started you can:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>read our step-by-step guidance in our
-            <a class="govuk-link" href="https://docs.payments.service.gov.uk/#gov-uk-pay-documentation">developer
-              documentation</a></li>
-          <li><a class="govuk-link" href="https://www.payments.service.gov.uk/support/">contact our team</a> for support
+          <li>
+            read our step-by-step guidance in our
+            <%= link_to 'developer documentation', 'https://docs.payments.service.gov.uk/#gov-uk-pay-documentation', class: 'govuk-link' %>
+          </li>
+          <li>
+            <%= link_to 'contact our team', 'support', class: 'govuk-link' %>
+            for support
           </li>
         </ul>
-        <p class="govuk-body">If you want to find out more about all that GOV.UK Pay offers, see
-          <%= link_to "our features page", "using-govuk-pay", class: "govuk-link" %>.</p>
+        <p class="govuk-body">
+          If you want to find out more about all that GOV.UK Pay offers, see
+          <%= link_to 'our features page', 'using-govuk-pay', class: 'govuk-link' %>.
+        </p>
       </div>
     </div>
   </main>

@@ -15,8 +15,13 @@
           'Security and compliance' => ['security', false]
         }.each do |title, url|
       %>
-        <li class="sub-navigation__item<% if url[1] == true %> sub-navigation__item--sub<% end %><% if title == current_page %> sub-navigation__item--active<% end %>" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <% link_to url[0], class: 'govuk-link', :itemprop => 'item', :relative => true do %>
+        <li
+          class="sub-navigation__item<% if url[1] == true %> sub-navigation__item--sub<% end %><% if title == current_page %> sub-navigation__item--active<% end %>"
+          itemprop="itemListElement"
+          itemscope
+          itemtype="http://schema.org/ListItem"
+        >
+          <% link_to url[0], class: 'govuk-link', :itemprop => 'item' do %>
             <span itemprop="name"><%= title %></span>
           <% end %>
         </li>

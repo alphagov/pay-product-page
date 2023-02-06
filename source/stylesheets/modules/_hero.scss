@@ -60,7 +60,7 @@
   }
 
   &__title {
-      @include govuk-font($size: 48, $weight: bold);
+    @include govuk-font($size: 48, $weight: bold);
   }
 
   &__description {
@@ -72,16 +72,15 @@
     margin-top: govuk-spacing(3);
     margin-bottom: govuk-spacing(3);
 
-      @include govuk-media-query(tablet) {
+    @include govuk-media-query(tablet) {
       margin-bottom: govuk-spacing(6);
     }
   }
 
-
   &__inline-image {
     text-align: center;
 
-      @include govuk-media-query(tablet) {
+    @include govuk-media-query(tablet) {
       display: none;
       visibility: hidden;
     }
@@ -92,12 +91,11 @@
     }
   }
 
-
   &__aside-image {
     display: none;
     visibility: hidden;
 
-      @include govuk-media-query(tablet) {
+    @include govuk-media-query(tablet) {
       display: block;
       visibility: visible;
     }
@@ -137,7 +135,7 @@
 
   .button--start_white:link,
   .button--start_white:visited {
-    background-color: govuk-colour("white");
+    background-color: govuk-colour('white');
     color: $govuk-brand-colour;
     background-size: 20px;
     background-position: 96% 50%;

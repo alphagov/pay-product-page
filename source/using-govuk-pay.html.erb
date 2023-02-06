@@ -3,33 +3,34 @@ title: Using GOV.UK Pay
 ---
 
 <div class="govuk-width-container">
-  <%= partial 'partials/breadcrumb.erb' %>
+  <%= partial 'partials/breadcrumb.html.erb' %>
 
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
-      <%= partial 'partials/features-sub-nav.erb', locals: {current_page: current_page.data.title} %>
+      <%= partial 'partials/features-sub-nav.html.erb', locals: { current_page: current_page.data.title } %>
 
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Using GOV.UK Pay</h1>
 
-        <p class="govuk-body">GOV.UK Pay is a free service, available to public sector organisations to take online card
-          payments. There’s no monthly charge, no set-up fee and no procurement process. It enables service teams to
-          replace offline payment methods quickly and easily, providing a Payment Card Industry (PCI) fully compliant,
-          secure and accessible user experience hosted on GOV.UK.</p>
-        <p class="govuk-body">It takes a couple of minutes to
-          <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/register/email-address">create an
-            account</a> and you can take payments within a day using our
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/govuk-payment-pages/">payment link
-            functionality</a> but many services opt for a richer experience and integrate with our well-documented API.
+        <p class="govuk-body">
+          GOV.UK Pay is a free service, available to public sector organisations to take online card payments. There’s no monthly charge, no set-up fee and no procurement process.
+          It enables service teams to replace offline payment methods quickly and easily, providing a Payment Card Industry (PCI) fully compliant, secure and accessible user
+          experience hosted on GOV.UK.
+        </p>
+        <p class="govuk-body">
+          It takes a couple of minutes to
+          <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/register/email-address">create an account</a>
+          and you can take payments within a day using our
+          <%= link_to 'payment link functionality', 'govuk-payment-pages', class: 'govuk-link' %>
+          but many services opt for a richer experience and integrate with our well-documented API.
         </p>
         <p class="govuk-body">With GOV.UK Pay you can:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>take debit card, credit card and digital wallets payments via our API integration or payment links
+          <li>take debit card, credit card and digital wallets payments via our API integration or payment links functionality</li>
+          <li>
+            provide assisted digital methods by taking debit and credit card payments by telephone, or post with
+            <%= link_to 'MOTO payment', 'take-payments-by-phone-or-post', class: 'govuk-link' %>
             functionality
-          </li>
-          <li>provide assisted digital methods by taking debit and credit card payments by telephone, or post with
-            <a class="govuk-link" href="https://www.payments.service.gov.uk/take-payments-by-phone-or-post/">MOTO
-              payment</a> functionality
           </li>
           <li>give full or partial refunds</li>
           <li>report on payments manually with CSV downloads or automatically via our API</li>
@@ -39,14 +40,15 @@ title: Using GOV.UK Pay
         <h2 class="govuk-heading-m">What GOV.UK Pay offers</h2>
 
         <h3 class="govuk-heading-s">Payment Service Provider</h3>
-        <p class="govuk-body">You need a Payment Service Provider (PSP) to process payments through GOV.UK Pay. We’ve
-          already procured Stripe as our payment provider for you.</p>
-        <p class="govuk-body">Alternatively, if you are a central government or health sector organisation, you can use
-          Government Banking’s centralised contract currently held with Worldpay.</p>
-        <p class="govuk-body">When these contracts and/or suppliers change we will handle the technical integration and
-          make the switch as seamless as possible for public sector users.</p>
+        <p class="govuk-body">You need a Payment Service Provider (PSP) to process payments through GOV.UK Pay. We’ve already procured Stripe as our payment provider for you.</p>
+        <p class="govuk-body">
+          Alternatively, if you are a central government or health sector organisation, you can use Government Banking’s centralised contract currently held with Worldpay.
+        </p>
+        <p class="govuk-body">
+          When these contracts and/or suppliers change we will handle the technical integration and make the switch as seamless as possible for public sector users.
+        </p>
         <h3 class="govuk-heading-s">Refunds</h3>
-        <p class="govuk-body">Provide full or partial refunds to your users for free </p>
+        <p class="govuk-body">Provide full or partial refunds to your users for free</p>
 
         <h3 class="govuk-heading-s">Security</h3>
         <p class="govuk-body">3D Secure 2 is available on all payments taken on GOV.UK Pay.</p>
@@ -64,11 +66,9 @@ title: Using GOV.UK Pay
           <li>refunds</li>
         </ul>
         <h3 class="govuk-heading-s">Manage your team</h3>
-        <p class="govuk-body">Control what your team members can see and do and remove them if they leave your
-          organisation.</p>
+        <p class="govuk-body">Control what your team members can see and do and remove them if they leave your organisation.</p>
         <h3 class="govuk-heading-s">Standards and support</h3>
-        <p class="govuk-body">GOV.UK Pay has been tested against all relevant government accessibility and usability
-          standards. It’s also:</p>
+        <p class="govuk-body">GOV.UK Pay has been tested against all relevant government accessibility and usability standards. It’s also:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>PCI compliant</li>
           <li>supported 24/7 by the team at the Government Digital Service</li>
@@ -83,8 +83,7 @@ title: Using GOV.UK Pay
         </ul>
 
         <p class="govuk-body">Use GOV.UK if you currently collect payment on paper or by email.</p>
-        <p class="govuk-body">Integrating with our API may be better if you have an online service and you need, for
-          example, to delay payments or issue a lot of refunds.</p>
+        <p class="govuk-body">Integrating with our API may be better if you have an online service and, for example, you need to delay payments or issue a lot of refunds.</p>
       </div>
     </div>
   </main>

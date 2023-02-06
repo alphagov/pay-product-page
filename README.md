@@ -41,10 +41,10 @@ Use the command line script `github-release` to build an artifact containing the
 3. Generate a [personal access](https://github.com/settings/tokens) token in GitHub. The token should have the `repo` scope.
 4. Run the following:
 
-```GITHUB_TOKEN=xxx bin/github-release --version 1.0.1 publish```
+`GITHUB_TOKEN=xxx bin/github-release --version 1.0.1 publish`
 
->- `GITHUB_TOKEN` is the personal access token you generated
->- the `--version` argument specifies the version of the new release (pick something sensible based on the previous releases)
+> - `GITHUB_TOKEN` is the personal access token you generated
+> - the `--version` argument specifies the version of the new release (pick something sensible based on the previous releases)
 
 The product page is deployed as part of `pay-frontend`.
 

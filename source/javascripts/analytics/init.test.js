@@ -12,7 +12,7 @@ beforeAll(() => {
   jest.spyOn(window, 'location', 'get').mockImplementation(() => {
     return {
       pathname: '/privacy-notice',
-      search: ''
+      search: '',
     }
   })
 
@@ -25,12 +25,10 @@ beforeAll(() => {
 
   window.GovUkPay.Cookie = {
     getCookieDomain: jest.fn(),
-  } 
-    
+  }
 })
 
 describe('InitialiseAnalytics component', () => {
-
   describe('If initAnalytics has not yet been called', () => {
     beforeEach(() => {
       InitialiseAnalytics()
@@ -47,7 +45,7 @@ describe('InitialiseAnalytics component', () => {
           anonymizeIp: true,
           displayFeaturesTask: null,
           transport: 'beacon',
-          expires: 365
+          expires: 365,
         })
       )
     })

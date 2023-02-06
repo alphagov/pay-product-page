@@ -1,23 +1,27 @@
 ---
 title: Take payments by phone or post
 ---
+
 <div class="govuk-width-container">
-  <%= partial 'partials/breadcrumb.erb' %>
+  <%= partial 'partials/breadcrumb.html.erb' %>
 
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
-      <%= partial 'partials/features-sub-nav.erb', locals: {current_page: current_page.data.title} %>
-
+      <%= partial 'partials/features-sub-nav.html.erb', locals: { current_page: current_page.data.title } %>
 
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Take payments by phone or post</h1>
 
-        <p class="govuk-body">You can use GOV.UK Pay to
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/moto_payments/#take-a-payment-over-the-phone-moto-payments">take
-            credit and debit card payments by telephone, or post</a>. These are sometimes called ‘MOTO’ payments.</p>
+        <p class="govuk-body">
+          You can use GOV.UK Pay to
+          <%=
+            link_to 'take credit and debit card payments by telephone, or post',
+                    'https://docs.payments.service.gov.uk/moto_payments/#take-a-payment-over-the-phone-moto-payments',
+                    class: 'govuk-link'
+          %>. These are sometimes called ‘MOTO’ payments.
+        </p>
 
-        <p class="govuk-body">You get all the advantages and security of using GOV.UK Pay, but you fill in your
-          users’ details on the payment pages for them.</p>
+        <p class="govuk-body">You get all the advantages and security of using GOV.UK Pay, but you fill in your users’ details on the payment pages for them.</p>
 
         <p class="govuk-body">You can use this feature to take payments:</p>
         <ul class="govuk-list govuk-list--bullet">
@@ -27,40 +31,49 @@ title: Take payments by phone or post
 
         <h2 class="govuk-heading-m">Why use this feature</h2>
 
-        <p class="govuk-body">All of your payments will be in one system, there’s no need to use any other software. You
-          simply use the same API as you do for online card payments. So all of your reporting, refund processing etc
-          can all be done in the same place.</p>
+        <p class="govuk-body">
+          All of your payments will be in one system, there’s no need to use any other software. You simply use the same API as you do for online card payments. So all of your
+          reporting, refund processing etc can all be done in the same place.
+        </p>
 
-        <p class="govuk-body">This feature also gives customers an alternative way of paying. It allows services to
-          easily help users that might be struggling to access an online service. This is called
-          <a class="govuk-link" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction">assisted
-            digital</a>.</p>
+        <p class="govuk-body">
+          This feature also gives customers an alternative way of paying. It allows services to easily help users that might be struggling to access an online service. This is
+          called
+          <%= link_to 'assisted digital', 'https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction', class: 'govuk-link' %>.
+        </p>
 
         <h2 class="govuk-heading-m">Other uses</h2>
 
-        <p class="govuk-body">If you already have a telephone payments system, but would like your online and phone
-          payment records in one place, use your existing API endpoint to send us your telephone payments data.</p>
+        <p class="govuk-body">
+          If you already have a telephone payments system, but would like your online and phone payment records in one place, use your existing API endpoint to send us your
+          telephone payments data.
+        </p>
 
         <p class="govuk-body">This allows you to do all of your reporting and refunds in the same place.</p>
 
         <h2 class="govuk-heading-m">Set up your account</h2>
 
-        <p class="govuk-body">If you want to take payments like this, just
-          <a class="govuk-link" href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk">get in touch</a>.</p>
+        <p class="govuk-body">
+          If you want to take payments like this, just
+          <%= mail_to 'govuk-pay-support@digital.cabinet-office.gov.uk', 'get in touch', class: 'govuk-link' %>.
+        </p>
 
-        <p class="govuk-body">You’ll need to be
-          <a class="govuk-link" href="https://docs.payments.service.gov.uk/security/#payment-card-industry-pci-compliance">PCI
-            compliant</a> and we’ll need to see evidence of this before we can set up your account to receive payments
-          in this way.</p>
+        <p class="govuk-body">
+          You’ll need to be
+          <%= link_to 'PCI compliant', 'https://docs.payments.service.gov.uk/security/#payment-card-industry-pci-compliance', class: 'govuk-link' %>
+          and we’ll need to see evidence of this before we can set up your account to receive payments in this way.
+        </p>
 
         <h2 class="govuk-heading-m">Future developments</h2>
 
-        <p class="govuk-body">We’d like to add to this in future. We’re particularly interested in hearing about how you
-          use, or might use, Interactive Voice Response (IVR) payments.</p>
+        <p class="govuk-body">
+          We’d like to add to this in future. We’re particularly interested in hearing about how you use, or might use, Interactive Voice Response (IVR) payments.
+        </p>
 
         <p class="govuk-body">
-          <a class="govuk-link" href="mailto:govuk-pay-support@digital.cabinet-office.gov.uk">Let us know</a> if you’re
-          taking payments by phone or post, and what else we can do to help with this.</p>
+          <%= mail_to 'govuk-pay-support@digital.cabinet-office.gov.uk', 'Let us know', class: 'govuk-link' %>
+          if you’re taking payments by phone or post, and what else we can do to help with this.
+        </p>
       </div>
     </div>
   </main>

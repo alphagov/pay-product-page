@@ -1,27 +1,30 @@
 {
-  "name": "product-page-example",
-  "private": "true",
+  "name": "govuk-pay-product-pages",
   "version": "1.0.0",
-  "description": "This is an example product page for use by GaaP products.",
+  "description": "GOV.UK Pay product pages",
   "scripts": {
-    "test": "jest"
+    "test": "prettier --check 'source/**/*' && jest",
+    "format": "prettier --write 'source/**/*'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alphagov/product-page-example.git"
+    "url": "git+https://github.com/alphagov/pay-product-page.git"
   },
   "author": "Government Digital Service developers",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alphagov/product-page-example/issues"
+    "url": "https://github.com/alphagov/pay-product-page/issues"
   },
-  "homepage": "https://github.com/alphagov/product-page-example#readme",
+  "homepage": "https://www.payments.service.gov.uk",
   "dependencies": {
     "gaap-analytics": "^3.1.0",
     "govuk-frontend": "^3.14.0"
   },
   "devDependencies": {
+    "@prettier/plugin-ruby": "^1.0.0",
     "jest": "^27.5.1",
-    "js-cookie": "^3.0.1"
+    "js-cookie": "^3.0.1",
+    "prettier": ">=2.0.0 <2.3",
+    "prettier-plugin-erb": "^0.4.0"
   }
 }

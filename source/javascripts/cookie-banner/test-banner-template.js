@@ -25,4 +25,4 @@ module.exports = `
           <button class="pay-cookie-banner__hide-button govuk-link" data-hide-cookie-banner="true" role="link">Hide</button>
         </div>
       </div>
-    `;
+    `

@@ -1,5 +1,4 @@
-module.exports = 
-`
+module.exports = `
     <div id="pay-cookie-banner" class="pay-cookie-banner">
         Cookie Banner
     </div>

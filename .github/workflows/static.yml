@@ -26,14 +26,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@8df78e55761745aad83acaf3ff12976382356e6d
         with:
           ruby-version: '.ruby-version'
           bundler-cache: true
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
@@ -42,11 +42,11 @@ jobs:
           npm ci
           bundle exec middleman build
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@37538b280cbfab35da9dcd936a2b95f1f522d927
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf
         with:
           path: 'build'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@0243b6c10d06cb8e95ed8ee471231877621202c0

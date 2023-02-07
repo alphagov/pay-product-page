@@ -88,7 +88,7 @@ window.GovUkPay.CookieBanner = (function () {
   }
 
   showConfirmationMessage = function (analyticsConsent) {
-    var messagePrefix = analyticsConsent ? 'You’ve accepted analytics cookies.' : 'You told us not to use analytics cookies.'
+    var messagePrefix = analyticsConsent ? 'You’ve accepted analytics cookies. ' : 'You told us not to use analytics cookies. '
 
     var $cookieBannerMainContent = document.querySelector('.pay-cookie-banner__wrapper')
     var $cookieBannerConfirmationMessage = document.querySelector('.pay-cookie-banner__confirmation-message')

@@ -9,12 +9,12 @@ module.exports = `
           </p>
           <div class="pay-cookie-banner__buttons">
             <button class="govuk-button pay-cookie-banner__button pay-cookie-banner__button--accept" type="submit" data-accept-cookies="true" aria-describedby="pay-cookie-banner__heading">
-              Yes<span class="govuk-visually-hidden">, GOV.UK Pay can store analytics cookies on your device</span>
+              Yes<span class="govuk-visually-hidden">, GOV.UK&nbsp;Pay can store analytics cookies on your device</span>
             </button>
             <button class="govuk-button pay-cookie-banner__button pay-cookie-banner__button--reject" type="submit" data-accept-cookies="false" aria-describedby="pay-cookie-banner__heading">
-              No<span class="govuk-visually-hidden">, GOV.UK Pay cannot store analytics cookies on your device</span>
+              No<span class="govuk-visually-hidden">, GOV.UK&nbsp;Pay cannot store analytics cookies on your device</span>
             </button>
-            <a class="govuk-link pay-cookie-banner__link" href="/cookies">How GOV.UK Pay uses cookies</a>
+            <a class="govuk-link pay-cookie-banner__link" href="/cookies">How GOV.UK&nbsp;Pay uses cookies</a>
           </div>
         </div>
 

@@ -30,7 +30,6 @@
     <%= meta_tag 'lgwTmoP7_cxm8W8Tp3n8aeUdcmJ3tKNpHxPiUtTCjWk', name: 'google-site-verification' %>
 
     <%= stylesheet_link_tag 'application', media: 'screen' %>
-    <%= favicon_tag 'favicon.png' %>
   </head>
 
   <body class="govuk-template__body">
@@ -46,8 +45,8 @@
     <% if config.new_cookie_banner == false %>
       <div id="global-cookie-message">
         <p>
-          GOV.UK Pay uses cookies to make the site simpler.
-          <a class="govuk-link" href="https://www.payments.service.gov.uk/cookies/">Find out more about cookies</a>
+          GOV.UK&nbsp;Pay uses cookies to make the site simpler.
+          <%= link_to 'Find out more about cookies', 'cookies', class: 'govuk-link' %>
         </p>
       </div>
     <% end %>
@@ -78,7 +77,7 @@
             <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
               <%
             {
-              'Features' => ['using-govuk-pay', true, 'Using GOV.UK Pay'],
+              'Features' => ['using-govuk-pay', true, 'Using GOV.UK&nbsp;Pay'],
               'Get started' => ['getstarted', true, 'Get started'],
               'Documentation' => ['https://docs.payments.service.gov.uk', false, ''],
               'Support' => ['support', true, 'Support'],
@@ -104,7 +103,7 @@
         { 'About' =>
             {
               'Get started' => 'getstarted',
-              'Using GOV.UK Pay' => 'using-govuk-pay',
+              'Using GOV.UK&nbsp;Pay' => 'using-govuk-pay',
               'Roadmap' => 'roadmap',
               'Performance' => 'performance',
               'Newsletter' => 'https://docs.google.com/forms/d/e/1FAIpQLSdJRj0asGOu3VJZ-0UPmx0T6w7FMsdduRAS51k18TS2XlNC7w/viewform'
@@ -112,7 +111,7 @@
           'Support' =>
             {
               'Contact' => 'support',
-              'Chat with GOV.UK Pay on Slack' => 'https://ukgovernmentdigital.slack.com/messages/C0L3AB342',
+              'Chat with GOV.UK&nbsp;Pay on Slack' => 'https://ukgovernmentdigital.slack.com/messages/C0L3AB342',
               'Documentation' => 'https://docs.payments.service.gov.uk',
               'System status' => 'https://payments.statuspage.io/'
             }

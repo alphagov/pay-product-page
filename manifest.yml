@@ -1,6 +1,0 @@
----
-applications:
-  - name: pay-product-page-test
-    memory: 64M
-    path: ./build
-    buildpack: staticfile_buildpack

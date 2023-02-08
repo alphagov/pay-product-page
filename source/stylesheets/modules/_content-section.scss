@@ -1,0 +1,102 @@
+/**
+ * Content Section Component
+ *
+ * Represents a section of content on the product page, with a title and
+ * optional image.
+ *
+ * Example Usage:
+ *
+ * <section class="content-section">
+ *   <h2 class="content-section__title">Section Title</h2>
+ *   <p class="content-section__body">Lorem ipsum dolor...</p>
+ * </section>
+ */
+
+.content-section {
+  margin-top: govuk-spacing(6);
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__image {
+    max-width: 100%;
+    margin-bottom: govuk-spacing(6);
+  }
+
+  &__video {
+    border: 1px solid $govuk-border-colour;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding: 30px 5px 56.25%;
+
+    iframe,
+    object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__transcript {
+    margin: 5px 0;
+    padding: 5px 0;
+
+    summary:hover {
+      background-color: govuk-colour('light-grey');
+    }
+  }
+
+  &--with-top-border {
+    padding-top: govuk-spacing(9);
+    border-top: 1px $govuk-border-colour solid;
+  }
+
+  &--with-top-padding {
+    @include govuk-media-query(tablet) {
+      padding-top: govuk-spacing(9);
+    }
+  }
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include govuk-media-query(desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.partner-logo {
+  margin-right: govuk-spacing(3);
+  margin-bottom: govuk-spacing(6);
+  width: auto;
+  height: 4em;
+
+  @include govuk-media-query(tablet) {
+    margin-right: govuk-spacing(4);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &-smaller {
+    height: 3.5em;
+  }
+
+  &--fcdo {
+    height: auto;
+    max-height: 4em;
+
+    @include govuk-media-query(tablet) {
+      box-sizing: border-box;
+      margin: 0;
+      padding-right: 20px;
+    }
+  }
+}

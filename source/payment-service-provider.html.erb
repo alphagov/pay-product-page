@@ -1,86 +1,46 @@
 ---
-title: GOV.UK Pay’s Payment Service Provider
+title: GOV.UK&nbsp;Pay’s Payment Service Provider
 ---
 
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-        </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.html.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <nav class="sub-navigation" data-click-events data-click-category="Content" data-click-action="Button clicked">
-          <ol itemscope itemtype="http://schema.org/ItemList">
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/using-govuk-pay" itemprop="item"><span itemprop="name">Using GOV.UK Pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/cost-benefits-of-pay" itemprop="item"><span itemprop="name">Cost benefits of pay</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/govuk-payment-pages" itemprop="item"><span itemprop="name">GOV.UK payment pages</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/api-integration" itemprop="item"><span itemprop="name">API integration</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--sub" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/take-payments-by-phone-or-post" itemprop="item"><span itemprop="name">Take payments by phone or post</span></a>
-            </li>
-            <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/payment-service-provider" itemprop="item"><span itemprop="name">GOV.UK Pay’s Payment Service Provider</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/direct-debit" itemprop="item"><span itemprop="name">Direct Debit</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/apple-pay-and-google-pay" itemprop="item"><span itemprop="name">Apple Pay and Google Pay</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/roadmap" itemprop="item"><span itemprop="name">Roadmap</span></a>
-            </li>
-            <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a class="govuk-link" href="/security" itemprop="item"><span itemprop="name">Security and compliance</span></a>
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <%= partial 'partials/features-sub-nav.html.erb', locals: { current_page: current_page.data.title } %>
 
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">GOV.UK Pay’s Payment Service Provider</h1>
-        <p class="govuk-body">GOV.UK Pay takes payments and processes them using a Payment Service Provider (PSP).</p>
-        <p class="govuk-body">When setting up services on Pay, you can choose between: </p>
+        <h1 class="govuk-heading-l">GOV.UK&nbsp;Pay’s Payment Service Provider</h1>
+        <p class="govuk-body">GOV.UK&nbsp;Pay takes payments and processes them using a Payment Service Provider (PSP).</p>
+        <p class="govuk-body">When setting up services on Pay, you can choose between:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>GOV.UK's PSP, Stripe</li>
           <li>Government Banking's PSP, Worldpay (central government or health sector organisations only)</li>
         </ul>
 
         <h2 class="govuk-heading-m">Using our PSP</h2>
-        <p class="govuk-body">To get your service live, you need to accept GOV.UK Pay and Stripe contracts. <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/login">Sign in to your Pay account</a>, and you'll find them in the page footer. The negotiated transaction fees are in the contract.</p>
-        <p class="govuk-body">If you already have a contract with Stripe, you cannot use it with GOV.UK Pay. You need to accept GOV.UK Pay's contract and terms.</p>
-
+        <p class="govuk-body">
+          To get your service live, you need to accept GOV.UK&nbsp;Pay and Stripe contracts.
+          <a class="govuk-link" href="https://selfservice.payments.service.gov.uk/login">Sign in to your Pay account</a>, and you'll find them in the page footer. The negotiated
+          transaction fees are in the contract.
+        </p>
+        <p class="govuk-body">If you already have a contract with Stripe, you cannot use it with GOV.UK&nbsp;Pay. You need to accept GOV.UK&nbsp;Pay's contract and terms.</p>
 
         <h2 class="govuk-heading-m">Benefits of using our PSP</h2>
         <h3 class="govuk-heading-s">Speed</h3>
         <p class="govuk-body">With our ready procured PSP, your account can be set up and ready to use immediately. With other PSPs this would normally take at least a month.</p>
         <p class="govuk-body">You can combine this with our payment links feature to start taking payments in a day, and you don’t need to build a full digital service.</p>
-        <p class="govuk-body">Follow our guide to <a class="govuk-link" href="/govuk-payment-pages">creating payment links</a>.</p>
+        <p class="govuk-body">
+          Follow our guide to
+          <%= link_to 'creating payment links', 'govuk-payment-pages', class: 'govuk-link' %>.
+        </p>
 
         <h3 class="govuk-heading-s">Ease</h3>
         <p class="govuk-body">Using our PSP means:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>we’ve done the procurement for you, saving you time and money</li>
-          <li>account set up is simple and, once your services are live, the GOV.UK Pay team provide 24 hour support</li>
-          <li>you’re not tied into long-term costly contracts, you can stop using GOV.UK Pay and our PSP at any time</li>
+          <li>account set up is simple and, once your services are live, the GOV.UK&nbsp;Pay team provide 24 hour support</li>
+          <li>you’re not tied into long-term costly contracts, you can stop using GOV.UK&nbsp;Pay and our PSP at any time</li>
         </ul>
 
         <p class="govuk-body">Our PSP is available for any public sector organisation to use.</p>
@@ -96,50 +56,77 @@ title: GOV.UK Pay’s Payment Service Provider
           <li>gross and net payments</li>
           <li>payments into your bank account</li>
         </ul>
-        <p class="govuk-body">Download the data as a CSV file or by integrating with our <a class="govuk-link" href="https://docs.payments.service.gov.uk/reporting">reporting API</a>.</p>
+        <p class="govuk-body">
+          Download the data as a CSV file or by integrating with our
+          <%= link_to 'reporting API', 'https://docs.payments.service.gov.uk/reporting', class: 'govuk-link' %>.
+        </p>
         <p class="govuk-body">Request a Stripe test account from your service's dashboard in the Admin tool.</p>
 
         <h2 class="govuk-heading-m">Setting up Stripe</h2>
         <p class="govuk-body">When you’re ready to go live, select ‘request a live account’ in your test account.</p>
         <p class="govuk-body">You’ll then:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>be asked to click and agree to the GOV.UK Pay contract (for non-Crown organisations) and MOU (for Crown organisations) and the Stripe Connected Account Agreement</li>
+          <li>
+            be asked to click and agree to the GOV.UK&nbsp;Pay contract (for non-Crown organisations) and MOU (for Crown organisations) and the Stripe Connected Account Agreement
+          </li>
           <li>be asked to submit your bank account details, your VAT and company number (if you have one) and details of the nominated responsible person for your account</li>
           <li>be able to set the description you want the user to see on their bank statement</li>
         </ul>
 
         <h2 class="govuk-heading-m">Receiving your money from Stripe</h2>
-        <p class="govuk-body">Payouts are made in a batch into your bank account 2 working days after the payments have been made. The cut-off time for a day’s payout is midnight UTC.</p>
+        <p class="govuk-body">
+          Payouts are made in a batch into your bank account 2 working days after the payments have been made. The cut-off time for a day’s payout is midnight UTC.
+        </p>
         <p class="govuk-body">The minimum payout is £1.</p>
         <p class="govuk-body">The payout from Stripe will appear on your bank statement with a description based on your service’s name.</p>
-        <p class="govuk-body">If you want to change this description, just contact the GOV.UK Pay team.</p>
+        <p class="govuk-body">If you want to change this description, just contact the GOV.UK&nbsp;Pay team.</p>
         <p class="govuk-body">You can download a report showing the total amount you received from Stripe in each payout and all the transactions that make up that payout.</p>
 
         <h2 class="govuk-heading-m">Paying transaction fees</h2>
-        <p class="govuk-body">GOV.UK Pay recoups transaction fees on a ‘net settlement’ basis.</p>
-        <p class="govuk-body">This means that payouts will be made to you with transaction fees already deducted. For example, 15 Blue Badges are purchased on Monday, for £10 each. The transaction fees for each are 16p. You will receive a payout of £147.72 on Wednesday.</p>
+        <p class="govuk-body">GOV.UK&nbsp;Pay recoups transaction fees on a ‘net settlement’ basis.</p>
+        <p class="govuk-body">
+          This means that payouts will be made to you with transaction fees already deducted. For example, 15 Blue Badges are purchased on Monday, for £10 each. The transaction
+          fees for each are 16p. You will receive a payout of £147.72 on Wednesday.
+        </p>
         <p class="govuk-body">Transaction fees and the net amount are shown for each transaction in the CSV and using the API.</p>
-        <p class="govuk-body">There will be an amount for ‘PSP fee’, which is the processing fee that Stripe takes, and ‘Net amount’, which is the amount paid to you with the PSP fee deducted.</p>
+        <p class="govuk-body">
+          There will be an amount for ‘PSP fee’, which is the processing fee that Stripe takes, and ‘Net amount’, which is the amount paid to you with the PSP fee deducted.
+        </p>
         <p class="govuk-body">If you take a payment for less than the amount of the transaction fee, you’ll have a negative balance.</p>
 
         <h2 class="govuk-heading-m">Processing refunds</h2>
-        <p class="govuk-body">Refunds are processed immediately and the funds will come out of your next payout. If you have daily payouts, that will be the next day. As with other transactions, the cut-off time for refunds each day is midnight UTC.</p>
-        <p class="govuk-body">If you have a zero balance in your Stripe account, the refund will still be processed, and you will have a negative balance. The money will come out of the next available payout. If the negative balance continues for longer than 2 months, we will contact you to make a payment to cover the cost.</p>
-        <p class="govuk-body">The refunds may take up to 6 days to reach the user. This is due to the procedures of the user’s own bank and not GOV.UK Pay.</p>
+        <p class="govuk-body">
+          Refunds are processed immediately and the funds will come out of your next payout. If you have daily payouts, that will be the next day. As with other transactions, the
+          cut-off time for refunds each day is midnight UTC.
+        </p>
+        <p class="govuk-body">
+          If you have a zero balance in your Stripe account, the refund will still be processed, and you will have a negative balance. The money will come out of the next available
+          payout. If the negative balance continues for longer than 2 months, we will contact you to make a payment to cover the cost.
+        </p>
+        <p class="govuk-body">The refunds may take up to 6 days to reach the user. This is due to the procedures of the user’s own bank and not GOV.UK&nbsp;Pay.</p>
         <p class="govuk-body">There is no additional charge for refunds, but the transaction fees you have paid on the original payment are not returned.</p>
         <h2 class="govuk-heading-m">Chargebacks</h2>
-        <p class="govuk-body">If a chargeback happens, we’ll contact you to let you know and ask for evidence to submit to Stripe. The fee for a chargeback is £15 for each disputed payment. There’s no fee for disputes resolved in your favour.</p>
+        <p class="govuk-body">
+          If a chargeback happens, we’ll contact you to let you know and ask for evidence to submit to Stripe. The fee for a chargeback is £15 for each disputed payment. There’s no
+          fee for disputes resolved in your favour.
+        </p>
 
         <h2 class="govuk-heading-m">Support</h2>
-        <p class="govuk-body">Support for services using Stripe is handled by the GOV.UK Pay team. Find out more about our <a class="govuk-link" href="/support">support process</a>.</p>
-
+        <p class="govuk-body">
+          Support for services using Stripe is handled by the GOV.UK&nbsp;Pay team. Find out more about our
+          <%= link_to 'support process', 'support', class: 'govuk-link' %>.
+        </p>
 
         <h2 class="govuk-heading-m">How we procured our PSP</h2>
         <p class="govuk-body">The PSP we’ve procured is a direct award on a Crown Commercial Service framework.</p>
         <p class="govuk-body">The framework follows all OJEU rules and processes. The contract was approved by the Cabinet Office’s Commercial Director.</p>
         <h2 class="govuk-heading-m">What next</h2>
-        <p class="govuk-body">Take a look at our PSP’s contract in your test account or contact <a class="govuk-link" href="/support">GOV.UK Pay support</a> with any questions.</p>
+        <p class="govuk-body">
+          Take a look at our PSP’s contract in your test account or contact
+          <%= link_to 'GOV.UK&nbsp;Pay support', 'support', class: 'govuk-link' %>
+          with any questions.
+        </p>
+      </div>
     </div>
-   </div>
   </main>
 </div>

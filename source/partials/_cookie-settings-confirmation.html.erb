@@ -1,0 +1,24 @@
+<div data-module="pay-cookie-settings-alert" class="pay-cookie-settings-alert pay-cookie-settings-alert--error" id="pay-cookie-settings-error" tabindex="0">
+  <h2>There was a problem saving your settings</h2>
+
+  <div class="pay-cookie-settings-alert__body">Please select 'Yes' or 'No'.</div>
+</div>
+
+<div data-module="pay-cookie-settings-alert" class="pay-cookie-settings-alert pay-cookie-settings-alert--warning" id="pay-cookie-settings-warning" tabindex="0">
+  <h2>Your cookie settings have not yet been saved</h2>
+
+  <div class="pay-cookie-settings-alert__body">
+    Pay sets cookies when you visit our website. You can choose to change these settings to your own preferences. You need to save this page with your new choices.
+  </div>
+</div>
+
+<div data-module="pay-cookie-settings-alert" class="pay-cookie-settings-alert pay-cookie-settings-alert--success" id="pay-cookie-settings-success" tabindex="0">
+  <h2>Your cookie settings were saved</h2>
+
+  <div class="pay-cookie-settings-alert__body">
+    <p class="govuk-body">You can change your preferences at any time on this page.</p>
+    <p class="govuk-body">
+      <%= link_to 'Go back to the page you were looking at.', 'cookies', class: 'govuk-link pay-cookie-settings__prev-page' %>
+    </p>
+  </div>
+</div>

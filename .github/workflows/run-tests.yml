@@ -1,10 +1,8 @@
 name: Github Actions Tests
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
+  workflow_call:
 
 permissions:
   contents: read
@@ -17,16 +15,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
-      - name: Setup
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@8df78e55761745aad83acaf3ff12976382356e6d
+        with:
+          ruby-version: '.ruby-version'
+          bundler-cache: true
+      - name: Setup Node
         uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
-          node-version: 12.22.4
-      - name: Cache NPM packages
-        uses: actions/cache@136d96b4aee02b1f0de3ba493b1d47135042d9c0
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
+          node-version-file: '.nvmrc'
+          cache: 'npm'
       - name: Install dependencies
         run: npm ci
       - name: Run unit tests

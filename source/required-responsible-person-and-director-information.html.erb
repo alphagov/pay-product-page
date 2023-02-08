@@ -1,29 +1,24 @@
 ---
 title: Required Responsible person and director information
 ---
+
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs" data-click-events data-click-category="Header" data-click-action="Breadcrumb clicked">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/service-toolkit#gov-uk-services">GOV.UK services</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">GOV.UK&nbsp;Pay</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#main-content" aria-current="page"><%= current_page.data.title %></a>
-        </li>
-    </ol>
-  </div>
+  <%= partial 'partials/breadcrumb.html.erb' %>
+
   <main id="main-content" class="govuk-main-wrapper" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-
         <h1 class="govuk-heading-l">Required Responsible person and director information</h1>
 
-        <p class="govuk-body">The Financial Conduct Authority (FCA) requires Stripe (GOV.UK Pay's payment service provider) to carry out anti-money laundering checks. These are part of the Know Your Customer (KYC) regulations. </p>
+        <p class="govuk-body">
+          The Financial Conduct Authority (FCA) requires Stripe (GOV.UK&nbsp;Pay's payment service provider) to carry out anti-money laundering checks. These are part of the Know
+          Your Customer (KYC) regulations.
+        </p>
 
-        <p class="govuk-body">To comply with the regulations, you'll need to add personal information about specific individuals in your organisation. Stripe will store this information, not GOV.UK Pay.</p>
+        <p class="govuk-body">
+          To comply with the regulations, you'll need to add personal information about specific individuals in your organisation. Stripe will store this information, not
+          GOV.UK&nbsp;Pay.
+        </p>
 
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -91,7 +86,6 @@ title: Required Responsible person and director information
           <li>date of birth</li>
           <li>work email address</li>
         </ul>
-
       </div>
     </div>
   </main>

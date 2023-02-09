@@ -1,9 +1,9 @@
-name: Deploy static content to Pages
+name: Deploy Pay product pages
 
 on:
   push:
-    branches: ['master']
-
+    branches:
+      - 'master'
   workflow_dispatch:
 
 permissions:
@@ -16,10 +16,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  unit-tests:
     uses: ./.github/workflows/run-tests.yml
   build-and-deploy:
-    needs: test
+    needs: unit-tests
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

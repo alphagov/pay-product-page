@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "snapshot": {
+    "widths": [
+      375,
+      1280
+    ],
+    "minHeight": 1024,
+    "percyCSS": ""
+  },
+  "discovery": {
+    "allowedHostnames": [],
+    "disallowedHostnames": [],
+    "networkIdleTimeout": 100
+  },
+  "static": {
+    "base-url": "/",
+    "exclude": [
+      "/contact/index.html",
+      "/features/index.html",
+      "/payment-links/index.html"
+    ]
+  },
+  "upload": {
+    "files": "**/*.{png,jpg,jpeg}",
+    "stripExtensions": false
+  }
+}

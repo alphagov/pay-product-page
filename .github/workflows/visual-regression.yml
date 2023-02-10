@@ -32,4 +32,6 @@ jobs:
           npm ci
           bundle exec middleman build
       - name: Start Percy tasks
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npm run percy

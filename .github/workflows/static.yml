@@ -1,9 +1,9 @@
-name: Deploy static content to Pages
+name: Deploy Pay product pages
 
 on:
   push:
-    branches: ['master']
-
+    branches:
+      - 'master'
   workflow_dispatch:
 
 permissions:
@@ -16,10 +16,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  unit-tests:
+    name: Unit tests
     uses: ./.github/workflows/run-tests.yml
   build-and-deploy:
-    needs: test
+    needs: unit-tests
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -43,10 +44,21 @@ jobs:
           bundle exec middleman build
       - name: Setup Pages
         uses: actions/configure-pages@37538b280cbfab35da9dcd936a2b95f1f522d927
+      - name: Prepare archive for upload
+        shell: sh
+        run: |
+          chmod -c -R +rX "build"
+          tar \
+            --dereference --hard-dereference \
+            --directory "build" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            .
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
         with:
-          path: 'build'
+          name: 'github-pages'
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 7
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@0243b6c10d06cb8e95ed8ee471231877621202c0

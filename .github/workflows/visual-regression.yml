@@ -1,4 +1,4 @@
-name: Visual regression checks
+name: Start Percy build
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  visual-regression:
+  start-percy-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,7 +31,7 @@ jobs:
         run: |
           npm ci
           bundle exec middleman build
-      - name: Start Percy tasks
+      - name: Run Percy tasks
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npm run percy

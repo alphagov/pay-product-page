@@ -1,4 +1,4 @@
-name: GHP
+name: Static
 
 on:
   push:
@@ -16,12 +16,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  unit-tests:
+  run-tests:
     name: Unit tests
     uses: ./.github/workflows/run-tests.yml
-  build-deploy-release:
-    name: Release and deploy Pay product pages
-    needs: unit-tests
+  static:
+    name:  Deploy and release Pay product pages
+    needs: run-tests
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -62,7 +62,7 @@ jobs:
               if (err.name == 'HttpError') {
                 console.warn("Found HttpError")
                 if (err.status == 404)  {
-                  console.error("Error 404: No previous GitHub Releases found. Defaulting to 0.0.0")
+                  console.log("No previous GitHub Releases found. Defaulting to 0.0.0")
                   return "0.0.0"
                 }
               } else {
@@ -99,15 +99,6 @@ jobs:
             --directory "build" \
             -cvf "${{ steps.set-artifact-name.outputs.name }}.tar" \
             .
-      - name: Upload artifact
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
-        with:
-          name: 'github-pages'
-          path: ${{ steps.set-artifact-name.outputs.name }}.tar
-          retention-days: 7
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@0243b6c10d06cb8e95ed8ee471231877621202c0
       - name: Create Release
         id: create-release
         uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
@@ -134,3 +125,12 @@ jobs:
               console.error(`Failed to create release: ${err.message}`)
               throw err
             }
+      - name: Upload Pages artifact
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
+        with:
+          name: 'github-pages'
+          path: ${{ steps.set-artifact-name.outputs.name }}.tar
+          retention-days: 7
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@0243b6c10d06cb8e95ed8ee471231877621202c0

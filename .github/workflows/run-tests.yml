@@ -1,4 +1,4 @@
-name: PR
+name: Run tests
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  unit-tests:
+  run-tests:
     name: Unit tests
     runs-on: ubuntu-latest
     steps:
@@ -27,5 +27,5 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Run unit tests
+      - name: Run tests
         run: npm test

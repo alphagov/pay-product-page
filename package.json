@@ -22,7 +22,7 @@
     "govuk-frontend": "^3.14.0"
   },
   "devDependencies": {
-    "@percy/cli": "^1.18.0",
+    "@percy/cli": "^1.19.2",
     "@prettier/plugin-ruby": "^1.0.0",
     "jest": "^27.5.1",
     "js-cookie": "^3.0.1",

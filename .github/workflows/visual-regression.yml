@@ -6,6 +6,11 @@ on:
       - 'master'
     paths:
       - 'source/**'
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'source/**'
   workflow_dispatch:
 
 permissions:

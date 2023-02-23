@@ -40,7 +40,7 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Setup Pages
-        uses: actions/configure-pages@37538b280cbfab35da9dcd936a2b95f1f522d927
+        uses: actions/configure-pages@fc89b04e7d263ef510d9e77d3a1d088fb2688522
       - name: Get Package version
         id: get-package-version
         run: |

@@ -30,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f
       - name: Setup Ruby
-        uses: ruby/setup-ruby@d3c9825d67b0d8720afdfdde5af56c79fdb38d16
+        uses: ruby/setup-ruby@e6689b4deb1cb2062ea45315001f687c0b52111b
         with:
           ruby-version: '.ruby-version'
           bundler-cache: true

@@ -47,7 +47,7 @@ jobs:
           echo "package_version=$(cat package.json | jq -r '.version')" >> $GITHUB_OUTPUT
       - name: Get latest release version
         id: get-latest-release-version
-        uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           result-encoding: string
@@ -101,7 +101,7 @@ jobs:
             .
       - name: Create Release
         id: create-release
-        uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |

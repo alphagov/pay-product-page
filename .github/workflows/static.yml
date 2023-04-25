@@ -133,4 +133,4 @@ jobs:
           retention-days: 7
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@73e62e651178eeba977de2dc9f4c7645b3d01015
+        uses: actions/deploy-pages@af48cf94a42f2c634308b1c9dc0151830b6f190a

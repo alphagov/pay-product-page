@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Middleman Gems
-gem 'middleman', '~> 4.4.3'
+gem 'middleman', '~> 4.5.0'
 gem 'middleman-livereload'
 gem 'middleman-sprockets'
 gem 'sprockets', '~> 4.2.0'

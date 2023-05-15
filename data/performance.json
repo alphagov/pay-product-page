@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "9 May 2023",
-  "numberOfPayments": "55.9 million",
+  "dateUpdated": "15 May 2023",
+  "numberOfPayments": "56.3 million",
   "totalPaymentAmount": "3.5 billion",
-  "numberOfServices": 874,
+  "numberOfServices": 876,
   "numberOfOrganisations": 334,
   "serviceCountBySector": {
     "local": 432,
     "central": 229,
-    "police": 106,
+    "police": 108,
     "nhstrust": 66,
     "nhscentral": 29,
     "other": 12
@@ -155,7 +155,7 @@
     "Harrow Council": 1,
     "Health and Safety Executive": 1,
     "Healthcare Improvement Scotland": 1,
-    "Heddlu Gwent Police": 11,
+    "Heddlu Gwent Police": 13,
     "Hertfordshire Constabulary": 2,
     "Hertfordshire County Council": 1,
     "Highlands and Islands Airports Ltd": 1,

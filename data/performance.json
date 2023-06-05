@@ -1,15 +1,15 @@
 {
-  "dateUpdated": "31 May 2023",
-  "numberOfPayments": "57.4 million",
+  "dateUpdated": "5 June 2023",
+  "numberOfPayments": "57.7 million",
   "totalPaymentAmount": "3.6 billion",
-  "numberOfServices": 880,
-  "numberOfOrganisations": 334,
+  "numberOfServices": 884,
+  "numberOfOrganisations": 336,
   "serviceCountBySector": {
-    "local": 433,
+    "local": 435,
     "central": 230,
-    "police": 110,
+    "police": 111,
     "nhstrust": 66,
-    "nhscentral": 29,
+    "nhscentral": 30,
     "other": 12
   },
   "serviceCountByOrganisation": {
@@ -80,7 +80,7 @@
     "Cheshire Constabulary": 1,
     "Cheshire Police": 4,
     "Chesterfield Borough Council": 1,
-    "Chief Constable for Staffordshire Police": 3,
+    "Chief Constable for Staffordshire Police": 4,
     "Child Maintenance Group": 6,
     "City Of York Council": 1,
     "City of Lincoln Council": 4,
@@ -94,6 +94,7 @@
     "County Hall": 1,
     "Croydon Council": 1,
     "Croydon Health Services NHS Trust": 1,
+    "Croydon University Hospital, NHS": 1,
     "Cumberland Council": 24,
     "Cumbria County Council": 5,
     "DBS FIN RCPTS CTS": 1,
@@ -287,7 +288,7 @@
     "Scottish Social Service Council": 1,
     "Security Industry Authority": 1,
     "Sevenoaks District Council": 1,
-    "Sheffield City Council": 1,
+    "Sheffield City Council": 2,
     "Sheffield Teaching Hospitals NHS Foundation Trust": 1,
     "Smart Applications Management": 1,
     "Smart Applications Management (SAM)": 1,
@@ -344,6 +345,7 @@
     "Weymouth Town Council": 1,
     "Wokingham Borough Council": 4,
     "Wolverhampton City Council": 1,
+    "Woodborough Parish Council": 1,
     "Worcestershire County Council": 1,
     "Yeovil Town Council": 3
   }

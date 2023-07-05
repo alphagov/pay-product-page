@@ -24,7 +24,7 @@
   "devDependencies": {
     "@percy/cli": "^1.26.0",
     "@prettier/plugin-ruby": "^1.0.0",
-    "jest": "^29.5.0",
+    "jest": "^29.6.0",
     "jest-environment-jsdom": "^29.5.0",
     "js-cookie": "^3.0.5",
     "prettier": ">=2.0.0 <2.3",

@@ -1,5 +1,10 @@
 # Pay Product Page
 
+## Raising a PR
+
+- Before raising a PR, you need to run prettier (`npm run format`), then add all files to your commit
+- PR builds needs to be approved in percy (https://percy.io) if they contain any changes under the src dir (performance data update does not require percy approval)
+
 ## Running Locally
 
 - `bundle install` to install middleman and its dependencies

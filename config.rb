@@ -65,11 +65,6 @@ end
 sprockets.append_path File.join(root, "node_modules/govuk-frontend/")
 sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
 
-# Special handling for redirecting to security.txt as it is a non-html content type.
-page "/security.txt", content_type: "text/html"
-redirect "security.txt", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
-redirect "security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
-
 redirect "contact/index.html", to: "/support/"
 redirect "features.html", to: "/using-govuk-pay/"
 redirect "payment-links.html", to: "/govuk-payment-pages/"

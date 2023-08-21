@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   run-tests:
-    name: Unit tests
+    name: Unit tests and static build
     uses: ./.github/workflows/run-tests.yml
   static:
     name:  Deploy and release Pay product pages

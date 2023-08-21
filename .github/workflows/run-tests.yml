@@ -1,4 +1,4 @@
-name: Run tests
+name: Run tests and static build
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   run-tests:
-    name: Unit tests
+    name: Unit tests and static build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,7 +25,9 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
-      - name: Install dependencies
+      - name: Install npm dependencies
         run: npm ci
       - name: Run tests
         run: npm test
+      - name: Build static site
+        run: bundle exec middleman build --verbose

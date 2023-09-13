@@ -41,11 +41,9 @@ Look at the CSS for the individual components for usage examples and notes.
 
 Releases are created when changes are merged into the `master` branch.
 
-The product page is deployed as part of `pay-frontend`.
+The product pages are then deployed to GitHub Pages automatically via GitHub Actions. Page contents are cached for roughly 30 minutes so your changes might not be viewable immediately.
 
-1. Update the `pay-product-page` dependency in the [`package.json`](https://github.com/alphagov/pay-frontend/blob/master/package.json) file in `pay-frontend` to point to the GitHub URL for the `.tar` file associated with the [GitHub release](https://github.com/alphagov/pay-product-page/releases).
-2. Within `pay-frontend`, run `npm install`.
-3. Merge and deploy the changes to `pay-frontend`.
+[View the product pages](https://payments.service.gov.uk/)
 
 ## Licence
 

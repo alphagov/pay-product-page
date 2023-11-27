@@ -11,31 +11,33 @@ title: Roadmap
 
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Roadmap</h1>
-        <p class="govuk-body">Here’s a list of the new and improved functionality we’re planning to offer through GOV.UK&nbsp;Pay.</p>
+        <p class="govuk-body">
+          We want to keep making GOV.UK&nbsp;Pay better by adding new features and making sure it's safe and works well for both public sector service teams and paying users.
+        </p>
         <div class="govuk-inset-text">
-          <p class="govuk-body">This roadmap is only a guide and may change. We work in 3-monthly cycles.</p>
+          <p class="govuk-body">
+            This is a record of what we've done, and a plan for what we want to improve next. Our plans can change based on what we learn from testing the product and speaking to
+            our users. We work in 3-monthly cycles.
+          </p>
         </div>
         <h2 class="govuk-heading-l">Recently released</h2>
-        <h3 class="govuk-heading-m">New contracts</h3>
+        <h3 class="govuk-heading-m">Recurring card payments</h3>
         <p class="govuk-body">
-          New cheaper centralised contracts are now in place. GOV.UK&nbsp;Pay and Government Banking have completed re-procurements for our respective contracts with payment
-          providers. The new contracts have lowered fees for most transactions.
+          The first service has started using
+          <%= link_to 'recurring payments', 'https://docs.payments.service.gov.uk/recurring_payments/', class: 'govuk-link' %> through GOV.UK Pay. Kent County Council are using it
+          for their Trading Standards Checked service. This makes it simpler for people to pay for things regularly and easier for service teams to collect payments. If you're
+          interested in using recurring payments, get in touch.
         </p>
-        <h3 class="govuk-heading-m">Improvements for Stripe users</h3>
+        <h3 class="govuk-heading-m">Digital wallets</h3>
         <p class="govuk-body">
-          As part of the move to new contracts, all transactions using the GOV.UK&nbsp;Pay contract with Stripe benefit from improved fraud protection which means we now include
-          fees on failed payments. We have adjusted our reporting functionality to accommodate this.
+          GOV.UK Pay now lets people pay for local government and police services (using Stripe as their provider) using Apple Pay and Google Pay. Previously this was only
+          available to central government and NHS services using Worldpay. Wallets make paying safer and easier, and help more payments go through successfully by reducing mistakes
+          associated with manually typing card information.
         </p>
-        <p class="govuk-body">We updated the onboarding process in response to new Know Your Customer regulations.</p>
+        <h3 class="govuk-heading-m">Data security standard</h3>
         <p class="govuk-body">
-          Finally, Stripe users can now
-          <%= link_to 'request a Stripe test account', 'https://docs.payments.service.gov.uk/testing_govuk_pay/#testing-the-whole-user-journey', class: 'govuk-link' %>, allowing
-          them to see how transaction fees and payments to your bank account will work before they go live.
-        </p>
-        <h3 class="govuk-heading-m">Switch payment provider more easily</h3>
-        <p class="govuk-body">
-          Payment provider switching functionality within Pay’s admin tool enables services to easily switch their underlying payment providers between the central contracts
-          without any changes to code or API keys.
+          By passing an assessment called the Payment Card Industry Data Security Standard for 2023, we've made our security stronger. This takes the complexity of dealing with
+          these rules away from public service teams. It also means that GOV.UK Pay can safely manage personal information when users are making payments.
         </p>
         <h3 class="govuk-heading-m">Use an external telephone payment system to send card details to the API</h3>
         <p class="govuk-body">
@@ -43,25 +45,46 @@ title: Roadmap
           <%= link_to 'a new API', 'https://docs.payments.service.gov.uk/send_card_details_api', class: 'govuk-link' %>. This allows these payments to be processed and reported in
           the same way as online payments through GOV.UK&nbsp;Pay.
         </p>
-        <h3 class="govuk-heading-m">API reference</h3>
+        <h2 class="govuk-heading-l">What we’re doing now</h2>
+        <h3 class="govuk-heading-m">Learning about open banking</h3>
+        <p class="govuk-body">We're looking at using open banking, which could make payments faster and cheaper while keeping them secure.</p>
+        <h3 class="govuk-heading-m">Accepting new payment types</h3>
         <p class="govuk-body">
-          We’ve released a new
-          <%= link_to 'API reference', 'https://docs.payments.service.gov.uk/api_reference', class: 'govuk-link' %>, making it easier for developers to understand how to integrate
-          with GOV.UK&nbsp;Pay.
+          Related to the open banking work, we're updating our system to manage not just card payments but other ways to pay as well. This change is important because it means
+          paying users of government services will have more options, making GOV.UK Pay able to adapt to different needs. More payment options make it simpler for everyone to use
+          government services in the way that works best for them, and allows more public services to benefit from using us. We're looking at using open banking, which could make
+          payments faster and cheaper while keeping them secure.
         </p>
-        <h3 class="govuk-heading-m">Infrastructure migration</h3>
-        <p class="govuk-body">We’ve migrated our infrastructure to AWS Fargate, making sure we can scale and maintain the platform in an efficient and resilient way.</p>
-        <h3 class="govuk-heading-m">Improved payment pages</h3>
+        <h3 class="govuk-heading-m">Accessibility</h3>
+        <p class="govuk-body">We're making sure our service can be used by everyone, following the latest Web Content Accessibility Guidelines 2.2 (WCAG 2.2).</p>
+        <h3 class="govuk-heading-m">Data deletion</h3>
+        <p class="govuk-body">We have reviewed our data retention schedules. We continue to make sure personal data is deleted or redacted within 7 years.</p>
+        <h3 class="govuk-heading-m">Database upgrades</h3>
+        <p class="govuk-body">We are upgrading 5 of our main databases in GOV.UK Pay to the latest Postgres version.</p>
+        <h2 class="govuk-heading-l">What's next</h2>
+        <h3 class="govuk-heading-m">Recurring payments improvements</h3>
+        <p class="govuk-body">We'll use feedback from services and paying users to improve how recurring payments work.</p>
+        <h3 class="govuk-heading-m">Improving transaction search</h3>
+        <p class="govuk-body">We're going to make it easier to find and manage transactions in the admin tool.</p>
+        <h3 class="govuk-heading-m">Strengthening our security</h3>
+        <p class="govuk-body">We're getting ready for a new security standard called Payment Card Industry Data Security Standard 4.0 to keep users' information safe.</p>
+        <h2 class="govuk-heading-l">Future plans</h2>
+        <h3 class="govuk-heading-m">Procuring new card payment suppliers</h3>
         <p class="govuk-body">
-          We’ve revised the journey for creating
-          <%= link_to 'payment pages', 'govuk-payment-pages', class: 'govuk-link' %>, and making a payment using them. Users are now asked for one thing per page, and services can
-          <%= link_to 'provide links with the amount and reference pre-filled', 'https://docs.payments.service.gov.uk/prefill_payment_links', class: 'govuk-link' %>.
+          We're planning to get the best new card payment suppliers, to make sure service teams and paying users have the best value for money and experience when using GOV.UK Pay.
         </p>
-        <h2 class="govuk-heading-l">What we're working on</h2>
-        <h3 class="govuk-heading-m">Users will be able to make recurring payments</h3>
+        <h3 class="govuk-heading-m">Improve how we handle data</h3>
+        <p class="govuk-body">We want to define a data organisation model to make Pay more efficient, improving performance and providing better value for money.</p>
+        <h3 class="govuk-heading-m">Improve payment reconciliation</h3>
+        <p class="govuk-body">We want to simplify the processes with Stripe and Worldpay to help service teams reconcile payments more quickly and efficiently.</p>
+        <h3 class="govuk-heading-m">Annual security checks</h3>
         <p class="govuk-body">
-          Users will be able to agree to allow a service to take payments in the future without their intervention, for example to pay for a licence that renews on a monthly or
-          annual basis.
+          We'll continue to stay up to date with our annual PCI compliance evaluations, meeting our commitment to keep our users' payment experience safe and secure.
+        </p>
+        <h3 class="govuk-heading-m">Linking with other government finance systems</h3>
+        <p class="govuk-body">
+          We want to make it easier to connect GOV.UK Pay with Enterprise Resource Planning (ERP) systems. This can reduce the need to manually process data when doing
+          reconciliations and refunds.
         </p>
         <h4 class="govuk-heading-s">Now</h4>
         <p class="govuk-body">Some services are testing the functionality in a private beta sandbox.</p>
@@ -85,22 +108,6 @@ title: Roadmap
         </p>
         <h4 class="govuk-heading-s">Now</h4>
         <p class="govuk-body">We’re working with the Government Finance Function to ensure that GOV.UK&nbsp;Pay will be integrated with all ERP systems that are adopted.</p>
-        <h4 class="govuk-heading-s">Next</h4>
-        <p class="govuk-body">Continue to pilot ways of integrating ERP systems with GOV.UK&nbsp;Pay to support efficient and automated Order to Cash processes.</p>
-        <h4 class="govuk-heading-s">Later</h4>
-        <p class="govuk-body">
-          We’ll make any changes needed to support integrations to all central government ERP systems, and to meet the Government Finance Function data standard.
-        </p>
-        <h3 class="govuk-heading-m">Other improvements</h3>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>We’ll make infrastructure improvements to make GOV.UK&nbsp;Pay more reliable, cheaper to run, and easier to support and iterate.</li>
-          <li>We’ll make improvements to our documentation to make it easier to understand how to use GOV.UK&nbsp;Pay.</li>
-          <li>
-            We’ll allow users to use authentication apps for their
-            <%= link_to 'second step verification', 'https://www.ncsc.gov.uk/guidance/setting-2-step-verification-2sv', class: 'govuk-link' %>
-            when signing in to GOV.UK&nbsp;Pay for the first time. At the moment, this can only be changed after the first login, which causes issues for some overseas users.
-          </li>
-        </ul>
         <h2 class="govuk-heading-l">Get in touch</h2>
         <p class="govuk-body">
           Email

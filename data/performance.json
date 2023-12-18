@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "11 December 2023",
-  "numberOfPayments": "69.9 million",
+  "dateUpdated": "18 December 2023",
+  "numberOfPayments": "70.3 million",
   "totalPaymentAmount": "4.4 billion",
-  "numberOfServices": 954,
-  "numberOfOrganisations": 362,
+  "numberOfServices": 957,
+  "numberOfOrganisations": 364,
   "serviceCountBySector": {
     "local": 450,
-    "central": 245,
+    "central": 246,
     "police": 136,
-    "nhstrust": 75,
+    "nhstrust": 76,
     "other": 14,
-    "nhscentral": 33
+    "nhscentral": 34
   },
   "serviceCountByOrganisation": {
     "1079 (Tiverton) Squadron, RAF Air Cadets": 1,
@@ -135,7 +135,7 @@
     "Dundee Airport Limited": 1,
     "East Suffolk & North Essex NHS Foundation Trust": 1,
     "Education Authority NI": 1,
-    "Environment Agency": 11,
+    "Environment Agency": 12,
     "Essex Police": 4,
     "Evesham Town Council": 1,
     "FCDO": 8,
@@ -222,6 +222,7 @@
     "NHS Blood & Transplant": 11,
     "NHS Business Service Authority": 1,
     "NHS Business Services Authority": 14,
+    "NHS Highland": 1,
     "NHSBSA": 2,
     "NHSBT NORS Retrieval": 1,
     "National Institute for Biological Standards and Control": 1,
@@ -240,6 +241,7 @@
     "North East Ambulance Service Unified Solutions Limited": 1,
     "North East Lincolnshire Council": 1,
     "North East London NHS Foundation Trust": 2,
+    "North Middlesex Hospital NHS Trust": 1,
     "North Norfolk District Council": 1,
     "North Somerset Council": 1,
     "North Wales Police": 1,

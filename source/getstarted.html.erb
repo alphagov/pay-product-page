@@ -132,21 +132,19 @@ title: Get started
                 You must have a Payment Service Provider (PSP) to process the payments taken using GOV.UK&nbsp;Pay. However, there is no procurement work required to obtain a PSP.
                 This saves you time and money, and you’re not locked into a long-term contract.
               </p>
-              <p class="govuk-body">There are 2 PSP options available:</p>
+              <p class="govuk-body">The PSP you will use depends on the type of organisation you work for:</p>
 
               <ol class="psp-list">
                 <li>
-                  <h3 class="govuk-heading-s">1. Use GOV.UK&nbsp;Pay's Payment Service Provider, Stripe</h3>
                   <p class="govuk-body">
-                    Stripe is available to any public sector organisation to use. Account set up is quick and easy, and you can start taking payments immediately.
+                    Local authorities and police will use Stripe.  Account set up is quick and easy, and you can start taking payments immediately.
                     <%= link_to 'Create an account', 'https://selfservice.payments.service.gov.uk/register/email-address', class: 'govuk-link' %>
                     to get started.
                   </p>
                 </li>
                 <li>
-                  <h3 class="govuk-heading-s">2. Use Government Banking’s Payment Service Provider, Worldpay</h3>
                   <p class="govuk-body">
-                    If you are a central government or health sector organisation, you can instead sign up to use the Government Banking contract. Account set up for the Government
+                    Central government, NHS or arm's length bodies will use Worldpay. You will need to sign up to use the Government Banking contract. Account set up for the Government
                     Banking contract takes 4 to 6 weeks.
                     <%=
                       mail_to 'serviceteam.gbs@hmrc.gov.uk',
@@ -157,6 +155,11 @@ title: Get started
                               :class => 'govuk-link'
                     %>
                     for more information.
+                  </p>
+                </li>
+                <li>
+                  <p class="govuk-body">
+                  Further education colleges may be able to use GOV.UK Pay if they are not an 'enterprise' as described in the a href="https://www.legislation.gov.uk/ukpga/2022/23/enacted">Subsidy Control Act 2022</a>. Contact us to confirm if you're eligible.
                   </p>
                 </li>
               </ol>

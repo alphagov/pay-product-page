@@ -1,42 +1,25 @@
 window.GovUkPay = window.GovUkPay || {}
 window.GovUkPay.Analytics = (function () {
-  // Stripped-down wra§pper for Google Analytics, based on:
-  // https://github.com/alphagov/static/blob/master/doc/analytics.md
-  SetupAnalytics = function (config) {
-    window.ga('create', config.trackingId, config.cookieDomain)
-    window.ga('set', 'anonymizeIp', config.anonymizeIp)
-    window.ga('set', 'displayFeaturesTask', config.displayFeaturesTask)
-    window.ga('set', 'transport', config.transport)
-  }
-
   LoadGoogleAnalytics = function () {
+    var gtagScript = document.createElement('script')
+    gtagScript.async = true
+    gtagScript.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-XE9K05CFFE')
+    document.head.appendChild(gtagScript)
+
+    window.dataLayer = window.dataLayer || []
+
+    // Disabling eslint as the Google snippet conflicts with the our linting rules
     /* eslint-disable */
-    // Copied from Google Analytics installation instructions
-    /* jshint ignore:start */
-    ;(function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r
-      ;(i[r] =
-        i[r] ||
-        function () {
-          ;(i[r].q = i[r].q || []).push(arguments)
-        }),
-        (i[r].l = 1 * new Date())
-      ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
-      a.async = 1
-      a.src = g
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
-    /* jshint ignore:end */
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    /* eslint-enable */
+    gtagScript.onload = function () {
+      gtag('js', new Date())
+      gtag('config', 'G-XE9K05CFFE')
+    }
   }
-
-  TrackPageview = function (path, title, options) {
-    var page = window.location.pathname + window.location.search
-    window.ga('send', 'pageview', page)
-  }
-
   return {
-    TrackPageview: TrackPageview,
     LoadGoogleAnalytics: LoadGoogleAnalytics,
-    SetupAnalytics: SetupAnalytics,
   }
 })()

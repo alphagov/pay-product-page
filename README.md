@@ -39,7 +39,7 @@ Look at the CSS for the individual components for usage examples and notes.
 
 ## Releasing a Static Copy of the Site
 
-Releases are created when changes are merged into the `master` branch.
+Releases are created when changes are merged into the `main` branch.
 
 The product pages are then deployed to GitHub Pages automatically via GitHub Actions. Page contents are cached for roughly 30 minutes so your changes might not be viewable immediately.
 

@@ -3,12 +3,12 @@ name: Visual regression
 on:
   pull_request:
     branches:
-      - 'master'
+      - 'main'
     paths:
       - 'source/**'
   push:
     branches:
-      - 'master'
+      - 'main'
     paths:
       - 'source/**'
   workflow_dispatch:

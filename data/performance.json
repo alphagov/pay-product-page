@@ -1,13 +1,13 @@
 {
-  "dateUpdated": "1 July 2024",
-  "numberOfPayments": "84.9 million",
+  "dateUpdated": "8 July 2024",
+  "numberOfPayments": "85.5 million",
   "totalPaymentAmount": "5.4 billion",
-  "numberOfServices": 1085,
+  "numberOfServices": 1086,
   "numberOfOrganisations": 400,
   "serviceCountBySector": {
     "local": 498,
     "central": 267,
-    "police": 174,
+    "police": 175,
     "nhstrust": 92,
     "other": 17,
     "nhscentral": 36
@@ -396,7 +396,7 @@
     "Walsall Metropolitan Borough Council": 1,
     "Warwickshire County Council": 22,
     "Warwickshire Police": 2,
-    "Warwickshire Police and Crime Commissioner": 2,
+    "Warwickshire Police and Crime Commissioner": 3,
     "Water Search and Rescue Team": 1,
     "Wealden District Council": 1,
     "Welsh Government": 3,

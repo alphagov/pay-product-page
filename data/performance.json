@@ -1,14 +1,14 @@
 {
-  "dateUpdated": "22 July 2024",
-  "numberOfPayments": "86.4 million",
+  "dateUpdated": "29 July 2024",
+  "numberOfPayments": "86.9 million",
   "totalPaymentAmount": "5.5 billion",
-  "numberOfServices": 1091,
-  "numberOfOrganisations": 402,
+  "numberOfServices": 1095,
+  "numberOfOrganisations": 404,
   "serviceCountBySector": {
-    "local": 498,
+    "local": 500,
     "central": 268,
     "police": 176,
-    "nhstrust": 94,
+    "nhstrust": 96,
     "other": 17,
     "nhscentral": 37
   },
@@ -115,6 +115,7 @@
     "Cumbria County Council": 5,
     "DBS FIN RCPTS CTS": 1,
     "DBS Mil Pers": 1,
+    "DONCASTER & BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST": 1,
     "DVLA": 2,
     "Dacorum Borough Council": 1,
     "Decree Absolute Search Team": 1,
@@ -197,7 +198,7 @@
     "Knutsford Town Council (Knutsford Mayor's Fundraising)": 1,
     "LNC Activities and Training CIC": 1,
     "Lancashire County Council": 1,
-    "Lancashire Teaching Hospitals NHS Foundation Trust": 4,
+    "Lancashire Teaching Hospitals NHS Foundation Trust": 5,
     "Lancashire and South Cumbria NHS Foundation Trust": 1,
     "Laneshaw Bridge Parish Council": 1,
     "Leeds City Council": 1,
@@ -375,6 +376,7 @@
     "The Coal Authority": 2,
     "The Hillingdon Hospitals NHS Foundation Trust": 1,
     "The National Archives": 2,
+    "The North Yorkshire Council": 1,
     "The Nottinghamshire Office of the Police and Crime Commissioner": 4,
     "The Office of the Police and Crime Commissioner for Leicestershire": 2,
     "The Official Solicitor and Public Trustee": 1,
@@ -414,6 +416,6 @@
     "Wolverhampton City Council": 1,
     "Woodborough Parish Council": 1,
     "Worcestershire County Council": 1,
-    "Yeovil Town Council": 3
+    "Yeovil Town Council": 4
   }
 }

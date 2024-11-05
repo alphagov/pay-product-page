@@ -8,6 +8,14 @@ permissions:
   contents: read
 
 jobs:
+  detect-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
+      - name: Detect secrets
+        uses: alphagov/pay-ci/actions/detect-secrets@master
+
   tests:
     name: Unit tests and static build
     runs-on: ubuntu-latest

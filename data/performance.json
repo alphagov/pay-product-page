@@ -1,14 +1,14 @@
 {
-  "dateUpdated": "9 December 2024",
-  "numberOfPayments": "95.3 million",
+  "dateUpdated": "16 December 2024",
+  "numberOfPayments": "95.7 million",
   "totalPaymentAmount": "6.1 billion",
-  "numberOfServices": 1181,
+  "numberOfServices": 1184,
   "numberOfOrganisations": 431,
   "serviceCountBySector": {
     "local": 534,
     "central": 277,
     "police": 197,
-    "nhstrust": 113,
+    "nhstrust": 116,
     "other": 20,
     "nhscentral": 39
   },
@@ -95,7 +95,7 @@
     "Business Co-Ordination Unit for Bedfordshire Police, Cambridgeshire and Hertfordshire Constabularies": 1,
     "Cabinet Office": 2,
     "Cadw Welsh Government": 1,
-    "Cambridge University Hospitals NHS Foundation Trust": 1,
+    "Cambridge University Hospitals NHS Foundation Trust": 4,
     "Canterbury City Council": 2,
     "Care Inspectorate": 1,
     "Causeway Coast and Glens Borough Council": 2,

@@ -1,9 +1,9 @@
 {
   "dateUpdated": "10 February 2025",
-  "numberOfPayments": "99.4 million",
+  "numberOfPayments": "99.5 million",
   "totalPaymentAmount": "6.4 billion",
   "numberOfServices": 1217,
-  "numberOfOrganisations": 436,
+  "numberOfOrganisations": 435,
   "serviceCountBySector": {
     "local": 540,
     "central": 285,
@@ -129,7 +129,6 @@
     "Cumbria County Council": 5,
     "DBS FIN RCPTS CTS": 1,
     "DBS Mil Pers": 1,
-    "DONCASTER & BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST": 1,
     "DVLA": 2,
     "Dacorum Borough Council": 1,
     "Decree Absolute Search Team": 1,
@@ -152,7 +151,7 @@
     "Digital Shared Services": 1,
     "Disclosure Scotland": 3,
     "Disclosure and Barring Service": 1,
-    "Doncaster & Bassetlaw Teaching Hospitals NHS Foundation Trust": 14,
+    "Doncaster & Bassetlaw Teaching Hospitals NHS Foundation Trust": 15,
     "Doncaster Council": 1,
     "Dorset Council": 104,
     "Dorset County Hospital NHS FT": 1,

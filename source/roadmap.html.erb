@@ -25,69 +25,82 @@ title: Roadmap
         <p class="govuk-body">
           We made changes to GOV.UK Pay to meet the Web Content Accessibility Guidelines 2.2 (WCAG 2.2), so that the product can be used by as many people as possible. We have:
         </p>
-        <ul class="govuk-list govuk-list--bullet">  
-        <li>updated the   
-    <%= link_to 'prefilled payment fields', 'https://docs.payments.service.gov.uk/optional_features/prefill_user_details/#prefill-payment-fields', class: 'govuk-link' %> and 
-    <%= link_to 'take a payment', 'https://docs.payments.service.gov.uk/making_payments/#creating-a-payment', class: 'govuk-link' %> pages in our tech docs, so that public sector services know how to meet the WCAG 2.2 redundant entry requirement</li>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            updated the
+            <%= link_to 'prefilled payment fields', 'https://docs.payments.service.gov.uk/optional_features/prefill_user_details/#prefill-payment-fields', class: 'govuk-link' %>
+            and <%= link_to 'take a payment', 'https://docs.payments.service.gov.uk/making_payments/#creating-a-payment', class: 'govuk-link' %> pages in our tech docs, so that
+            public sector services know how to meet the WCAG 2.2 redundant entry requirement
+          </li>
           <li>upgraded GOV.UK Pay to version 5.0 of the GOV.UK Design System, so that we’re using the most up-to-date design patterns</li>
           <li>updated our accessibility statement</li>
-          </ul>
+        </ul>
 
         <h3 class="govuk-heading-m">Library upgrades</h3>
         <p class="govuk-body">
-          We replaced old Node.js libraries across our apps and upgraded GOV.UK Pay to use Dropwizard 3 and Java 21. This makes sure we’re running our service on fully supported third-party software and code.
+          We replaced old Node.js libraries across our apps and upgraded GOV.UK Pay to use Dropwizard 3 and Java 21. This makes sure we’re running our service on fully supported
+          third-party software and code.
         </p>
         <h3 class="govuk-heading-m">Database upgrades</h3>
-        <p class="govuk-body">
-          We upgraded all of our databases in GOV.UK Pay to a newer Postgres version.
-        </p>
+        <p class="govuk-body">We upgraded all of our databases in GOV.UK Pay to a newer Postgres version.</p>
         <h3 class="govuk-heading-m">Corporate exemptions</h3>
         <p class="govuk-body">
-          We integrated with Worldpay’s corporate card exemption engine to meet card scheme requirements for a selection of services who have a significant portion of business payees.
+          We integrated with Worldpay’s corporate card exemption engine to meet card scheme requirements for a selection of services who have a significant portion of business
+          payees.
         </p>
         <h2 class="govuk-heading-l">What we’re doing now</h2>
 
         <h3 class="govuk-heading-m">Updating the Settings page in the admin tool</h3>
         <p class="govuk-body">
-          We’re making changes to the settings pages in the GOV.UK Pay admin tool so they're clearer and simpler. This will make it easier for public sector teams to manage their services and switch easily between live and test modes.
+          We’re making changes to the settings pages in the GOV.UK Pay admin tool so they're clearer and simpler. This will make it easier for public sector teams to manage their
+          services and switch easily between live and test modes.
         </p>
         <h3 class="govuk-heading-m">Accepting new payment types</h3>
         <p class="govuk-body">
-         We're updating Pay to manage not just card payments but other ways to pay as well. This change is important because it means paying users of public sector services will have more options in future, making GOV.UK Pay able to adapt to different needs. More payment options make it simpler for everyone to use public sector services in the way that works best for them, and allows more public services to benefit from using us. We plan to use pay by bank, which could make payments faster and cheaper while keeping them secure.
+          We're updating Pay to manage not just card payments but other ways to pay as well. This change is important because it means paying users of public sector services will
+          have more options in future, making GOV.UK Pay able to adapt to different needs. More payment options make it simpler for everyone to use public sector services in the
+          way that works best for them, and allows more public services to benefit from using us. We plan to use pay by bank, which could make payments faster and cheaper while
+          keeping them secure.
         </p>
         <h3 class="govuk-heading-m">Procuring new card and pay by bank payment suppliers</h3>
         <p class="govuk-body">
-          We're completing a procurement exercise to get the best card and pay by bank suppliers. This will make sure service teams and paying users have the best value for money and experience when using GOV.UK Pay.
+          We're completing a procurement exercise to get the best card and pay by bank suppliers. This will make sure service teams and paying users have the best value for money
+          and experience when using GOV.UK Pay.
         </p>
         <h2 class="govuk-heading-l">What's next</h2>
         <h3 class="govuk-heading-m">Integrate with new card payment suppliers</h3>
-        <p class="govuk-body">
-          Once we’ve procured new card payment suppliers, we’ll integrate them with GOV.UK Pay.
-        </p>
+        <p class="govuk-body">Once we’ve procured new card payment suppliers, we’ll integrate them with GOV.UK Pay.</p>
         <h3 class="govuk-heading-m">Release pay by bank to a small number of public sector services</h3>
         <p class="govuk-body">
-          We want to integrate GOV.UK Pay with a pay by bank supplier so we can release pay by bank for a small number of public sector services. This will allow users to pay for public sector services with their banking app or online banking. We’ll use what we learn from this work to improve pay by bank before releasing it to more public sector services.
+          We want to integrate GOV.UK Pay with a pay by bank supplier so we can release pay by bank for a small number of public sector services. This will allow users to pay for
+          public sector services with their banking app or online banking. We’ll use what we learn from this work to improve pay by bank before releasing it to more public sector
+          services.
         </p>
         <h3 class="govuk-heading-m">Complete our 2025 Payment Card Industry assessment</h3>
         <p class="govuk-body">
-          In June 2025, we’ll complete our 2025 Payment Card Industry Data Security Standard 4.0 assessment to review our processes and make sure we’re keeping users’ information safe.
+          In June 2025, we’ll complete our 2025 Payment Card Industry Data Security Standard 4.0 assessment to review our processes and make sure we’re keeping users’ information
+          safe.
         </p>
         <h3 class="govuk-heading-m">Meet Visa card scheme data field requirements</h3>
         <p class="govuk-body">
-          Card schemes are doing more to prevent and combat fraud. As a result, from August 2025, Visa require us to send some data fields with payments. We'll need to make changes in GOV.UK Pay to accommodate this for services and tell them about the change.
+          Card schemes are doing more to prevent and combat fraud. As a result, from August 2025, Visa require us to send some data fields with payments. We'll need to make changes
+          in GOV.UK Pay to accommodate this for services and tell them about the change.
         </p>
         <h2 class="govuk-heading-l">Future plans</h2>
         <h3 class="govuk-heading-m">Improve database performance</h3>
         <p class="govuk-body">
-         We want to make some changes to one of our largest databases to improve its performance. This means public sector service teams will be able to complete large transaction searches in the GOV.UK Pay admin tool more quickly and efficiently.
+          We want to make some changes to one of our largest databases to improve its performance. This means public sector service teams will be able to complete large transaction
+          searches in the GOV.UK Pay admin tool more quickly and efficiently.
         </p>
         <h3 class="govuk-heading-m">Multi-factor authentication reset</h3>
         <p class="govuk-body">
-          We want to automate the process for public sector service users to reset the multi-factor authentication on their GOV.UK Pay account. This means that users will be able to regain access to their account without intervention from the GOV.UK Pay team, saving time while maintaining security.
+          We want to automate the process for public sector service users to reset the multi-factor authentication on their GOV.UK Pay account. This means that users will be able
+          to regain access to their account without intervention from the GOV.UK Pay team, saving time while maintaining security.
         </p>
         <h3 class="govuk-heading-m">Improve the paying user journey</h3>
         <p class="govuk-body">
-           We want to make incremental changes to the payment pages, including investigating whether we should remove the Confirm page from the user journey. This could reduce friction for paying users and make it easier for them to pay for public sector services online.     
+          We want to make incremental changes to the payment pages, including investigating whether we should remove the Confirm page from the user journey. This could reduce
+          friction for paying users and make it easier for them to pay for public sector services online.
         </p>
         <h3 class="govuk-heading-m">Annual security checks</h3>
         <p class="govuk-body">

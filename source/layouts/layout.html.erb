@@ -36,7 +36,7 @@
     <script>
       document.body.className = document.body.className ? document.body.className + ' js-enabled' : 'js-enabled'
     </script>
-    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
     <% if config.new_cookie_banner == true %>
       <%= partial 'partials/cookie-banner.html.erb' %>
@@ -74,11 +74,11 @@
           <% end %>
         </div>
         <div class="govuk-header__content">
-          <button type="button" role="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">
-            Menu
-          </button>
-          <nav>
-            <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+          <nav aria-label="Top Level Navigation">
+            <button type="button" role="button" class="govuk-header__menu-button govuk-js-header-toggle govuk-header__navigation" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">
+              Menu
+            </button>
+            <ul id="navigation" class="govuk-header__navigation-list">
               <%
             {
               'Features' => ['using-govuk-pay', true, 'Using GOV.UK&nbsp;Pay'],
@@ -121,7 +121,7 @@
             }
         }.each do |header, links|
       %>
-            <div class="govuk-footer__section">
+            <div class="govuk-footer__section govuk-grid-column-two-thirds">
               <h2 class="govuk-footer__heading govuk-heading-m"><%= header %></h2>
               <ul class="govuk-footer__list">
                 <% links.each do |title, url| %>

@@ -19,7 +19,7 @@
   "homepage": "https://www.payments.service.gov.uk",
   "dependencies": {
     "gaap-analytics": "^3.1.0",
-    "govuk-frontend": "^3.15.0"
+    "govuk-frontend": "^4.9.0"
   },
   "devDependencies": {
     "@percy/cli": "^1.26.0",

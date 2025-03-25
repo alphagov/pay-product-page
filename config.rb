@@ -26,6 +26,14 @@ end
 config[:css_dir] = "stylesheets"
 config[:images_dir] = "images"
 config[:js_dir] = "javascripts"
+config[:sass] = {
+  load_paths: [
+    File.join(root, "node_modules"),
+    File.join(root, "node_modules/govuk-frontend"),
+    File.join(root, "node_modules/govuk-frontend/dist"),
+    File.join(root, "node_modules/govuk-frontend/dist/govuk")
+  ]
+}
 
 ignore "**/javascripts/*test*.js"
 
@@ -63,6 +71,7 @@ activate :sprockets do |config|
 end
 
 sprockets.append_path File.join(root, "node_modules")
+sprockets.append_path File.join(root, "node_modules/govuk-frontend")
 
 redirect "security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
 redirect ".well-known/security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"

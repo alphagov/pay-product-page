@@ -56,14 +56,29 @@ helpers do
     groups = text.to_s.scan(/(?:^\+)?\d+/)
     link_to text, "tel:#{groups.join ''}", className
   end
+  
+  # https://frontend.design-system.service.gov.uk/import-javascript/#use-a-hash-to-unblock-inline-javascript
+  def csp_nonce
+    SecureRandom.base64(24)
+  end
 end
 
 activate :sprockets do |config|
   config.expose_middleman_helpers = true
 end
 
-sprockets.append_path File.join(root, "node_modules/govuk-frontend/")
+
+sprockets.append_path File.join(root, "node_modules/")
 sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
+
+after_build do |builder|
+  FileUtils.mkdir_p(File.join(root, "build/assets/javascripts"))
+
+  FileUtils.cp(
+    File.join(root, "node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js"),
+    File.join(root, "build/assets/javascripts/govuk-frontend.min.js")
+  )
+end
 
 redirect "security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
 redirect ".well-known/security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"

@@ -1,5 +1,4 @@
-//= require govuk/all.js
-//= require gaap-analytics.min.js
+//= require ../node_modules/gaap-analytics/build/gaap-analytics.min.js
 //= require cookies.js
 //= require ./cookie-banner/cookie-banner.js
 //= require ./cookie-settings/cookie-settings.js

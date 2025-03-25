@@ -63,10 +63,6 @@ activate :sprockets do |config|
 end
 
 sprockets.append_path File.join(root, "node_modules")
-sprockets.append_path File.join(root, "node_modules/govuk-frontend/")
-sprockets.append_path File.join(root, "node_modules/govuk-frontend/dist")
-sprockets.append_path File.join(root, "node_modules/govuk-frontend/package")
-sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
 
 redirect "security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
 redirect ".well-known/security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"

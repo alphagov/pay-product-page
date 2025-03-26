@@ -68,10 +68,12 @@ activate :sprockets do |config|
 end
 
 
-sprockets.append_path File.join(root, "node_modules/govuk-frontend/")
+sprockets.append_path File.join(root, "node_modules/")
 sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
 
 after_build do |builder|
+  FileUtils.mkdir_p(File.join(root, "build/assets/javascripts"))
+
   FileUtils.cp(
     File.join(root, "node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js"),
     File.join(root, "build/assets/javascripts/govuk-frontend.min.js")

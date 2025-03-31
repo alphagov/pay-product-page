@@ -8,6 +8,7 @@
 page "/*.xml", layout: false
 page "/*.json", layout: false
 page "/*.txt", layout: false
+page "/favicon.ico", directory_index: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -67,7 +68,6 @@ activate :sprockets do |config|
   config.expose_middleman_helpers = true
 end
 
-
 sprockets.append_path File.join(root, "node_modules/")
 sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
 
@@ -90,4 +90,4 @@ redirect "payment-links.html", to: "/govuk-payment-pages/"
 # https://middlemanapp.com/advanced/pretty-urls/
 activate :directory_indexes
 
-activate :asset_hash
+activate :asset_hash, ignore: [/^favicon/]

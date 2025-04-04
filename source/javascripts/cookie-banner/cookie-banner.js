@@ -4,14 +4,14 @@
 window.GovUkPay = window.GovUkPay || {}
 
 window.GovUkPay.CookieBanner = (function () {
-  $module = {}
-  COOKIE_NAME = 'govuk_pay_cookie_policy'
+  let $module = {}
+  const COOKIE_NAME = 'govuk_pay_cookie_policy'
 
-  setModule = function ($module) {
+  const setModule = function ($module) {
     $module = $module
   }
 
-  checkForBannerAndInit = function () {
+  const checkForBannerAndInit = function () {
     var $cookieBanner = document.querySelector('[data-module="pay-cookie-banner"]')
 
     if ($cookieBanner) {
@@ -20,37 +20,37 @@ window.GovUkPay.CookieBanner = (function () {
     }
   }
 
-  init = function ($module) {
+  const init = function ($module) {
     $module.cookieBanner = document.querySelector('.pay-cookie-banner')
     $module.cookieBannerConfirmationMessage = document.querySelector('.pay-cookie-banner__confirmation')
 
     setupCookieMessage()
   }
 
-  setupCookieMessage = function () {
-    this.$hideLink = $module.cookieBannerConfirmationMessage.querySelector('button[data-hide-cookie-banner]')
-    if (this.$hideLink) {
-      this.$hideLink.addEventListener('click', hideCookieMessage)
+  const setupCookieMessage = function () {
+    const $hideLink = $module.cookieBannerConfirmationMessage.querySelector('button[data-hide-cookie-banner]')
+    if ($hideLink) {
+      $hideLink.addEventListener('click', hideCookieMessage)
     }
 
-    this.$acceptCookiesLink = $module.cookieBanner.querySelector('button[data-accept-cookies=true]')
-    if (this.$acceptCookiesLink) {
-      this.$acceptCookiesLink.addEventListener('click', function () {
+    const $acceptCookiesLink = $module.cookieBanner.querySelector('button[data-accept-cookies=true]')
+    if ($acceptCookiesLink) {
+      $acceptCookiesLink.addEventListener('click', function () {
         setCookieConsent(true)
       })
     }
 
-    this.$rejectCookiesLink = $module.cookieBanner.querySelector('button[data-accept-cookies=false]')
-    if (this.$rejectCookiesLink) {
-      this.$rejectCookiesLink.addEventListener('click', function () {
+    const $rejectCookiesLink = $module.cookieBanner.querySelector('button[data-accept-cookies=false]')
+    if ($rejectCookiesLink) {
+      $rejectCookiesLink.addEventListener('click', function () {
         setCookieConsent(false)
       })
     }
 
-    this.showCookieMessage()
+    showCookieMessage()
   }
 
-  showCookieMessage = function () {
+  const showCookieMessage = function () {
     // Show the cookie banner if policy cookie not set
     var hasCookiesPolicy = window.GovUkPay.Cookie.getCookie(COOKIE_NAME)
 
@@ -67,7 +67,7 @@ window.GovUkPay.CookieBanner = (function () {
     }
   }
 
-  hideCookieMessage = function (event) {
+  const hideCookieMessage = function (event) {
     if ($module.cookieBannerConfirmationMessage) {
       $module.cookieBannerConfirmationMessage.style.display = 'none'
     }
@@ -77,7 +77,7 @@ window.GovUkPay.CookieBanner = (function () {
     }
   }
 
-  setCookieConsent = function (analyticsConsent) {
+  const setCookieConsent = function (analyticsConsent) {
     window.GovUkPay.Cookie.setConsentCookie({ analytics: analyticsConsent })
 
     showConfirmationMessage(analyticsConsent)
@@ -87,7 +87,7 @@ window.GovUkPay.CookieBanner = (function () {
     }
   }
 
-  showConfirmationMessage = function (analyticsConsent) {
+  const showConfirmationMessage = function (analyticsConsent) {
     var messagePrefix = analyticsConsent ? 'You’ve accepted analytics cookies. ' : 'You told us not to use analytics cookies. '
 
     var $cookieBannerMainContent = document.querySelector('.pay-cookie-banner__wrapper')

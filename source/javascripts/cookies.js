@@ -60,7 +60,7 @@
     }
     return null
   }
-}.call(this))
+}.call(window))
 ;(function () {
   'use strict'
   var root = this
@@ -77,7 +77,7 @@
       GOVUK.cookie('seen_cookie_message', 'yes', { days: 28 })
     }
   }
-}.call(this))
+}.call(window))
 ;(function () {
   'use strict'
 
@@ -85,4 +85,4 @@
   if (window.GOVUK && GOVUK.addCookieMessage) {
     GOVUK.addCookieMessage()
   }
-}.call(this))
+}.call(window))

@@ -18,7 +18,8 @@
     "exclude": [
       "/contact/index.html",
       "/features/index.html",
-      "/payment-links/index.html"
+      "/payment-links/index.html",
+      "/assets/govuk/components/**"
     ]
   },
   "upload": {

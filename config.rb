@@ -62,7 +62,7 @@ activate :sprockets do |config|
   config.expose_middleman_helpers = true
 end
 
-sprockets.append_path File.join(root, "node_modules/govuk-frontend/")
+sprockets.append_path File.join(root, "node_modules/govuk-frontend/dist/")
 sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
 
 redirect "security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"

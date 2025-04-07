@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "31 March 2025",
-  "numberOfPayments": "103.2 million",
+  "dateUpdated": "7 April 2025",
+  "numberOfPayments": "103.8 million",
   "totalPaymentAmount": "6.7 billion",
-  "numberOfServices": 1260,
-  "numberOfOrganisations": 457,
+  "numberOfServices": 1261,
+  "numberOfOrganisations": 459,
   "serviceCountBySector": {
-    "local": 554,
+    "local": 556,
     "central": 291,
     "police": 215,
     "nhstrust": 128,
     "other": 24,
-    "nhscentral": 47
+    "nhscentral": 46
   },
   "serviceCountByOrganisation": {
     "1079 (Tiverton) Squadron, RAF Air Cadets": 1,
@@ -166,6 +166,7 @@
     "Eastleigh Borough Council": 1,
     "Education Authority": 1,
     "Education Authority NI": 1,
+    "Elvetham Heath Parish Council": 1,
     "Environment Agency": 26,
     "Essex Police": 5,
     "Evesham Town Council": 1,
@@ -188,7 +189,7 @@
     "Greater Manchester Police": 4,
     "Guys and St Thomas Foundation NHS Trust": 2,
     "Gwent Police": 1,
-    "HAMPSHIRE AND ISLE OF WIGHT ICB": 3,
+    "HAMPSHIRE AND ISLE OF WIGHT ICB": 2,
     "HM Courts & Tribunals Service": 9,
     "HM Land Registry": 5,
     "Halton Borough Council": 1,
@@ -196,6 +197,7 @@
     "Hampshire County Council": 1,
     "Haringey Council": 1,
     "Harrow Council": 1,
+    "Headley Parish Council": 1,
     "Health and Safety Executive": 2,
     "Healthcare Improvement Scotland": 1,
     "Heddlu Gwent Police": 19,

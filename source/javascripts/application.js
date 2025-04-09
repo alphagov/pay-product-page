@@ -1,4 +1,4 @@
-//= require govuk/all.js
+//= require govuk/all.bundle.js
 //= require gaap-analytics.min.js
 //= require cookies.js
 //= require ./cookie-banner/cookie-banner.js

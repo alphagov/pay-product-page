@@ -2,7 +2,7 @@
 
 window.GovUkPay = window.GovUkPay || {}
 window.GovUkPay.InitAnalytics = (function () {
-  InitialiseAnalytics = function () {
+  const InitialiseAnalytics = function () {
     window.GovUkPay.Analytics.LoadGoogleAnalytics()
   }
 

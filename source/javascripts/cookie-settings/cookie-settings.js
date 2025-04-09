@@ -2,9 +2,9 @@
 
 window.GovUkPay = window.GovUkPay || {}
 window.GovUkPay.CookieSettings = (function () {
-  $module = {}
+  let $module = {}
 
-  checkForFormAndInit = function () {
+  const checkForFormAndInit = function () {
     var $cookieSettingsForm = document.querySelector('#cookie-settings-form')
 
     if ($cookieSettingsForm) {

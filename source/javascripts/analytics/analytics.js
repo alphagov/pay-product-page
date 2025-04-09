@@ -1,6 +1,6 @@
 window.GovUkPay = window.GovUkPay || {}
 window.GovUkPay.Analytics = (function () {
-  LoadGoogleAnalytics = function () {
+  const LoadGoogleAnalytics = function () {
     var gtagScript = document.createElement('script')
     gtagScript.async = true
     gtagScript.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-XE9K05CFFE')

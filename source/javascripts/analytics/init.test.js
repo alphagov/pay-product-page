@@ -14,7 +14,7 @@ beforeAll(() => {
 describe('InitialiseAnalytics component', () => {
   describe('If initAnalytics has not yet been called', () => {
     beforeEach(() => {
-      InitialiseAnalytics()
+      window.GovUkPay.InitAnalytics.InitialiseAnalytics()
     })
 
     it('the Google Analytics libraries will have been loaded', () => {

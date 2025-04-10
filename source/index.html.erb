@@ -50,9 +50,17 @@ description: Take and process online payments from your users - GOV.UK Pay is a 
     <div class="content-section">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
-          <h2 class="content-section__title govuk-heading-m">Take payments instantly</h2>
-          <p class="govuk-body">Use GOV.UK&nbsp;Pay and be ready to take online payments in&nbsp;minutes.</p>
-          <p class="govuk-body">There are no monthly bills, setup or upgrade fees.</p>
+          <h2 class="content-section__title govuk-heading-m">What GOV.UK&nbsp;Pay can do</h2>
+          <p class="govuk-body">GOV.UK&nbsp;Pay does more than just take card payments. It can also:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>provide a PCI DSS compliant platform</li>
+            <li>take recurring payments to a schedule you can set</li>
+            <li>take telephone (MOTO) payments so your users can pay by telephoning your call centre</li>
+            <li>integrate with GOV.UK&nbsp;Forms and finance software</li>
+            <li>give you real-time information on your payments</li>
+            <li>take digital wallet payments with Apple&nbsp;Pay and Google&nbsp;Pay</li>
+          </ul>
+          <p class="govuk-body">We’re adding <%= link_to 'new features', 'using-govuk-pay', class: 'govuk-link' %> all the time.</p>
         </div>
         <div class="govuk-grid-column-one-half">
           <%=
@@ -65,12 +73,10 @@ description: Take and process online payments from your users - GOV.UK Pay is a 
     </div>
     <div class="content-section content-section--with-top-border">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-          <h2 class="content-section__title govuk-heading-m">Manage your payments</h2>
-          <p class="govuk-body">Take payments, issue refunds and run reports on all your payments.</p>
-        </div>
-        <div class="govuk-grid-column-one-half">
-          <%= image_tag 'product-page_images_transaction-screen.svg', alt: 'Dashboard showing a list of transactions with search filters.', class: 'content-section__image' %>
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="content-section__title govuk-heading-m">What’s new</h2>
+          <p class="govuk-body">We’re updating GOV.UK&nbsp;Pay all the time.</p>
+          <p class="govuk-body">Read the  <%= link_to 'full roadmap', 'roadmap', class: 'govuk-link' %>  to see what’s changed and what’s coming next.</p>
         </div>
       </div>
     </div>
@@ -125,8 +131,11 @@ description: Take and process online payments from your users - GOV.UK Pay is a 
       <div class="content-section content-section--with-top-border">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <h2 class="content-section__title govuk-heading-m">Security and relevant standards built in</h2>
-            <p class="govuk-body">GOV.UK&nbsp;Pay is robust, secure and fully Payment Card Industry (PCI) compliant.</p>
+            <h2 class="content-section__title govuk-heading-m">Secure, reliable and accessible</h2>
+            <p class="govuk-body">
+              GOV.UK&nbsp;Pay is built by the Government Digital Service. It is robust, secure and fully Payment Card Industry Data Security Standard (PCI DSS) compliant. It is
+              supported 24 hours a day, 7 days a week. Our uptime is 99.99%. Read more about our <%= link_to 'security and compliance', 'security', class: 'govuk-link' %>.
+            </p>
             <p class="govuk-body">
               Read the
               <%= link_to 'accessibility statement', 'accessibility-statement', class: 'govuk-link' %>

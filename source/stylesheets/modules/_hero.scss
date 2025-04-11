@@ -78,6 +78,13 @@
   }
 
   &__inline-image {
+    // Not in original product-page-example
+    // Added because we relocated the image
+    // to be immediately above the button
+    // and the extra margin is necessary to
+    // give the button space to breathe
+    margin-bottom: govuk-spacing(3);
+
     text-align: center;
 
     @include govuk-media-query(tablet) {

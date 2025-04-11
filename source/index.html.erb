@@ -17,19 +17,27 @@ description: GOV.UK Pay is for central government, local authorities, police and
     </div>
     <div class="hero__content">
       <div class="hero__body">
-        <h1 class="hero__title">The best way to take payments for public services</h1>
-        <p class="hero__description">
-          GOV.UK&nbsp;Pay has contracts with payment providers so you can take payments quickly and easily. It’s used across central and local government, police and the NHS.
-        </p>
+        <h1 class="hero__title">Take online payments from your users</h1>
         <div class="hero__inline-image">
           <%= image_tag 'pay-top-image.png', alt: 'Payment screen on mobile and dashboard with refund function.', role: 'presentation' %>
         </div>
+        <p class="hero__description">If you work in the public sector, use GOV.UK&nbsp;Pay to take&nbsp;payments</p>
         <% link_to 'getstarted', :role => 'button', :class => 'govuk-button govuk-button--start button--start_white', 'data-click-events' => '', 'data-click-category' => 'Hero', 'data-click-action' => 'Internal link clicked' do %>
-          Find out if you can use GOV.UK&nbsp;Pay
+          Create a test account
           <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
           </svg>
         <% end %>
+        <span class="hero-alternative-action">
+          or
+          <%=
+            link_to 'find out what GOV.UK&nbsp;Pay offers',
+                    'using-govuk-pay',
+                    'data-click-events' => '',
+                    'data-click-category' => 'Hero',
+                    'data-click-action' => 'Internal link clicked'
+          %>
+        </span>
       </div>
       <div class="hero__aside-image">
         <%= image_tag 'pay-top-image.png', alt: 'Payment screen on mobile and dashboard with refund function.', role: 'presentation' %>

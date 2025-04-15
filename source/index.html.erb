@@ -73,25 +73,40 @@ description: GOV.UK Pay is for central government, local authorities, police and
       </div>
     </div>
     <div class="content-section content-section--with-top-border">
-      <h2 class="content-section__title govuk-heading-m">Create a hosted payment page or integrate your existing service</h2>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
+          <h2 class="content-section__title govuk-heading-m">Payment links: no tech knowledge needed</h2>
           <p class="govuk-body govuk-!-margin-bottom-9">
-            If you want to take online payments and don’t have an online service,
-            <%= link_to 'create a GOV.UK&nbsp;Payment page', 'govuk-payment-pages', class: 'govuk-link' %>.
+            <%= link_to 'Payment links', 'govuk-payment-pages', class: 'govuk-link' %> are pages people can use to pay you. You can create them easily without needing any technical
+            knowledge.
           </p>
+          <p class="govuk-body govuk-!-margin-bottom-9">You can even use your own custom branding so users trust they are paying correctly.</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
           <%=
-            image_tag 'product-page_images_payment-link.svg',
+            image_tag 'product-page_images_example_service.svg',
                       alt: 'A user-facing payment page with information about what the payment is about and an input box to input the price.',
                       class: 'content-section__image'
           %>
         </div>
+      </div>
+      <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
-          <p class="govuk-body govuk-!-margin-bottom-9">
-            If you
-            <%= link_to 'integrate your online service', 'api-integration', class: 'govuk-link' %>
-            you’ll get greater control over your payments.
+          <h2 class="content-section__title govuk-heading-m">Or use GOV.UK&nbsp;Pay's API in your digital service</h2>
+          <p class="govuk-body">
+            We also have an API so you can seamslessly
+            <%= link_to 'integrate GOV.UK&nbsp;Pay into your full digital service.', 'api-integration', class: 'govuk-link' %>
           </p>
+          <p class="govuk-body">The API is based on REST principles with endpoints returning data in JSON format. Our API lets you:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>begin and complete payments</li>
+            <li>view the event history for individual payments</li>
+            <li>view transactions, refunds, and siputes within a specified time period</li>
+            <li>issue full or partial refunds</li>
+            <li>create agreements to take recurring payments</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-half">
           <%=
             image_tag 'product-page_images_api_json_example.svg',
                       alt: 'A screenshot of an extract of JSON code that would be used in an API call to GOV.UK&nbsp;Pay.',

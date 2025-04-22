@@ -62,41 +62,25 @@
   }
 }
 
-.partner-grid {
+.organisations-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  justify-items: start;
 
   @include govuk-media-query(desktop) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.partner-logo {
-  margin-right: govuk-spacing(3);
-  margin-bottom: govuk-spacing(6);
-  width: auto;
-  height: 4em;
-
-  @include govuk-media-query(tablet) {
-    margin-right: govuk-spacing(4);
-
-    &:last-of-type {
-      margin-right: 0;
-    }
+    grid-template-columns: auto 1fr 1fr 1fr 1fr auto;
+    align-items: center;
+    justify-items: center;
   }
 
-  &-smaller {
-    height: 3.5em;
-  }
+  &__logo {
+    width: auto;
+    height: 4em;
+    display: block;
 
-  &--fcdo {
-    height: auto;
-    max-height: 4em;
-
-    @include govuk-media-query(tablet) {
-      box-sizing: border-box;
-      margin: 0;
-      padding-right: 20px;
+    &--small {
+      height: 2.5em;
     }
   }
 }

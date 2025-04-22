@@ -118,37 +118,55 @@ description: GOV.UK Pay is for central government, local authorities, police and
     <div class="content-section content-section--with-top-border">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
-          <h2 class="content-section__title govuk-heading-m">Used and trusted across government</h2>
-          <p class="govuk-body">Partners from right across the public sector are already using GOV.UK&nbsp;Pay, including the NHS, MOJ, police forces and local authorities.</p>
+          <h2 class="content-section__title govuk-heading-m">Who’s using GOV.UK Pay?</h2>
+          <p class="govuk-body">GOV.UK Pay is used by a range of services from applying for a passport to getting a Blue Badge in Kent.</p>
           <p class="govuk-body">
             See all the
             <%= link_to 'services using GOV.UK&nbsp;Pay', 'performance', class: 'govuk-link' %>
             .
           </p>
         </div>
-        <div class="govuk-grid-column-one-half partner-grid">
-          <%= image_tag 'logos/home-office.png', alt: 'Home Office', class: 'content-section__image partner-logo' %>
-          <%= image_tag 'logos/moj.png', alt: 'Ministry of Justice', class: 'content-section__image partner-logo' %>
-          <%= image_tag 'logos/dit.png', alt: 'Department for International Trade', class: 'content-section__image partner-logo' %>
-          <%= image_tag 'logos/fcdo.png', alt: 'Foreign, Commonwealth & Development Office', class: 'content-section__image partner-logo partner-logo--fcdo' %>
-          <%= image_tag 'logos/mod.png', alt: 'Ministry of Defence', class: 'content-section__image partner-logo' %>
-          <%= image_tag 'logos/nhs.png', alt: 'NHS', class: 'content-section__image partner-logo' %>
+        <div class="govuk-grid-column-one-half .why-use-govuk-pay">
+          <div class="govuk-body govuk-!-font-size-24">
+            <span class="govuk-visually-hidden">There are</span>
+            <div class="govuk-!-font-size-36 govuk-!-font-weight-bold">1,200+</div>
+            live services
+          </div>
+          <div class="govuk-body govuk-!-font-size-24">
+            <span class="govuk-visually-hidden">and</span>
+            <div class="govuk-!-font-size-36 govuk-!-font-weight-bold">70,000+</div>
+            payments processed every day
+          </div>
         </div>
       </div>
-      <div class="content-section content-section--with-top-border">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <h2 class="content-section__title govuk-heading-m">Secure, reliable and accessible</h2>
-            <p class="govuk-body">
-              GOV.UK&nbsp;Pay is built by the Government Digital Service. It is robust, secure and fully Payment Card Industry Data Security Standard (PCI DSS) compliant. It is
-              supported 24 hours a day, 7 days a week. Our uptime is 99.99%. Read more about our <%= link_to 'security and compliance', 'security', class: 'govuk-link' %>.
-            </p>
-            <p class="govuk-body">
-              Read the
-              <%= link_to 'accessibility statement', 'accessibility-statement', class: 'govuk-link' %>
-              to check how it meets accessibility standards.
-            </p>
-          </div>
+    </div>
+
+    <div class="content-section">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full organisations-grid">
+          <%= image_tag 'logos/hmpo.png', alt: 'HM Passport Office', class: 'content-section__image organisations-grid__logo' %>
+          <%= image_tag 'logos/moj.png', alt: 'Ministry of Justice', class: 'content-section__image organisations-grid__logo' %>
+          <%= image_tag 'logos/mod.png', alt: 'Ministry of Defence', class: 'content-section__image organisations-grid__logo' %>
+          <%= image_tag 'logos/nhs.jpg', alt: 'NHS', class: 'content-section__image organisations-grid__logo--small' %>
+          <%= image_tag 'logos/essex-police.png', alt: 'Essex Police', class: 'content-section__image organisations-grid__logo--small' %>
+          <%= image_tag 'logos/dorset-council.svg', alt: 'Dorset Council', class: 'content-section__image organisations-grid__logo--small' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section content-section--with-top-border">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="content-section__title govuk-heading-m">Secure, reliable and accessible</h2>
+          <p class="govuk-body">
+            GOV.UK&nbsp;Pay is built by the Government Digital Service. It is robust, secure and fully Payment Card Industry Data Security Standard (PCI DSS) compliant. It is
+            supported 24 hours a day, 7 days a week. Our uptime is 99.99%. Read more about our <%= link_to 'security and compliance', 'security', class: 'govuk-link' %>.
+          </p>
+          <p class="govuk-body">
+            Read the
+            <%= link_to 'accessibility statement', 'accessibility-statement', class: 'govuk-link' %>
+            to check how it meets accessibility standards.
+          </p>
         </div>
       </div>
     </div>

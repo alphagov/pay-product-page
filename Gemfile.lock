@@ -100,7 +100,7 @@ GEM
     parslet (2.0.0)
     prettier_print (1.2.1)
     public_suffix (5.0.1)
-    rack (2.2.13)
+    rack (2.2.14)
     rack-livereload (0.3.17)
       rack
     rake (13.2.1)

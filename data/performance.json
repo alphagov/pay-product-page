@@ -1,11 +1,11 @@
 {
-  "dateUpdated": "10 June 2025",
-  "numberOfPayments": "108.5 million",
-  "totalPaymentAmount": "7.0 billion",
-  "numberOfServices": 1325,
+  "dateUpdated": "16 June 2025",
+  "numberOfPayments": "108.9 million",
+  "totalPaymentAmount": "7.1 billion",
+  "numberOfServices": 1326,
   "numberOfOrganisations": 486,
   "serviceCountBySector": {
-    "local": 570,
+    "local": 571,
     "central": 316,
     "police": 224,
     "nhstrust": 135,
@@ -496,6 +496,7 @@
     "Wolverhampton City Council": 1,
     "Wolverton and Greenleys Town Council": 2,
     "Woodborough Parish Council": 1,
+    "Wootton Parish Council": 1,
     "Worcestershire County Council": 1,
     "Yeovil Town Council": 4
   }

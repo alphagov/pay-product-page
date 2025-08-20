@@ -19,8 +19,7 @@
       text-decoration: none;
     }
 
-    a:hover,
-    a:active {
+    a:hover:not(:focus) {
       text-decoration: underline;
     }
 

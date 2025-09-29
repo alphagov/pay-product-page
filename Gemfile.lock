@@ -100,7 +100,7 @@ GEM
     parslet (2.0.0)
     prettier_print (1.2.1)
     public_suffix (5.0.1)
-    rack (2.2.14)
+    rack (2.2.18)
     rack-livereload (0.3.17)
       rack
     rake (13.2.1)
@@ -108,7 +108,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rbs (3.1.0)
-    rexml (3.3.9)
+    rexml (3.4.2)
     sass-embedded (1.86.0)
       google-protobuf (~> 4.30)
       rake (>= 13)

@@ -1,15 +1,15 @@
 {
-  "dateUpdated": "6 October 2025",
-  "numberOfPayments": "117.7 million",
+  "dateUpdated": "13 October 2025",
+  "numberOfPayments": "118.3 million",
   "totalPaymentAmount": "7.7 billion",
-  "numberOfServices": 1501,
-  "numberOfOrganisations": 563,
+  "numberOfServices": 1509,
+  "numberOfOrganisations": 564,
   "serviceCountBySector": {
-    "local": 604,
+    "local": 605,
     "central": 332,
     "police": 236,
     "nhstrust": 217,
-    "other": 46,
+    "other": 53,
     "nhscentral": 65
   },
   "serviceCountByOrganisation": {
@@ -17,6 +17,7 @@
     "1223 (Caerphilly) Squadron": 1,
     "1260 (Newark & District) Sqn RAFAC": 1,
     "129 (Tunbridge Wells) Squadron ATC": 1,
+    "1368 (Warwick & Royal Leamington Spa) Squadron ATC": 1,
     "1407 (Newton Aycliffe) Squadron RAFAC": 1,
     "152 (City of Hull) Squadron RAFAC": 1,
     "1801 (Alnwick) Squadron RAF Air Cadets": 1,
@@ -54,7 +55,7 @@
     "Ards and North Down Borough Council": 4,
     "Armagh City, Banbridge & Craigavon Borough Council": 1,
     "Armed Forces Compensation Scheme": 1,
-    "Army Cadets": 23,
+    "Army Cadets": 30,
     "Army Welfare Service Catterick Garrison": 1,
     "Army Winter Sports Association": 1,
     "Aylesbury Town Council": 1,

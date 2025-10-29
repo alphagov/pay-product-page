@@ -24,7 +24,6 @@ Check the `build` directory for the output.
 
 Look at the CSS for the individual components for usage examples and notes.
 
-- [Breadcrumbs](source/stylesheets/modules/_breadcrumbs.scss)
 - [Content Section](source/stylesheets/modules/_content-section.scss)
 - [Full Width Form](source/stylesheets/modules/_full-width-form.scss)
 - [GOV.UK Logo](source/stylesheets/modules/_govuk-logo.scss)

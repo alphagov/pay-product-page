@@ -5,9 +5,9 @@
 # Per-page layout changes:
 #
 # With no layout
-page "/*.xml", layout: false
-page "/*.json", layout: false
-page "/*.txt", layout: false
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -23,15 +23,15 @@ configure :development do
   activate :livereload
 end
 
-config[:css_dir] = "stylesheets"
-config[:images_dir] = "images"
-config[:js_dir] = "javascripts"
+config[:css_dir] = 'stylesheets'
+config[:images_dir] = 'images'
+config[:js_dir] = 'javascripts'
 
-ignore "**/javascripts/*test*.js"
+ignore '**/javascripts/*test*.js'
 
 # Google analytics
 configure :development do
-  set :analytics, ""
+  set :analytics, ''
   set :new_cookie_banner, true
 end
 
@@ -56,21 +56,41 @@ helpers do
     groups = text.to_s.scan(/(?:^\+)?\d+/)
     link_to text, "tel:#{groups.join ''}", className
   end
+
+  def inherit_active_state(nav_title, current_page_title)
+    if nav_title == 'Features' &&
+         [
+           'Cost benefits of Pay',
+           'GOV.UK payment pages',
+           'API integration',
+           'Recurring payments',
+           'Take payments by phone or post',
+           'GOV.UK Pay’s Payment Service Provider',
+           'Direct Debit',
+           'Apple Pay and Google Pay',
+           'Roadmap',
+           'Security and compliance',
+         ].include?(current_page_title)
+      true
+    else
+      false
+    end
+  end
 end
 
 activate :sprockets do |config|
   config.expose_middleman_helpers = true
 end
 
-sprockets.append_path File.join(root, "node_modules/govuk-frontend/dist/")
-sprockets.append_path File.join(root, "node_modules/gaap-analytics/build")
+sprockets.append_path File.join(root, 'node_modules/govuk-frontend/dist/')
+sprockets.append_path File.join(root, 'node_modules/gaap-analytics/build')
 
-redirect "security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
-redirect ".well-known/security.txt.html", to: "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
+redirect 'security.txt.html', to: 'https://vdp.cabinetoffice.gov.uk/.well-known/security.txt'
+redirect '.well-known/security.txt.html', to: 'https://vdp.cabinetoffice.gov.uk/.well-known/security.txt'
 
-redirect "contact/index.html", to: "/support/"
-redirect "features.html", to: "/using-govuk-pay/"
-redirect "payment-links.html", to: "/govuk-payment-pages/"
+redirect 'contact/index.html', to: '/support/'
+redirect 'features.html', to: '/using-govuk-pay/'
+redirect 'payment-links.html', to: '/govuk-payment-pages/'
 
 # https://middlemanapp.com/advanced/pretty-urls/
 activate :directory_indexes

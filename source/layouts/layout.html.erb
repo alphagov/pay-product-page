@@ -87,26 +87,35 @@
             <span class="govuk-header__product-name">Pay</span>
           </a>
         </div>
-        <div class="govuk-header__content">
-          <nav aria-label="Custom navigation label" class="govuk-header__navigation">
-            <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>Menu</button>
-
-            <ul id="navigation" class="govuk-header__navigation-list">
-              <%
-            {
-              'Features' => ['using-govuk-pay', true, 'Using GOV.UK&nbsp;Pay'],
-              'Get started' => ['getstarted', true, 'Get started'],
-              'Documentation' => ['https://docs.payments.service.gov.uk', false, ''],
-              'Support' => ['support', true, 'Support'],
-              'Sign in' => ['https://selfservice.payments.service.gov.uk/login', false, '']
-            }.each do |title, url|
-          %>
-                <li class="govuk-header__navigation-item<% if url[2] == current_page.data.title %> govuk-header__navigation-item--active<% end %>">
-                  <%= link_to title, url[0], class: 'govuk-header__link', relative: url[1] %>
-                </li>
-              <% end %>
-            </ul>
-          </nav>
+      </div>
+      <div
+        class="<%= current_page.url == '/' ? 'govuk-service-navigation govuk-service-navigation--inverse' : 'govuk-service-navigation' %>"
+        data-module="govuk-service-navigation"
+      >
+        <div class="govuk-width-container">
+          <div class="govuk-service-navigation__container">
+            <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+              <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>Menu</button>
+              <ul class="govuk-service-navigation__list" id="navigation">
+                <%
+          {
+            'Get started' => ['getstarted', true, 'Get started'],
+            'Features' => ['using-govuk-pay', true, 'Using GOV.UK Pay'],
+            'Documentation' => ['https://docs.payments.service.gov.uk', false, ''],
+            'Support' => ['support', true, 'Support'],
+            'Sign in' => ['https://selfservice.payments.service.gov.uk/login', false, '']
+          }.each do |title, url|
+        %>
+                  <li
+                    class="govuk-service-navigation__item<% if url[2] == current_page.data.title || inherit_active_state(title,current_page.data.title) %> govuk-service-navigation__item--active<% end %>"
+                    aria-current="true"
+                  >
+                    <%= link_to title, url[0], class: 'govuk-service-navigation__link', relative: url[1] %>
+                  </li>
+                <% end %>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>

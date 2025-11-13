@@ -107,8 +107,10 @@
           }.each do |title, url|
         %>
                   <li
-                    class="govuk-service-navigation__item<% if url[2] == current_page.data.title || inherit_active_state(title,current_page.data.title) %> govuk-service-navigation__item--active<% end %>"
-                    aria-current="true"
+                    class="govuk-service-navigation__item<% if url[2] == current_page.data.title || inherit_active_state(title,current_page.data.title) %> govuk-service-navigation__item--active <% end %>"
+                    <% if url[2] == current_page.data.title %>
+                      aria-current="true"
+                    <%end%>
                   >
                     <%= link_to title, url[0], class: 'govuk-service-navigation__link', relative: url[1] %>
                   </li>

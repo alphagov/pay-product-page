@@ -1,16 +1,16 @@
 {
-  "dateUpdated": "18 May 2026",
-  "numberOfPayments": "136.4 million",
+  "dateUpdated": "26 May 2026",
+  "numberOfPayments": "137.0 million",
   "totalPaymentAmount": "9.1 billion",
-  "numberOfServices": 1713,
-  "numberOfOrganisations": 607,
+  "numberOfServices": 1712,
+  "numberOfOrganisations": 606,
   "serviceCountBySector": {
     "local": 661,
     "central": 350,
     "police": 255,
-    "nhstrust": 240,
-    "other": 140,
-    "nhscentral": 66
+    "nhstrust": 239,
+    "other": 141,
+    "nhscentral": 65
   },
   "serviceCountByOrganisation": {
     "1079 (Tiverton) Squadron, RAF Air Cadets": 1,
@@ -212,7 +212,6 @@
     "Forestry England": 1,
     "Friends of Water Search and Rescue Team": 1,
     "Frimley Health NHS Foundation Trust": 5,
-    "Frimley ICB": 1,
     "GDS": 1,
     "GMCA Greater Manchester Police": 2,
     "Gambling Commission": 3,
@@ -319,6 +318,7 @@
     "Metropolitan Police Service": 27,
     "Mid and East Antrim Borough Council": 6,
     "Middlesbrough Borough Council": 1,
+    "Middlesex Wing ATC": 1,
     "Midlothian Council": 1,
     "Milborne Port Parish Council": 1,
     "Milton Keynes City Council": 1,
@@ -331,7 +331,6 @@
     "NHS Arden and Greater East Midlands CSU": 1,
     "NHS BANES, Swindon and Wiltshire ICB": 1,
     "NHS Bath and North East Somerset, Swindon and Wiltshire ICB": 1,
-    "NHS Bedfordshire, Luton & Milton Keynes ICB": 1,
     "NHS Bedfordshire, Luton and Milton Keynes ICB": 1,
     "NHS Birmingham and Solihull ICB": 2,
     "NHS Black Country ICB": 2,

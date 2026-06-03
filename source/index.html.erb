@@ -58,8 +58,32 @@ description: GOV.UK Pay is for central government, local authorities, police and
         <div class="govuk-grid-column-two-thirds">
           <h2 class="content-section__title govuk-heading-m">What’s coming</h2>
           <p class="govuk-body">
-            We’re updating GOV.UK&nbsp;Pay to manage not just card payments but other ways to pay as well. We plan to use pay by bank, which could make payments faster and cheaper
-            while keeping them secure.
+            We have
+            <%=
+              link_to 'procured a new payment services provider',
+                      'https://gds.blog.gov.uk/2026/06/02/building-for-the-future-making-change-simple-on-gov-uk-pay/',
+                      :class => 'govuk-link',
+                      'data-click-events' => '',
+                      'data-click-category' => 'Content',
+                      'data-click-action' => 'External link clicked'
+            %>
+            (PSP) for non-Crown card payments and pay by bank. Adyen is the new provider, replacing Stripe.
+          </p>
+          <p class="govuk-body">
+            We are contacting service teams directly about this. There will be some things they need to do but we are making it as quick and simple as possible.
+          </p>
+          <p class="govuk-body">
+            This affects local authorities, armed forces, police forces and other organisations currently using GOV.UK&nbsp;Pay with Stripe as their provider. Organisations using
+            Worldpay are unaffected. Email
+            <%=
+              mail_to 'govuk-pay-support@digital.cabinet-office.gov.uk',
+                      'govuk-pay-support@digital.cabinet-office.gov.uk',
+                      :class => 'govuk-link',
+                      'data-click-events' => '',
+                      'data-click-category' => 'Content',
+                      'data-click-action' => 'Email link clicked'
+            %>
+            if you have questions.
           </p>
           <p class="govuk-body">Read our <%= link_to 'roadmap', 'roadmap', class: 'govuk-link' %>&nbsp;to see what we’ve been working on recently and what’s coming next.</p>
         </div>

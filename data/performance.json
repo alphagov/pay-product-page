@@ -1,14 +1,14 @@
 {
-  "dateUpdated": "22 June 2026",
-  "numberOfPayments": "139.3 million",
+  "dateUpdated": "29 June 2026",
+  "numberOfPayments": "139.9 million",
   "totalPaymentAmount": "9.3 billion",
-  "numberOfServices": 1726,
-  "numberOfOrganisations": 610,
+  "numberOfServices": 1728,
+  "numberOfOrganisations": 612,
   "serviceCountBySector": {
     "local": 663,
     "central": 353,
-    "police": 257,
-    "nhstrust": 242,
+    "police": 258,
+    "nhstrust": 243,
     "other": 146,
     "nhscentral": 64
   },
@@ -197,6 +197,7 @@
     "Dundee Airport Limited": 1,
     "Durham Constabulary": 2,
     "East Suffolk & North Essex NHS Foundation Trust": 2,
+    "East of England Ambulance Service NHS Trust": 1,
     "Eastbourne Borough Council": 1,
     "Eastleigh Borough Council": 1,
     "Education Authority": 1,
@@ -425,7 +426,7 @@
     "North Wales Police": 1,
     "North West Ambulance Service NHS Trust": 2,
     "North West London Pathology": 1,
-    "North Yorkshire Police": 4,
+    "North Yorkshire Police": 3,
     "Northamptonshire Police": 3,
     "Northern Ireland Carrier Bag Levy Team": 1,
     "Northumberland Inshore Fisheries & Conservation Authority": 1,
@@ -622,6 +623,7 @@
     "Woodborough Parish Council": 1,
     "Wootton Parish Council": 1,
     "Worcestershire County Council": 1,
-    "Yeovil Town Council": 4
+    "Yeovil Town Council": 4,
+    "York & North Yorkshire Combined Authority - Police": 2
   }
 }

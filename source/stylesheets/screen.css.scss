@@ -1,25 +1,25 @@
 @charset "utf-8";
 
-$govuk-assets-path: '/assets/govuk/assets/';
+@use 'govuk' as * with (
+   $govuk-assets-path: '/assets/govuk/assets/'
+);
 
-@import 'govuk/all';
-
-@import 'modules/borders';
-@import 'modules/content-section';
-@import 'modules/cookie-banner';
-@import 'modules/cookie-settings';
-@import 'modules/header';
-@import 'modules/hero';
-@import 'modules/hero-alternative-action';
-@import 'modules/image';
-@import 'modules/inverted-button';
-@import 'modules/masthead';
-@import 'modules/navigation';
-@import 'modules/related-items';
-@import 'modules/responsive-embed';
-@import 'modules/sticky';
-@import 'modules/sub-navigation';
-@import 'modules/task-list';
+@use 'modules/borders';
+@use 'modules/content-section';
+@use 'modules/cookie-banner';
+@use 'modules/cookie-settings';
+@use 'modules/header';
+@use 'modules/hero';
+@use 'modules/hero-alternative-action';
+@use 'modules/image';
+@use 'modules/inverted-button';
+@use 'modules/masthead';
+@use 'modules/navigation';
+@use 'modules/related-items';
+@use 'modules/responsive-embed';
+@use 'modules/sticky';
+@use 'modules/sub-navigation';
+@use 'modules/task-list';
 
 // scss-lint:disable IdSelector
 #main-content {

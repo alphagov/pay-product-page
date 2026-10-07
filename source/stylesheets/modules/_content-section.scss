@@ -1,3 +1,5 @@
+@use 'govuk' as *;
+
 /**
  * Content Section Component
  *
@@ -25,7 +27,7 @@
   }
 
   &__video {
-    border: 1px solid $govuk-border-colour;
+    border: 1px solid govuk-functional-colour(border);
     height: 0;
     overflow: hidden;
     position: relative;
@@ -46,13 +48,13 @@
     padding: 5px 0;
 
     summary:hover {
-      background-color: govuk-colour('light-grey');
+      background-color: govuk-colour('black', $variant: 'tint-95');
     }
   }
 
   &--with-top-border {
     padding-top: govuk-spacing(9);
-    border-top: 1px $govuk-border-colour solid;
+    border-top: 1px govuk-functional-colour(border) solid;
   }
 
   &--with-top-padding {

@@ -1,11 +1,13 @@
 /* Old banner - will be removed once new banner is enabled */
+@use 'govuk' as *;
+@use 'sass:color';
 
 .js-enabled #global-cookie-message {
   display: none; /* shown with JS, always on for non-JS */
 }
 
 #global-cookie-message {
-  background-color: lighten(desaturate(govuk-colour('light-blue'), 8.46), 42.55);
+  background-color: color.adjust(color.adjust(govuk-colour('blue', $variant: 'tint-25'), $saturation: 8.46%), $lightness: 42.55%);
   padding: govuk-spacing(3);
 
   p {
@@ -101,7 +103,7 @@
 
 .pay-cookie-banner__hide-button {
   @include govuk-font($size: 19);
-  color: $govuk-link-colour;
+  color: govuk-functional-colour(link);
   outline: 0;
   border: 0;
   background: none;

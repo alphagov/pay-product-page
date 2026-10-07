@@ -1,3 +1,5 @@
+@use 'govuk' as *;
+
 .govuk-header__content,
 .govuk-header__logo {
   @include govuk-media-query($from: desktop) {

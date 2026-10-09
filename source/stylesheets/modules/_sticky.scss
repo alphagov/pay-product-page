@@ -1,3 +1,5 @@
+@use 'govuk' as *;
+
 .sticky {
   @include govuk-media-query(tablet) {
     position: -webkit-sticky;

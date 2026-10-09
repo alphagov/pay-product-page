@@ -1,19 +1,21 @@
-.govuk-template--rebranded .govuk-header {
+@use 'govuk' as *;
+
+.govuk-template .govuk-header {
   border-bottom: none;
 }
 
-.govuk-template--rebranded .govuk-service-navigation {
+.govuk-template .govuk-service-navigation {
   .govuk-header__link {
-    color: $govuk-link-colour;
+    color: govuk-functional-colour(link);
   }
 
   .govuk-service-navigation__item--active {
-    color: $govuk-link-colour;
+    color: govuk-functional-colour(link);
   }
 }
 
-.govuk-template--rebranded .govuk-service-navigation--inverse {
-  background-color: $govuk-brand-colour;
+.govuk-template .govuk-service-navigation--inverse {
+  background-color: govuk-functional-colour(brand);
 
   .govuk-width-container {
     border-top: 1px solid #8eb8dc;
